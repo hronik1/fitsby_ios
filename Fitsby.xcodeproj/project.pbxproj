@@ -19,6 +19,7 @@
 		F2C0FFBA16D474F700F869BB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C0FFB816D474F700F869BB /* MainStoryboard.storyboard */; };
 		F2C0FFBD16D474F700F869BB /* FitsbyMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFBC16D474F700F869BB /* FitsbyMasterViewController.m */; };
 		F2C0FFC016D474F700F869BB /* FitsbyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFBF16D474F700F869BB /* FitsbyDetailViewController.m */; };
+		F2C0FFF116D476FA00F869BB /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFF016D476FA00F869BB /* LandingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		F2C0FFBC16D474F700F869BB /* FitsbyMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitsbyMasterViewController.m; sourceTree = "<group>"; };
 		F2C0FFBE16D474F700F869BB /* FitsbyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitsbyDetailViewController.h; sourceTree = "<group>"; };
 		F2C0FFBF16D474F700F869BB /* FitsbyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitsbyDetailViewController.m; sourceTree = "<group>"; };
+		F2C0FFEF16D476FA00F869BB /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		F2C0FFF016D476FA00F869BB /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 		F2C0FFA616D474F700F869BB /* Fitsby */ = {
 			isa = PBXGroup;
 			children = (
+				F2C0FFEF16D476FA00F869BB /* LandingViewController.h */,
+				F2C0FFF016D476FA00F869BB /* LandingViewController.m */,
 				F2C0FFAF16D474F700F869BB /* FitsbyAppDelegate.h */,
 				F2C0FFB016D474F700F869BB /* FitsbyAppDelegate.m */,
 				F2C0FFB816D474F700F869BB /* MainStoryboard.storyboard */,
@@ -183,6 +188,7 @@
 				F2C0FFB116D474F700F869BB /* FitsbyAppDelegate.m in Sources */,
 				F2C0FFBD16D474F700F869BB /* FitsbyMasterViewController.m in Sources */,
 				F2C0FFC016D474F700F869BB /* FitsbyDetailViewController.m in Sources */,
+				F2C0FFF116D476FA00F869BB /* LandingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
