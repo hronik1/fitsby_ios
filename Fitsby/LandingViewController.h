@@ -10,4 +10,6 @@
 
 @interface LandingViewController : UIViewController
 
+- (IBAction)cancel:(UIStoryboardSegue *)segue;
+
 @end
