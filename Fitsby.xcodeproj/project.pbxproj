@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2C0000116DAB5A600F869BB /* MyHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0000016DAB5A600F869BB /* MyHttpClient.m */; };
 		F2C0FFA116D474F700F869BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C0FFA016D474F700F869BB /* UIKit.framework */; };
 		F2C0FFA316D474F700F869BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C0FFA216D474F700F869BB /* Foundation.framework */; };
 		F2C0FFA516D474F700F869BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C0FFA416D474F700F869BB /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2C0000016DAB5A600F869BB /* MyHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHttpClient.m; sourceTree = "<group>"; };
 		F2C0FF9D16D474F700F869BB /* Fitsby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitsby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C0FFA016D474F700F869BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F2C0FFA216D474F700F869BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +51,7 @@
 		F2C0FFF916D7237000F869BB /* FitsbyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyLoginViewController.m; sourceTree = "<group>"; };
 		F2C0FFFB16DAAA0800F869BB /* FitsbyRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyRegisterViewController.h; sourceTree = "<group>"; };
 		F2C0FFFC16DAAA0800F869BB /* FitsbyRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyRegisterViewController.m; sourceTree = "<group>"; };
+		F2C0FFFF16DAB5A600F869BB /* MyHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHttpClient.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,7 @@
 		F2C0FFA616D474F700F869BB /* Fitsby */ = {
 			isa = PBXGroup;
 			children = (
+				F2C0FFFE16DAB45800F869BB /* NetworkControllers */,
 				F2C0FFF816D7237000F869BB /* FitsbyLoginViewController.h */,
 				F2C0FFF916D7237000F869BB /* FitsbyLoginViewController.m */,
 				F2C0FFFB16DAAA0800F869BB /* FitsbyRegisterViewController.h */,
@@ -125,6 +129,15 @@
 				F2C0FFB616D474F700F869BB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2C0FFFE16DAB45800F869BB /* NetworkControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2C0FFFF16DAB5A600F869BB /* MyHttpClient.h */,
+				F2C0000016DAB5A600F869BB /* MyHttpClient.m */,
+			);
+			name = NetworkControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +214,7 @@
 				F2C0FFF116D476FA00F869BB /* LandingViewController.m in Sources */,
 				F2C0FFFA16D7237000F869BB /* FitsbyLoginViewController.m in Sources */,
 				F2C0FFFD16DAAA0800F869BB /* FitsbyRegisterViewController.m in Sources */,
+				F2C0000116DAB5A600F869BB /* MyHttpClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
