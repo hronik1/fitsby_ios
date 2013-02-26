@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *emailAddressInput;
 @property (weak, nonatomic) IBOutlet UITextField *passwordInput;
+- (IBAction)doneClicked:(id)sender;
 
 @end

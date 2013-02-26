@@ -7,6 +7,8 @@
 //
 
 #import "FitsbyLoginViewController.h"
+#import "MyHttpClient.h"
+#import "UserCommunication.h"
 
 @interface FitsbyLoginViewController ()
 
@@ -96,6 +98,15 @@
 #pragma mark - Table view delegate
 
 
+
 - (IBAction)doneClicked:(id)sender {
+    NSString *email = self.emailAddressInput.text;
+    NSString *password = self.passwordInput.text;
+    if (!email.length || !password.length) {
+        NSLog(@"fields not complete");
+    } else {
+        [UserCommunication loginUser:email withPassword:password];
+    }
 }
+
 @end

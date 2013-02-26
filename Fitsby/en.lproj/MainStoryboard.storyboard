@@ -125,7 +125,11 @@
                                 <segue destination="mnu-1F-aZz" kind="unwind" unwindAction="cancel:" id="kOa-ip-zAH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="POG-qh-1LB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="POG-qh-1LB">
+                            <connections>
+                                <action selector="doneClicked:" destination="LVu-DL-BZg" id="m1u-s1-jPI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailAddressInput" destination="MFq-mR-c4l" id="HfI-Ig-qwX"/>

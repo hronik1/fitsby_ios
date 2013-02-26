@@ -11,9 +11,9 @@
 @interface MyHttpClient : NSObject
 
 //Class method to send a post request
-+ (NSData *) createPostRequest:(NSString *)route withParams:(NSData *)params;
++ (NSData *) createPostRequest:(NSString *)route withParams:(NSDictionary *)params;
 
 //Class method to send a get request
-+ (NSData *) createGetRequest:(NSString *)route withParams:(NSData *)params;
++ (NSData *) createGetRequest:(NSString *)route withParams:(NSDictionary *)params;
 
 @end
