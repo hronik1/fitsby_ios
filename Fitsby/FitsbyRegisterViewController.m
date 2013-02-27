@@ -7,6 +7,7 @@
 //
 
 #import "FitsbyRegisterViewController.h"
+#import "UserCommunication.h"
 
 @interface FitsbyRegisterViewController ()
 
@@ -122,5 +123,26 @@
 //     [self.navigationController pushViewController:detailViewController animated:YES];
 //     */
 //}
+
+- (IBAction)doneClicked:(id)sender {
+    NSString *email = self.emailAddressInput.text;
+    NSString *password = self.passwordInput.text;
+    NSString *confirmPassword = self.confirmPasswordInput.text;
+    NSString *firstName = self.firstNameInput.text;
+    NSString *lastName = self.lastNameInput.text;
+    
+    if (!email.length || !password.length || !confirmPassword.length || !firstName.length || !lastName.length) {
+        NSLog(@"fields not complete");
+        //TODO alert user
+    } else if (password.length < 6) {
+        NSLog(@"password is too short");
+        //TODO alert user
+    } else if (![password isEqualToString:confirmPassword]) {
+        NSLog((@"password does not match confirm password"));
+        //TODO alert user
+    } else {
+        [UserCommunication registerUser:email withPassword:password confirmPassword:confirmPassword firstName:firstName lastName:lastName];
+    }
+}
 
 @end

@@ -104,6 +104,7 @@
     NSString *password = self.passwordInput.text;
     if (!email.length || !password.length) {
         NSLog(@"fields not complete");
+        //TODO alert user
     } else {
         [UserCommunication loginUser:email withPassword:password];
     }
