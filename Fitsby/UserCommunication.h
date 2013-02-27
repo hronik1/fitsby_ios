@@ -11,7 +11,9 @@
 @interface UserCommunication : NSObject
 
 /**
- *  loginUser
+ *  loginUser:withPassword:confirmPassword:firstName:lastName
+ *
+ *  Sends a request to attempt to login the User with the input credentials
  *
  * @param  email      Email of user who is attempting to login
  * @param  password   Password of user who is attempting to login 
@@ -21,7 +23,9 @@
 + (NSData *) loginUser:(NSString *)email withPassword:(NSString *)password;
 
 /**
- *  registerUser
+ *  registerUser:withPassword:confirmPassword:firstName:lastName
+ *
+ *  Attempts to register a new User with the following credentials
  *
  * @param  email            Email of user who is attempting to register
  * @param  password         Password of user who is attempting to register
