@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "FitsbyAppDelegate.h"
+#import "UserApplication.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([FitsbyAppDelegate class]));
+        return UIApplicationMain(argc, argv, NSStringFromClass([UserApplication class]), NSStringFromClass([FitsbyAppDelegate class]));
     }
 }
