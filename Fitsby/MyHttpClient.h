@@ -10,10 +10,24 @@
 
 @interface MyHttpClient : NSObject
 
-//Class method to send a post request
+/**
+ *  createPostRequest
+ * 
+ * @param  route  This is the route of the method of the post request
+ * @param  params  A dictionary of keys and values corresponding to the post paramaters
+ *
+ * @ereturn  Raw data returned from the server
+ */
 + (NSData *) createPostRequest:(NSString *)route withParams:(NSDictionary *)params;
 
-//Class method to send a get request
+/**
+ *  createGetRequest
+ *
+ * @param  route  This is the route of the method of the get request
+ * @param  params  A dictionary of keys and values corresponding to the get paramaters
+ *
+ * @ereturn  Raw data returned from the server
+ */
 + (NSData *) createGetRequest:(NSString *)route withParams:(NSDictionary *)params;
 
 @end
