@@ -106,7 +106,28 @@
         NSLog(@"fields not complete");
         //TODO alert user
     } else {
-        [UserCommunication loginUser:email withPassword:password];
+        UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        [self.view addSubview:progress];
+        progress.color = [UIColor redColor];
+        progress.center = self.view.center;
+        progress.hidesWhenStopped = YES;
+        dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
+        [progress startAnimating];
+        if (progress.isAnimating)
+            NSLog(@"animating");
+        else
+            NSLog(@"not animating");
+        //NSLog(@"Isanimating:%c", progress.isAnimating);
+        dispatch_async(queue, ^{
+  
+            //NSLog(@"Isanimating:%c", progress.isAnimating);
+            [UserCommunication loginUser:email withPassword:password];
+            NSLog(@"stopped");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [progress stopAnimating];
+            });
+        });
+        //[UserCommunication loginUser:email withPassword:password];
     }
 }
 

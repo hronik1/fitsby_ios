@@ -26,6 +26,7 @@
 		F2C0FFF116D476FA00F869BB /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFF016D476FA00F869BB /* LandingViewController.m */; };
 		F2C0FFFA16D7237000F869BB /* FitsbyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFF916D7237000F869BB /* FitsbyLoginViewController.m */; };
 		F2C0FFFD16DAAA0800F869BB /* FitsbyRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFFC16DAAA0800F869BB /* FitsbyRegisterViewController.m */; };
+		F2EA227C16DFA9A700B8918E /* StatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA227B16DFA9A700B8918E /* StatusResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		F2C0FFFB16DAAA0800F869BB /* FitsbyRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyRegisterViewController.h; sourceTree = "<group>"; };
 		F2C0FFFC16DAAA0800F869BB /* FitsbyRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyRegisterViewController.m; sourceTree = "<group>"; };
 		F2C0FFFF16DAB5A600F869BB /* MyHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHttpClient.h; sourceTree = "<group>"; };
+		F2EA227A16DFA9A700B8918E /* StatusResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusResponse.h; sourceTree = "<group>"; };
+		F2EA227B16DFA9A700B8918E /* StatusResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 		F2C0FFA616D474F700F869BB /* Fitsby */ = {
 			isa = PBXGroup;
 			children = (
+				F2EA227916DFA97A00B8918E /* Responses */,
 				F2C0000916DDB79100F869BB /* Application Sublcass */,
 				F2C0000516DD022500F869BB /* Models */,
 				F2C0FFFE16DAB45800F869BB /* NetworkControllers */,
@@ -169,6 +173,15 @@
 				F2C0000316DAF1CD00F869BB /* UserCommunication.m */,
 			);
 			name = NetworkControllers;
+			sourceTree = "<group>";
+		};
+		F2EA227916DFA97A00B8918E /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				F2EA227A16DFA9A700B8918E /* StatusResponse.h */,
+				F2EA227B16DFA9A700B8918E /* StatusResponse.m */,
+			);
+			name = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +262,7 @@
 				F2C0000416DAF1CD00F869BB /* UserCommunication.m in Sources */,
 				F2C0000816DDA18800F869BB /* User.m in Sources */,
 				F2C0000C16DDB7B700F869BB /* UserApplication.m in Sources */,
+				F2EA227C16DFA9A700B8918E /* StatusResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +385,7 @@
 				F2C0FFC516D474F700F869BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
