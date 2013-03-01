@@ -10,7 +10,7 @@
 
 @interface User : NSObject
 
-@property NSInteger  *_id;
+@property int _id;
 @property (weak, nonatomic) NSString *firstName;
 @property (weak, nonatomic) NSString *lastName;
 @property (weak, nonatomic) NSString *email;
@@ -36,6 +36,6 @@
  *
  * @return  This instance of a User
  */
--(id)initWithId:(NSInteger *)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email;
+-(id)initWithId:(int)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email;
 
 @end

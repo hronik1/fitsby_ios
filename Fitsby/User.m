@@ -11,6 +11,10 @@
 @implementation User
 
 -(id)init {
+    self = [super init];
+    if (!self)
+        return nil;
+    
     self._id = nil;
     self.firstName = nil;
     self.lastName = nil;
@@ -19,7 +23,11 @@
     return self;
 }
 
--(id)initWithId:(NSInteger *)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email {
+-(id)initWithId:(int)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email {
+    self = [super init];
+    if (!self)
+        return nil;
+    
     self._id = _id;
     self.firstName = firstName;
     self.lastName = lastName;

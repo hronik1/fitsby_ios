@@ -27,6 +27,7 @@
 		F2C0FFFA16D7237000F869BB /* FitsbyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFF916D7237000F869BB /* FitsbyLoginViewController.m */; };
 		F2C0FFFD16DAAA0800F869BB /* FitsbyRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFFC16DAAA0800F869BB /* FitsbyRegisterViewController.m */; };
 		F2EA227C16DFA9A700B8918E /* StatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA227B16DFA9A700B8918E /* StatusResponse.m */; };
+		F2EA227F16E0F54000B8918E /* UserResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA227E16E0F54000B8918E /* UserResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		F2C0FFFF16DAB5A600F869BB /* MyHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHttpClient.h; sourceTree = "<group>"; };
 		F2EA227A16DFA9A700B8918E /* StatusResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusResponse.h; sourceTree = "<group>"; };
 		F2EA227B16DFA9A700B8918E /* StatusResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusResponse.m; sourceTree = "<group>"; };
+		F2EA227D16E0F54000B8918E /* UserResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserResponse.h; sourceTree = "<group>"; };
+		F2EA227E16E0F54000B8918E /* UserResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 			children = (
 				F2EA227A16DFA9A700B8918E /* StatusResponse.h */,
 				F2EA227B16DFA9A700B8918E /* StatusResponse.m */,
+				F2EA227D16E0F54000B8918E /* UserResponse.h */,
+				F2EA227E16E0F54000B8918E /* UserResponse.m */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				F2C0000816DDA18800F869BB /* User.m in Sources */,
 				F2C0000C16DDB7B700F869BB /* UserApplication.m in Sources */,
 				F2EA227C16DFA9A700B8918E /* StatusResponse.m in Sources */,
+				F2EA227F16E0F54000B8918E /* UserResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

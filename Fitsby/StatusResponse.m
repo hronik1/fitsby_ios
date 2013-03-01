@@ -18,14 +18,22 @@ NSString *const RESPONSE_FAIL = @"fail";
 @implementation StatusResponse
 
 -(id) init {
+    self = [super init];
+    if (!self)
+        return nil;
+    
     self.successful = NO;
     self.error = nil;
     return self;
 }
 
 -(id) initWithData:(NSDictionary *)jsonDictionary {
-    NSString *tempStatus = [jsonDictionary objectForKey:@"status"];
-    NSString *tempError = [jsonDictionary objectForKey:@"error"];
+    self = [super init];
+    if (!self)
+        return nil;
+    
+    NSString *tempStatus = [jsonDictionary objectForKey:STATUS_KEY];
+    NSString *tempError = [jsonDictionary objectForKey:ERROR_KEY];
     
     if ([tempStatus isEqualToString:RESPONSE_SUCCESS] || [tempStatus isEqualToString:RESPONSE_SUCCESS_GOOGLE_PLACES])
         self.successful = YES;

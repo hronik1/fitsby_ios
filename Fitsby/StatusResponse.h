@@ -25,9 +25,11 @@
 /**
  *  initWithData
  *
- *  Initialize a status response objct with a jsonDictionary.
+ *  Initialize a StatusResponse objct with a NSDictionary.
  *
  *  @param  jsonDictionary  Dictionary object corresponding to the response to be parsed.
+ *
+ *  @return Reference to this instance of StatusResponse
  */
 -(id) initWithData:(NSDictionary *)jsonDictionary;
 
