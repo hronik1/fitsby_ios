@@ -134,12 +134,13 @@
                     <connections>
                         <outlet property="emailAddressInput" destination="MFq-mR-c4l" id="HfI-Ig-qwX"/>
                         <outlet property="passwordInput" destination="ZXQ-1a-MoB" id="BU2-ff-JiJ"/>
+                        <segue destination="3" kind="modal" identifier="LoggedIn" id="oDB-xu-J3T"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeN-8x-K52" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="mnu-1F-aZz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="520" y="-571"/>
+            <point key="canvasLocation" x="606" y="-571"/>
         </scene>
         <!--Fitsby Register View Controller-->
         <scene sceneID="2Ho-h3-edX">
@@ -324,25 +325,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="joinPublicGameCell" id="lJ0-d7-vTF" customClass="JoinPublicGameCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hna-bJ-h1R">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="28" id="bLp-3F-dga"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcV-2H-Q3f">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g5-gR-e0J">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-gH-crW">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SA-ez-Ddk">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hg2-rD-yrn">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9xf-gH-crW" firstAttribute="baseline" secondItem="8g5-gR-e0J" secondAttribute="baseline" type="default" id="2bG-1o-6Ah"/>
+                                    <constraint firstItem="hg2-rD-yrn" firstAttribute="centerY" secondItem="lJ0-d7-vTF" secondAttribute="centerY" type="default" id="9bX-dz-OaP"/>
+                                    <constraint firstItem="9xf-gH-crW" firstAttribute="leading" secondItem="8g5-gR-e0J" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9ep-ic-nQo"/>
+                                    <constraint firstItem="9SA-ez-Ddk" firstAttribute="leading" secondItem="9xf-gH-crW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Evc-Xq-j0D"/>
+                                    <constraint firstItem="hg2-rD-yrn" firstAttribute="baseline" secondItem="9SA-ez-Ddk" secondAttribute="baseline" type="default" id="WfP-jm-fuh"/>
+                                    <constraint firstItem="OcV-2H-Q3f" firstAttribute="centerY" secondItem="Hna-bJ-h1R" secondAttribute="centerY" type="default" id="aAM-61-xFR"/>
+                                    <constraint firstItem="Hna-bJ-h1R" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" constant="20" type="default" id="b1k-Pa-XgK"/>
+                                    <constraint firstItem="8g5-gR-e0J" firstAttribute="leading" secondItem="OcV-2H-Q3f" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bZd-6O-3vJ"/>
+                                    <constraint firstItem="OcV-2H-Q3f" firstAttribute="leading" secondItem="Hna-bJ-h1R" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eEr-Ld-Rni"/>
+                                    <constraint firstItem="OcV-2H-Q3f" firstAttribute="bottom" secondItem="Hna-bJ-h1R" secondAttribute="bottom" type="default" id="fbF-xf-okI"/>
+                                    <constraint firstAttribute="trailing" secondItem="hg2-rD-yrn" secondAttribute="trailing" constant="20" type="default" id="mxe-lj-JEg"/>
+                                    <constraint firstItem="8g5-gR-e0J" firstAttribute="top" secondItem="Hna-bJ-h1R" secondAttribute="top" type="default" id="ngF-rk-DuV"/>
+                                    <constraint firstItem="9SA-ez-Ddk" firstAttribute="baseline" secondItem="OcV-2H-Q3f" secondAttribute="baseline" type="default" id="zvh-Ym-cMU"/>
+                                </constraints>
                                 <connections>
+                                    <outlet property="durationLabel" destination="hg2-rD-yrn" id="OHx-PJ-aDU"/>
+                                    <outlet property="goalLabel" destination="9SA-ez-Ddk" id="ISp-RF-lby"/>
+                                    <outlet property="idLabel" destination="OcV-2H-Q3f" id="ukH-KU-fkc"/>
+                                    <outlet property="playersLabel" destination="8g5-gR-e0J" id="haQ-Tn-izz"/>
+                                    <outlet property="profileIV" destination="Hna-bJ-h1R" id="o70-wQ-Sp6"/>
+                                    <outlet property="wagerLabel" destination="9xf-gH-crW" id="grp-wC-7yJ"/>
                                     <segue destination="21" kind="push" identifier="showDetail" id="jZb-fq-zAk"/>
                                 </connections>
                             </tableViewCell>
@@ -353,7 +398,7 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <navigationItem key="navigationItem" title="Games" id="36"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
@@ -473,6 +518,17 @@
                 <relationship kind="outlet" name="firstNameInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="lastNameInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="JoinPublicGameCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JoinPublicGameCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="idLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profileIV" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="wagerLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="LandingViewController" superclassName="UIViewController">

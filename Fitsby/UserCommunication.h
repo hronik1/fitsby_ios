@@ -19,7 +19,7 @@
  * @param  email      Email of user who is attempting to login
  * @param  password   Password of user who is attempting to login 
  *
- * @ereturn  Raw data returned from the server
+ * @ereturn  UserResponse corresponding to the parsed request.
  */
 + (UserResponse *) loginUser:(NSString *)email withPassword:(NSString *)password;
 
@@ -34,7 +34,7 @@
  * @param  firstName        First name of user who is attempting to register
  * @param  lastName         Last name of user who is attempting to register
  *
- * @ereturn  Raw data returned from the server
+ * @ereturn  UserResponse corresponding to the parsed request.
  */
 + (UserResponse *) registerUser:(NSString *)email withPassword:(NSString *)password
           confirmPassword:(NSString *)confirmPassword firstName:(NSString *)firstName lastName:(NSString *)lastName;

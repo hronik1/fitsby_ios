@@ -24,8 +24,7 @@
     
     if (!error) {
         UserResponse *userResponse = [[UserResponse alloc] initWithDictionary:jsonDictionary];
-        User *user = userResponse.user;
-        return user;
+        return userResponse;
     } else {
         NSLog(@"error");
         return nil;

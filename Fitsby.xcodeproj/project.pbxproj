@@ -28,6 +28,8 @@
 		F2C0FFFD16DAAA0800F869BB /* FitsbyRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0FFFC16DAAA0800F869BB /* FitsbyRegisterViewController.m */; };
 		F2EA227C16DFA9A700B8918E /* StatusResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA227B16DFA9A700B8918E /* StatusResponse.m */; };
 		F2EA227F16E0F54000B8918E /* UserResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA227E16E0F54000B8918E /* UserResponse.m */; };
+		F2EA228616E2891A00B8918E /* JoinPublicGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA228516E2891A00B8918E /* JoinPublicGameCell.m */; };
+		F2EA228916E28FFE00B8918E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA228816E28FFE00B8918E /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,10 @@
 		F2EA227B16DFA9A700B8918E /* StatusResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusResponse.m; sourceTree = "<group>"; };
 		F2EA227D16E0F54000B8918E /* UserResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserResponse.h; sourceTree = "<group>"; };
 		F2EA227E16E0F54000B8918E /* UserResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserResponse.m; sourceTree = "<group>"; };
+		F2EA228416E2891A00B8918E /* JoinPublicGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinPublicGameCell.h; sourceTree = "<group>"; };
+		F2EA228516E2891A00B8918E /* JoinPublicGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinPublicGameCell.m; sourceTree = "<group>"; };
+		F2EA228716E28FFE00B8918E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		F2EA228816E28FFE00B8918E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,8 @@
 			children = (
 				F2C0000616DDA18800F869BB /* User.h */,
 				F2C0000716DDA18800F869BB /* User.m */,
+				F2EA228716E28FFE00B8918E /* Game.h */,
+				F2EA228816E28FFE00B8918E /* Game.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 		F2C0FFA616D474F700F869BB /* Fitsby */ = {
 			isa = PBXGroup;
 			children = (
+				F2EA228016E2882000B8918E /* TableCells */,
 				F2EA227916DFA97A00B8918E /* Responses */,
 				F2C0000916DDB79100F869BB /* Application Sublcass */,
 				F2C0000516DD022500F869BB /* Models */,
@@ -187,6 +196,15 @@
 				F2EA227E16E0F54000B8918E /* UserResponse.m */,
 			);
 			name = Responses;
+			sourceTree = "<group>";
+		};
+		F2EA228016E2882000B8918E /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				F2EA228416E2891A00B8918E /* JoinPublicGameCell.h */,
+				F2EA228516E2891A00B8918E /* JoinPublicGameCell.m */,
+			);
+			name = TableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +287,8 @@
 				F2C0000C16DDB7B700F869BB /* UserApplication.m in Sources */,
 				F2EA227C16DFA9A700B8918E /* StatusResponse.m in Sources */,
 				F2EA227F16E0F54000B8918E /* UserResponse.m in Sources */,
+				F2EA228616E2891A00B8918E /* JoinPublicGameCell.m in Sources */,
+				F2EA228916E28FFE00B8918E /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

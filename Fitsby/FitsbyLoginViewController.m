@@ -11,6 +11,9 @@
 #import "UserCommunication.h"
 #import "UserResponse.h"
 #import "User.h"
+#import "UserApplication.h"
+
+NSString *const SEGUE_ID = @"LoggedIn";
 
 @interface FitsbyLoginViewController ()
 
@@ -130,7 +133,9 @@
                 //TODO alert user of failure
                 NSLog(@"user nil");
             } else {
-                
+                UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+                userApplication.user = user;
+                [self performSegueWithIdentifier:SEGUE_ID sender:sender];
             }
         });
     }
