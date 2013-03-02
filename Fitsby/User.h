@@ -11,9 +11,9 @@
 @interface User : NSObject
 
 @property int _id;
-@property (weak, nonatomic) NSString *firstName;
-@property (weak, nonatomic) NSString *lastName;
-@property (weak, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *firstName;
+@property (strong, nonatomic) NSString *lastName;
+@property (strong, nonatomic) NSString *email;
 
 /** 
  * init

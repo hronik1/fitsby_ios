@@ -21,15 +21,19 @@ NSString *const EMAIL_KEY = @"email";
     if (!self)
         return nil;
     
-    self.user = nil;
+    self.user = [[User alloc] init];
+    
     return self;
 }
 
--(id) initWithData:(NSDictionary *)jsonDictionary {
-    self = [super initWithData:jsonDictionary];
+-(id) initWithDictionary:(NSDictionary *)jsonDictionary {
+    self = [super initWithDictionary:jsonDictionary];
     if (!self)
         return nil;
-    
+    self.user = [[User alloc] init];
+    if(!self.user)
+        return nil;
+
     self.user.firstName = [jsonDictionary objectForKey:FIRST_NAME_KEY];
     self.user.lastName = [jsonDictionary objectForKey:LAST_NAME_KEY];
     self.user._id = [[jsonDictionary objectForKey:ID_KEY] intValue];

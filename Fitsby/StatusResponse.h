@@ -11,7 +11,7 @@
 @interface StatusResponse : NSObject
 
 @property (nonatomic, assign, getter=isSuccessful) BOOL successful;
-@property (weak, nonatomic) NSString *error;
+@property (strong, nonatomic) NSString *error;
 
 /**
  *  init
@@ -23,7 +23,7 @@
 -(id) init;
 
 /**
- *  initWithData
+ *  initWithDictionar
  *
  *  Initialize a StatusResponse objct with a NSDictionary.
  *
@@ -31,6 +31,6 @@
  *
  *  @return Reference to this instance of StatusResponse
  */
--(id) initWithData:(NSDictionary *)jsonDictionary;
+-(id) initWithDictionary:(NSDictionary *)jsonDictionary;
 
 @end

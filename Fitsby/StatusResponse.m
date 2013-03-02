@@ -27,7 +27,7 @@ NSString *const RESPONSE_FAIL = @"fail";
     return self;
 }
 
--(id) initWithData:(NSDictionary *)jsonDictionary {
+-(id) initWithDictionary:(NSDictionary *)jsonDictionary {
     self = [super init];
     if (!self)
         return nil;

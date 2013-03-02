@@ -15,7 +15,7 @@
     if (!self)
         return nil;
     
-    self._id = nil;
+    self._id = 0;
     self.firstName = nil;
     self.lastName = nil;
     self.email = nil;

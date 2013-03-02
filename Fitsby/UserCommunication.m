@@ -8,26 +8,32 @@
 
 #import "UserCommunication.h"
 #import "MyHttpClient.h"
+#import "UserResponse.h"
+#import "User.h"
 
 @implementation UserCommunication
 
-+ (NSData *) loginUser:(NSString *)email withPassword:(NSString *)password {
-    NSLog(@"email:%@, password:%@", email, password);
-    
++ (User *) loginUser:(NSString *)email withPassword:(NSString *)password {
     NSArray *keys = [NSArray arrayWithObjects:@"email", @"password", nil];
     NSArray *objects = [NSArray arrayWithObjects:email, password, nil];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
                                                            forKeys:keys];
     NSData *response = [MyHttpClient createPostRequest:@"login_android" withParams:dictionary];
+    NSError *error = nil;
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
     
-    return nil;
+    if (!error) {
+        UserResponse *userResponse = [[UserResponse alloc] initWithDictionary:jsonDictionary];
+        User *user = userResponse.user;
+        return user;
+    } else {
+        NSLog(@"error");
+        return nil;
+    }
 }
 
-+ (NSData *) registerUser:(NSString *)email withPassword:(NSString *)password
++ (User *) registerUser:(NSString *)email withPassword:(NSString *)password
           confirmPassword:(NSString *)confirmPassword firstName:(NSString *)firstName lastName:(NSString *)lastName {
-    NSLog(@"email:%@ password:%@ confirmPassword:%@ firstName:%@ lastName:%@",
-          email, password, confirmPassword, firstName, lastName);
-    
     NSArray *keys = [NSArray arrayWithObjects:@"email", @"password", @"confirm_password",
                      @"first_name", @"last_name", nil];
     NSArray *objects = [NSArray arrayWithObjects:email, password, confirmPassword,
@@ -36,7 +42,18 @@
                                                            forKeys:keys];
     
     NSData *response = [MyHttpClient createPostRequest:@"users.json" withParams:dictionary];
-    return nil;
+    NSError *error = nil;
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
+    
+    if (!error) {
+        UserResponse *userResponse = [[UserResponse alloc] initWithDictionary:jsonDictionary];
+        User *user = userResponse.user;
+        return user;
+    } else {
+        NSLog(@"error");
+        return nil;
+    }
+    
 }
 
 @end

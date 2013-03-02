@@ -11,7 +11,7 @@
 
 @interface UserResponse : StatusResponse
 
-@property (weak, nonatomic) User *user;
+@property (strong, nonatomic) User *user;
 
 /**
  *  init
@@ -31,6 +31,6 @@
  *
  *  @return  Referenece to this instance of a UserResponse.
  */
--(id) initWithData:(NSDictionary *)jsonDictionary;
+-(id) initWithDictionary:(NSDictionary *)jsonDictionary;
 
 @end
