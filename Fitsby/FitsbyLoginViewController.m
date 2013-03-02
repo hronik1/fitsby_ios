@@ -9,6 +9,8 @@
 #import "FitsbyLoginViewController.h"
 #import "MyHttpClient.h"
 #import "UserCommunication.h"
+#import "UserResponse.h"
+#import "User.h"
 
 @interface FitsbyLoginViewController ()
 
@@ -111,23 +113,26 @@
         progress.color = [UIColor redColor];
         progress.center = self.view.center;
         progress.hidesWhenStopped = YES;
-        dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
         [progress startAnimating];
-        if (progress.isAnimating)
-            NSLog(@"animating");
-        else
-            NSLog(@"not animating");
-        //NSLog(@"Isanimating:%c", progress.isAnimating);
+        
+        dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
         dispatch_async(queue, ^{
-  
-            //NSLog(@"Isanimating:%c", progress.isAnimating);
-            [UserCommunication loginUser:email withPassword:password];
-            NSLog(@"stopped");
+            UserResponse *userResponse = [UserCommunication loginUser:email withPassword:password];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [progress stopAnimating];
             });
+            if (!userResponse) {
+                //TODO alertUser of failure
+                NSLog(@"userResponse nil");
+            }
+            User *user = userResponse.user;
+            if (!user) {
+                //TODO alert user of failure
+                NSLog(@"user nil");
+            } else {
+                
+            }
         });
-        //[UserCommunication loginUser:email withPassword:password];
     }
 }
 

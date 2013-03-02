@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class User;
+@class UserResponse;
 
 @interface UserCommunication : NSObject
 
@@ -21,7 +21,7 @@
  *
  * @ereturn  Raw data returned from the server
  */
-+ (User *) loginUser:(NSString *)email withPassword:(NSString *)password;
++ (UserResponse *) loginUser:(NSString *)email withPassword:(NSString *)password;
 
 /**
  *  registerUser:withPassword:confirmPassword:firstName:lastName
@@ -36,6 +36,6 @@
  *
  * @ereturn  Raw data returned from the server
  */
-+ (User *) registerUser:(NSString *)email withPassword:(NSString *)password
++ (UserResponse *) registerUser:(NSString *)email withPassword:(NSString *)password
           confirmPassword:(NSString *)confirmPassword firstName:(NSString *)firstName lastName:(NSString *)lastName;
 @end
