@@ -9,10 +9,10 @@
 #import "UserResponse.h"
 #import "User.h"
 
-NSString *const FIRST_NAME_KEY = @"first_name";
-NSString *const LAST_NAME_KEY = @"last_name";
-NSString *const ID_KEY = @"id";
-NSString *const EMAIL_KEY = @"email";
+static NSString *const FIRST_NAME_KEY = @"first_name";
+static NSString *const LAST_NAME_KEY = @"last_name";
+static NSString *const ID_KEY = @"id";
+static NSString *const EMAIL_KEY = @"email";
 
 @implementation UserResponse
 
@@ -22,6 +22,8 @@ NSString *const EMAIL_KEY = @"email";
         return nil;
     
     self.user = [[User alloc] init];
+    if (!self.user)
+        return nil;
     
     return self;
 }

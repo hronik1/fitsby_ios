@@ -9,11 +9,11 @@
 #import "StatusResponse.h"
 
 //key and result constant definititons
-NSString *const STATUS_KEY = @"status";
-NSString *const ERROR_KEY = @"error";
-NSString *const RESPONSE_SUCCESS = @"okay";
-NSString *const RESPONSE_SUCCESS_GOOGLE_PLACES = @"OK";
-NSString *const RESPONSE_FAIL = @"fail";
+static NSString *const STATUS_KEY = @"status";
+static NSString *const ERROR_KEY = @"error";
+static NSString *const RESPONSE_SUCCESS = @"okay";
+static NSString *const RESPONSE_SUCCESS_GOOGLE_PLACES = @"OK";
+static NSString *const RESPONSE_FAIL = @"fail";
 
 @implementation StatusResponse
 

@@ -30,6 +30,9 @@
 		F2EA227F16E0F54000B8918E /* UserResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA227E16E0F54000B8918E /* UserResponse.m */; };
 		F2EA228616E2891A00B8918E /* JoinPublicGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA228516E2891A00B8918E /* JoinPublicGameCell.m */; };
 		F2EA228916E28FFE00B8918E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA228816E28FFE00B8918E /* Game.m */; };
+		F2EA228C16E2922200B8918E /* GameCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA228B16E2922200B8918E /* GameCommunication.m */; };
+		F2EA228F16E2927800B8918E /* JoinGameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA228E16E2927800B8918E /* JoinGameResponse.m */; };
+		F2EA229216E293AE00B8918E /* PublicGamesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA229116E293AE00B8918E /* PublicGamesResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,12 @@
 		F2EA228516E2891A00B8918E /* JoinPublicGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinPublicGameCell.m; sourceTree = "<group>"; };
 		F2EA228716E28FFE00B8918E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		F2EA228816E28FFE00B8918E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		F2EA228A16E2922200B8918E /* GameCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCommunication.h; sourceTree = "<group>"; };
+		F2EA228B16E2922200B8918E /* GameCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCommunication.m; sourceTree = "<group>"; };
+		F2EA228D16E2927800B8918E /* JoinGameResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinGameResponse.h; sourceTree = "<group>"; };
+		F2EA228E16E2927800B8918E /* JoinGameResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinGameResponse.m; sourceTree = "<group>"; };
+		F2EA229016E293AE00B8918E /* PublicGamesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicGamesResponse.h; sourceTree = "<group>"; };
+		F2EA229116E293AE00B8918E /* PublicGamesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicGamesResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +192,8 @@
 				F2C0000016DAB5A600F869BB /* MyHttpClient.m */,
 				F2C0000216DAF1CD00F869BB /* UserCommunication.h */,
 				F2C0000316DAF1CD00F869BB /* UserCommunication.m */,
+				F2EA228A16E2922200B8918E /* GameCommunication.h */,
+				F2EA228B16E2922200B8918E /* GameCommunication.m */,
 			);
 			name = NetworkControllers;
 			sourceTree = "<group>";
@@ -194,6 +205,10 @@
 				F2EA227B16DFA9A700B8918E /* StatusResponse.m */,
 				F2EA227D16E0F54000B8918E /* UserResponse.h */,
 				F2EA227E16E0F54000B8918E /* UserResponse.m */,
+				F2EA228D16E2927800B8918E /* JoinGameResponse.h */,
+				F2EA228E16E2927800B8918E /* JoinGameResponse.m */,
+				F2EA229016E293AE00B8918E /* PublicGamesResponse.h */,
+				F2EA229116E293AE00B8918E /* PublicGamesResponse.m */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -289,6 +304,9 @@
 				F2EA227F16E0F54000B8918E /* UserResponse.m in Sources */,
 				F2EA228616E2891A00B8918E /* JoinPublicGameCell.m in Sources */,
 				F2EA228916E28FFE00B8918E /* Game.m in Sources */,
+				F2EA228C16E2922200B8918E /* GameCommunication.m in Sources */,
+				F2EA228F16E2927800B8918E /* JoinGameResponse.m in Sources */,
+				F2EA229216E293AE00B8918E /* PublicGamesResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
