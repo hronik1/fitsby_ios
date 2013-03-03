@@ -11,10 +11,17 @@
 #import "UserApplication.h"
 #import "GameCommunication.h"
 #import "User.h"
+#import "Game.h"
+#import "PublicGamesResponse.h"
+#import "JoinPublicGameCell.h"
 
 @interface FitsbyMasterViewController () {
     NSMutableArray *_objects;
+
 }
+
+//callback for when the response is finished being fetched from the server
+-(void) fetchedGamesResponse:(PublicGamesResponse *)response;
 @end
 
 @implementation FitsbyMasterViewController
@@ -36,7 +43,12 @@
     
     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
     User *user = userApplication.user;
-    [GameCommunication getPublicGames:user._id];
+    
+    dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
+    dispatch_async(queue, ^{
+        PublicGamesResponse *gamesResponse = [GameCommunication getPublicGames:user._id];
+        [self fetchedGamesResponse:gamesResponse];
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,10 +81,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"joinPublicGameCell";
+    
+    JoinPublicGameCell *cell = [tableView
+                              dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[JoinPublicGameCell alloc]
+                initWithStyle:UITableViewCellStyleDefault
+                reuseIdentifier:cellIdentifier];
+    }
+    
+    // Configure the cell...
+    int row = [indexPath row];
+    Game *game = [_objects objectAtIndex:row];
+    cell.idLabel.text = [NSString stringWithFormat:@"%d",game._id];
+    cell.playersLabel.text = [NSString stringWithFormat:@"%d",game.players];
+    cell.wagerLabel.text = [NSString stringWithFormat:@"$%d",game.wager];
+    cell.goalLabel.text = [NSString stringWithFormat:@"%d",game.goal];
+    cell.durationLabel.text = [NSString stringWithFormat:@"%d",game.duration];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
     return cell;
 }
 
@@ -117,4 +144,16 @@
     }
 }
 
+-(void) fetchedGamesResponse:(PublicGamesResponse *)response {
+    if (!response) {
+        //TODO alert user
+        return;
+    } else if (!response.games) {
+        //TODO log error
+        return;
+    }
+    
+    _objects = response.games;
+    [self.tableView reloadData];
+}
 @end
