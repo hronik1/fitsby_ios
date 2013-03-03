@@ -7,8 +7,10 @@
 //
 
 #import "FitsbyMasterViewController.h"
-
 #import "FitsbyDetailViewController.h"
+#import "UserApplication.h"
+#import "GameCommunication.h"
+#import "User.h"
 
 @interface FitsbyMasterViewController () {
     NSMutableArray *_objects;
@@ -25,11 +27,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"segue started on master side");
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+    User *user = userApplication.user;
+    [GameCommunication getPublicGames:user._id];
 }
 
 - (void)didReceiveMemoryWarning

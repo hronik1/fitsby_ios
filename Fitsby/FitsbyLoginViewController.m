@@ -135,6 +135,7 @@ NSString *const SEGUE_ID = @"LoggedIn";
             } else {
                 UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
                 userApplication.user = user;
+                (NSLog(@"segue initiated"));
                 [self performSegueWithIdentifier:SEGUE_ID sender:sender];
             }
         });

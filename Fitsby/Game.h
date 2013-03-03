@@ -12,9 +12,12 @@
 
 @property int _id;
 @property BOOL isPrivate;
+@property int players;
 @property int wager;
+@property int stakes;
 @property int goal;
 @property int duration;
+@property (strong, nonatomic) NSString *creatorEmail;
 @property (strong, nonatomic) UIImageView *creatorIV;
 
 @end

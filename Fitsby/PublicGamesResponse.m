@@ -7,15 +7,29 @@
 //
 
 #import "PublicGamesResponse.h"
+#import "Game.h"
 
+//key for array of games
+static NSString *const GAMES_KEY = @"public_games";
+//keys for an individual game
 static NSString *const ID_KEY = @"id";
 static NSString *const PLAYERS_KEY = @"players";
 static NSString *const DURATION_KEY = @"duration";
 static NSString *const WAGER_KEY = @"wager";
+static NSString *const GOAL_KEY = @"goal_days";
+static NSString *const EMAIL_KEY = @"email";
+static NSString *const STAKES_KEY = @"stakes";
+
+
+@interface PublicGamesResponse()
+
+//Parses and individual game and returns it
+-(Game *) parseGame:(NSDictionary *)jsonDictionary;
+
+@end
 
 @implementation PublicGamesResponse
 
-//TODO add implementation
 -(id)init {
     self = [super init];
     if (!self)
@@ -37,7 +51,28 @@ static NSString *const WAGER_KEY = @"wager";
     if (!self.games)
         return nil;
     
-    //TODO parse dictionary
+    NSArray *array = [jsonDictionary objectForKey:GAMES_KEY];
+    for (id object in array) {
+        Game *game = [self parseGame:object];
+        [self.games addObject:game];
+    }
     return self;
 }
+
+-(Game *) parseGame:(NSDictionary *)jsonDictionary {
+    Game *game = [[Game alloc] init];
+    if (!game)
+        return nil;
+    
+    game._id = [[jsonDictionary objectForKey:ID_KEY] intValue];
+    game.creatorEmail = [jsonDictionary objectForKey:EMAIL_KEY];
+    game.players = [[jsonDictionary objectForKey:PLAYERS_KEY] intValue];
+    game.duration = [[jsonDictionary objectForKey:DURATION_KEY] intValue];
+    game.stakes = [[jsonDictionary objectForKey:STAKES_KEY] intValue];
+    game.goal = [[jsonDictionary objectForKey:GOAL_KEY] intValue];
+    game.wager = [[jsonDictionary objectForKey:WAGER_KEY] intValue];
+    
+    return game;
+}
+
 @end
