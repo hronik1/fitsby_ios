@@ -368,17 +368,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="9xf-gH-crW" firstAttribute="baseline" secondItem="8g5-gR-e0J" secondAttribute="baseline" type="default" id="2bG-1o-6Ah"/>
+                                    <constraint firstItem="8g5-gR-e0J" firstAttribute="width" secondItem="OcV-2H-Q3f" secondAttribute="width" type="user" id="6ft-Xf-xM8"/>
                                     <constraint firstItem="hg2-rD-yrn" firstAttribute="centerY" secondItem="lJ0-d7-vTF" secondAttribute="centerY" type="default" id="9bX-dz-OaP"/>
                                     <constraint firstItem="9xf-gH-crW" firstAttribute="leading" secondItem="8g5-gR-e0J" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9ep-ic-nQo"/>
                                     <constraint firstItem="9SA-ez-Ddk" firstAttribute="leading" secondItem="9xf-gH-crW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Evc-Xq-j0D"/>
+                                    <constraint firstItem="8g5-gR-e0J" firstAttribute="width" secondItem="9SA-ez-Ddk" secondAttribute="width" type="user" id="Mah-gK-p3t"/>
                                     <constraint firstItem="hg2-rD-yrn" firstAttribute="baseline" secondItem="9SA-ez-Ddk" secondAttribute="baseline" type="default" id="WfP-jm-fuh"/>
                                     <constraint firstItem="OcV-2H-Q3f" firstAttribute="centerY" secondItem="Hna-bJ-h1R" secondAttribute="centerY" type="default" id="aAM-61-xFR"/>
                                     <constraint firstItem="Hna-bJ-h1R" firstAttribute="leading" secondItem="lJ0-d7-vTF" secondAttribute="leading" constant="20" type="default" id="b1k-Pa-XgK"/>
                                     <constraint firstItem="8g5-gR-e0J" firstAttribute="leading" secondItem="OcV-2H-Q3f" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bZd-6O-3vJ"/>
                                     <constraint firstItem="OcV-2H-Q3f" firstAttribute="leading" secondItem="Hna-bJ-h1R" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eEr-Ld-Rni"/>
+                                    <constraint firstItem="8g5-gR-e0J" firstAttribute="width" secondItem="9xf-gH-crW" secondAttribute="width" type="user" id="eFU-9b-2hf"/>
                                     <constraint firstItem="OcV-2H-Q3f" firstAttribute="bottom" secondItem="Hna-bJ-h1R" secondAttribute="bottom" type="default" id="fbF-xf-okI"/>
                                     <constraint firstAttribute="trailing" secondItem="hg2-rD-yrn" secondAttribute="trailing" constant="20" type="default" id="mxe-lj-JEg"/>
                                     <constraint firstItem="8g5-gR-e0J" firstAttribute="top" secondItem="Hna-bJ-h1R" secondAttribute="top" type="default" id="ngF-rk-DuV"/>
+                                    <constraint firstItem="8g5-gR-e0J" firstAttribute="width" secondItem="hg2-rD-yrn" secondAttribute="width" type="user" id="vLN-M8-eIe"/>
                                     <constraint firstItem="9SA-ez-Ddk" firstAttribute="baseline" secondItem="OcV-2H-Q3f" secondAttribute="baseline" type="default" id="zvh-Ym-cMU"/>
                                 </constraints>
                                 <connections>
