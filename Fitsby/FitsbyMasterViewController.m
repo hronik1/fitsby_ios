@@ -140,8 +140,8 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        Game *game = _objects[indexPath.row];
+        [[segue destinationViewController] setGame:game];
     }
 }
 

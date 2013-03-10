@@ -7,6 +7,7 @@
 //
 
 #import "FitsbyDetailViewController.h"
+#import "Game.h"
 
 @interface FitsbyDetailViewController ()
 - (void)configureView;
@@ -16,22 +17,19 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setGame:(Game *)newGame
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
+    if(_game != newGame) {
+        _game = newGame;
     }
+    
+    [self configureView];
 }
-
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    Game *theGame = self.game;
+    if (theGame) {
+        self.profileIV.image = theGame.creatorImage;
     }
 }
 
@@ -46,6 +44,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"detailContainer"]) {
+        [[segue destinationViewController] setGame:self.game];
+    }
 }
 
 @end
