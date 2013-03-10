@@ -99,6 +99,7 @@
     cell.wagerLabel.text = [NSString stringWithFormat:@"$%d",game.wager];
     cell.goalLabel.text = [NSString stringWithFormat:@"%d",game.goal];
     cell.durationLabel.text = [NSString stringWithFormat:@"%d",game.duration];
+    cell.imageView.image = game.creatorImage;
 
     return cell;
 }

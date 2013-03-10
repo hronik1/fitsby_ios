@@ -18,6 +18,6 @@
 @property int goal;
 @property int duration;
 @property (strong, nonatomic) NSString *creatorEmail;
-@property (strong, nonatomic) UIImageView *creatorIV;
+@property (strong, nonatomic) UIImage *creatorImage;
 
 @end

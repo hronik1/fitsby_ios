@@ -8,6 +8,7 @@
 
 #import "PublicGamesResponse.h"
 #import "Game.h"
+#import "GravatarHelper.h"
 
 //key for array of games
 static NSString *const GAMES_KEY = @"public_games";
@@ -71,6 +72,10 @@ static NSString *const STAKES_KEY = @"stakes";
     game.stakes = [[jsonDictionary objectForKey:STAKES_KEY] intValue];
     game.goal = [[jsonDictionary objectForKey:GOAL_KEY] intValue];
     game.wager = [[jsonDictionary objectForKey:WAGER_KEY] intValue];
+    
+    NSURL *gravatarURL = [GravatarHelper getGravatarURL:game.creatorEmail];
+    NSData *gravatarData = [[NSData alloc] initWithContentsOfURL:gravatarURL];
+    game.creatorImage = [[UIImage alloc] initWithData:gravatarData];
     
     return game;
 }
