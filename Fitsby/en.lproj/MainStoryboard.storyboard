@@ -402,11 +402,110 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Games" id="36"/>
+                    <navigationItem key="navigationItem" title="Games" id="36">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DdR-wQ-IZ3">
+                            <connections>
+                                <segue destination="5qI-gY-tIx" kind="modal" id="A94-Rt-Rkd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2037" y="64"/>
+        </scene>
+        <!--Fitsby Create Game View Controller-->
+        <scene sceneID="oUK-ZH-NBv">
+            <objects>
+                <viewController id="o6G-nS-uPp" customClass="FitsbyCreateGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ln-6d-5bh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rnX-dX-6J7">
+                                <connections>
+                                    <action selector="durationValueChanged:" destination="o6G-nS-uPp" eventType="valueChanged" id="cTm-MB-rLv"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="us9-Q8-JL5">
+                                <connections>
+                                    <action selector="goalValueChanged:" destination="o6G-nS-uPp" eventType="valueChanged" id="AHI-zt-971"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="CBM-DH-sFo">
+                                <connections>
+                                    <action selector="wagerValueChanged:" destination="o6G-nS-uPp" eventType="valueChanged" id="9Ih-U5-So8"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTh-60-5xT">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2On-PJ-t0E">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wager" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYl-r8-DO2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EK-C7-nOw">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-6L-Cvh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31l-LA-Bjv">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2On-PJ-t0E" firstAttribute="leading" secondItem="2Ln-6d-5bh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0l4-wp-6fT"/>
+                            <constraint firstAttribute="trailing" secondItem="us9-Q8-JL5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Q3-Og-ENq"/>
+                            <constraint firstItem="2On-PJ-t0E" firstAttribute="top" secondItem="us9-Q8-JL5" secondAttribute="top" type="default" id="828-FP-1sb"/>
+                            <constraint firstItem="2On-PJ-t0E" firstAttribute="top" secondItem="NTh-60-5xT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FIb-WT-yJS"/>
+                            <constraint firstItem="rnX-dX-6J7" firstAttribute="leading" secondItem="6EK-C7-nOw" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Fqa-1z-loH"/>
+                            <constraint firstItem="NTh-60-5xT" firstAttribute="leading" secondItem="2Ln-6d-5bh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IEp-PA-gUq"/>
+                            <constraint firstItem="us9-Q8-JL5" firstAttribute="leading" secondItem="MBb-6L-Cvh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="NIp-W7-Zwe"/>
+                            <constraint firstItem="us9-Q8-JL5" firstAttribute="top" secondItem="rnX-dX-6J7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Qdx-dK-a3t"/>
+                            <constraint firstItem="rnX-dX-6J7" firstAttribute="top" secondItem="2Ln-6d-5bh" secondAttribute="top" constant="20" symbolic="YES" type="default" id="SCh-KU-2LJ"/>
+                            <constraint firstItem="MYl-r8-DO2" firstAttribute="leading" secondItem="2Ln-6d-5bh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cHi-IR-5kz"/>
+                            <constraint firstItem="MYl-r8-DO2" firstAttribute="top" secondItem="2On-PJ-t0E" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gHY-4P-Xic"/>
+                            <constraint firstAttribute="trailing" secondItem="rnX-dX-6J7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="inJ-Qm-t2D"/>
+                            <constraint firstItem="31l-LA-Bjv" firstAttribute="centerY" secondItem="CBM-DH-sFo" secondAttribute="centerY" type="default" id="jCI-2z-max"/>
+                            <constraint firstAttribute="trailing" secondItem="CBM-DH-sFo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mCN-2b-bGp"/>
+                            <constraint firstItem="CBM-DH-sFo" firstAttribute="leading" secondItem="31l-LA-Bjv" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wX0-pR-4TE"/>
+                            <constraint firstItem="CBM-DH-sFo" firstAttribute="top" secondItem="us9-Q8-JL5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wwW-0Q-IIJ"/>
+                            <constraint firstItem="MBb-6L-Cvh" firstAttribute="centerY" secondItem="us9-Q8-JL5" secondAttribute="centerY" type="default" id="xWx-tv-VQE"/>
+                            <constraint firstItem="6EK-C7-nOw" firstAttribute="baseline" secondItem="NTh-60-5xT" secondAttribute="baseline" type="default" id="zPx-xy-KkX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7sZ-gZ-8eC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fAH-Q9-rzB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QVJ-YC-bbz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="duration" destination="6EK-C7-nOw" id="gfI-4p-a95"/>
+                        <outlet property="durationStepper" destination="rnX-dX-6J7" id="XA6-6E-a82"/>
+                        <outlet property="goal" destination="MBb-6L-Cvh" id="znP-cn-xPX"/>
+                        <outlet property="goalStepper" destination="us9-Q8-JL5" id="7UX-Ou-yci"/>
+                        <outlet property="wager" destination="31l-LA-Bjv" id="pq3-dh-QPc"/>
+                        <outlet property="wagerStepper" destination="CBM-DH-sFo" id="CLH-6z-X2L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S17-Ou-9VB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3101" y="-394"/>
         </scene>
         <!--Fitsby Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -446,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2480" y="64"/>
+            <point key="canvasLocation" x="2580" y="360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8g3-gZ-Tkz">
@@ -707,10 +806,42 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr5-fN-zqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2974" y="193"/>
+            <point key="canvasLocation" x="3090" y="441"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TlC-dD-10h">
+            <objects>
+                <navigationController id="5qI-gY-tIx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tw3-MV-cGl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o6G-nS-uPp" kind="relationship" relationship="rootViewController" id="f37-JW-iUz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXy-rV-uRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2575" y="-394"/>
         </scene>
     </scenes>
     <classes>
+        <class className="FitsbyCreateGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyCreateGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="durationValueChanged:"/>
+                <relationship kind="action" name="goalValueChanged:"/>
+                <relationship kind="action" name="wagerValueChanged:"/>
+                <relationship kind="outlet" name="duration" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="durationStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="goal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goalStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="wager" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wagerStepper" candidateClass="UIStepper"/>
+            </relationships>
+        </class>
         <class className="FitsbyDetailContainerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyDetailContainerViewController.h"/>
             <relationships>
