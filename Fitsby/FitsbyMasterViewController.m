@@ -132,6 +132,13 @@
     }
 }
 
+- (IBAction)cancelAdd:(UIStoryboardSegue *)segue {
+    if ([[segue identifier] isEqualToString:@"CancelAdd"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+
+/** private method **/
 -(void) fetchedGamesResponse:(PublicGamesResponse *)response {
     if (!response) {
         //TODO alert user
@@ -144,4 +151,6 @@
     _objects = response.games;
     [self.tableView reloadData];
 }
+
+
 @end

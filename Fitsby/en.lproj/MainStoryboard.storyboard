@@ -467,31 +467,45 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Private" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ET-ln-LFU">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAt-Vw-GfJ"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2On-PJ-t0E" firstAttribute="leading" secondItem="2Ln-6d-5bh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0l4-wp-6fT"/>
                             <constraint firstAttribute="trailing" secondItem="us9-Q8-JL5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Q3-Og-ENq"/>
-                            <constraint firstItem="2On-PJ-t0E" firstAttribute="top" secondItem="us9-Q8-JL5" secondAttribute="top" type="default" id="828-FP-1sb"/>
-                            <constraint firstItem="2On-PJ-t0E" firstAttribute="top" secondItem="NTh-60-5xT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FIb-WT-yJS"/>
+                            <constraint firstItem="qAt-Vw-GfJ" firstAttribute="top" secondItem="CBM-DH-sFo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8oe-tr-Pid"/>
                             <constraint firstItem="rnX-dX-6J7" firstAttribute="leading" secondItem="6EK-C7-nOw" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Fqa-1z-loH"/>
+                            <constraint firstItem="2On-PJ-t0E" firstAttribute="baseline" secondItem="MBb-6L-Cvh" secondAttribute="baseline" type="default" id="GQG-Fn-aTX"/>
                             <constraint firstItem="NTh-60-5xT" firstAttribute="leading" secondItem="2Ln-6d-5bh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IEp-PA-gUq"/>
+                            <constraint firstAttribute="trailing" secondItem="qAt-Vw-GfJ" secondAttribute="trailing" constant="13" id="MPw-l9-a4W"/>
                             <constraint firstItem="us9-Q8-JL5" firstAttribute="leading" secondItem="MBb-6L-Cvh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="NIp-W7-Zwe"/>
+                            <constraint firstItem="6EK-C7-nOw" firstAttribute="centerY" secondItem="rnX-dX-6J7" secondAttribute="centerY" type="default" id="Oza-mc-40Q"/>
                             <constraint firstItem="us9-Q8-JL5" firstAttribute="top" secondItem="rnX-dX-6J7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Qdx-dK-a3t"/>
+                            <constraint firstItem="MBb-6L-Cvh" firstAttribute="centerY" secondItem="us9-Q8-JL5" secondAttribute="centerY" type="default" id="S9s-cK-jss"/>
                             <constraint firstItem="rnX-dX-6J7" firstAttribute="top" secondItem="2Ln-6d-5bh" secondAttribute="top" constant="20" symbolic="YES" type="default" id="SCh-KU-2LJ"/>
                             <constraint firstItem="MYl-r8-DO2" firstAttribute="leading" secondItem="2Ln-6d-5bh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cHi-IR-5kz"/>
-                            <constraint firstItem="MYl-r8-DO2" firstAttribute="top" secondItem="2On-PJ-t0E" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gHY-4P-Xic"/>
                             <constraint firstAttribute="trailing" secondItem="rnX-dX-6J7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="inJ-Qm-t2D"/>
                             <constraint firstItem="31l-LA-Bjv" firstAttribute="centerY" secondItem="CBM-DH-sFo" secondAttribute="centerY" type="default" id="jCI-2z-max"/>
+                            <constraint firstItem="MYl-r8-DO2" firstAttribute="baseline" secondItem="31l-LA-Bjv" secondAttribute="baseline" type="default" id="jLm-UV-vTN"/>
+                            <constraint firstItem="qAt-Vw-GfJ" firstAttribute="centerY" secondItem="9ET-ln-LFU" secondAttribute="centerY" type="default" id="jOR-tZ-etj"/>
                             <constraint firstAttribute="trailing" secondItem="CBM-DH-sFo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mCN-2b-bGp"/>
+                            <constraint firstItem="6EK-C7-nOw" firstAttribute="baseline" secondItem="NTh-60-5xT" secondAttribute="baseline" type="default" id="sz3-Ld-8Wq"/>
                             <constraint firstItem="CBM-DH-sFo" firstAttribute="leading" secondItem="31l-LA-Bjv" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wX0-pR-4TE"/>
+                            <constraint firstItem="9ET-ln-LFU" firstAttribute="leading" secondItem="2Ln-6d-5bh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wuw-h5-bCU"/>
                             <constraint firstItem="CBM-DH-sFo" firstAttribute="top" secondItem="us9-Q8-JL5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wwW-0Q-IIJ"/>
-                            <constraint firstItem="MBb-6L-Cvh" firstAttribute="centerY" secondItem="us9-Q8-JL5" secondAttribute="centerY" type="default" id="xWx-tv-VQE"/>
-                            <constraint firstItem="6EK-C7-nOw" firstAttribute="baseline" secondItem="NTh-60-5xT" secondAttribute="baseline" type="default" id="zPx-xy-KkX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7sZ-gZ-8eC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fAH-Q9-rzB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fAH-Q9-rzB">
+                            <connections>
+                                <segue destination="GTO-jh-NXL" kind="unwind" identifier="CancelAdd" unwindAction="cancelAdd:" id="vHC-y5-KTq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="QVJ-YC-bbz"/>
                     </navigationItem>
                     <connections>
@@ -504,6 +518,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S17-Ou-9VB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GTO-jh-NXL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3101" y="-394"/>
         </scene>
@@ -877,6 +892,9 @@
         </class>
         <class className="FitsbyMasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyMasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelAdd:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
         </class>
         <class className="FitsbyRegisterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyRegisterViewController.h"/>

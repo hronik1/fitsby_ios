@@ -10,4 +10,6 @@
 
 @interface FitsbyMasterViewController : UITableViewController
 
+- (IBAction)cancelAdd:(UIStoryboardSegue *)segue;
+
 @end
