@@ -111,6 +111,7 @@ NSString *const SEGUE_ID = @"LoggedIn";
         NSLog(@"fields not complete");
         //TODO alert user
     } else {
+        [self.view endEditing:YES];
         UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         [self.view addSubview:progress];
         progress.color = [UIColor redColor];
@@ -123,21 +124,22 @@ NSString *const SEGUE_ID = @"LoggedIn";
             UserResponse *userResponse = [UserCommunication loginUser:email withPassword:password];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [progress stopAnimating];
+                if (!userResponse) {
+                    //TODO alertUser of failure
+                    NSLog(@"userResponse nil");
+                }
+                User *user = userResponse.user;
+                if (!user) {
+                    //TODO alert user of failure
+                    NSLog(@"user nil");
+                } else {
+                    UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+                    userApplication.user = user;
+                    (NSLog(@"segue initiated"));
+                    [self performSegueWithIdentifier:SEGUE_ID sender:sender];
+                }
             });
-            if (!userResponse) {
-                //TODO alertUser of failure
-                NSLog(@"userResponse nil");
-            }
-            User *user = userResponse.user;
-            if (!user) {
-                //TODO alert user of failure
-                NSLog(@"user nil");
-            } else {
-                UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
-                userApplication.user = user;
-                (NSLog(@"segue initiated"));
-                [self performSegueWithIdentifier:SEGUE_ID sender:sender];
-            }
+   
         });
     }
 }
