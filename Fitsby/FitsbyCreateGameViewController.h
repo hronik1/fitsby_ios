@@ -21,4 +21,5 @@
 - (IBAction)goalValueChanged:(id)sender;
 - (IBAction)wagerValueChanged:(id)sender;
 - (IBAction)createDoneClicked:(id)sender;
+- (IBAction)cancelCreditCard:(UIStoryboardSegue *)segue;
 @end

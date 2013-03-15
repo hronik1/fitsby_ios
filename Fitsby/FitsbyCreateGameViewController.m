@@ -96,6 +96,11 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
     }
 }
 
+- (IBAction)cancelCreditCard:(UIStoryboardSegue *)segue{
+    if ([[segue identifier] isEqualToString:@"CancelCreditCard"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
 /** private methods **/
 - (void)initializeLabels {
     self.duration.text = [NSString stringWithFormat:@"%d",DEFAULT_DURATION];
