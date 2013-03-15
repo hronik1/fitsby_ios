@@ -10,6 +10,7 @@
 
 @interface FitsbyCreateGameViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UISwitch *privateSwitch;
 @property (weak, nonatomic) IBOutlet UIStepper *durationStepper;
 @property (weak, nonatomic) IBOutlet UIStepper *goalStepper;
 @property (weak, nonatomic) IBOutlet UIStepper *wagerStepper;
@@ -19,4 +20,5 @@
 - (IBAction)durationValueChanged:(id)sender;
 - (IBAction)goalValueChanged:(id)sender;
 - (IBAction)wagerValueChanged:(id)sender;
+- (IBAction)createDoneClicked:(id)sender;
 @end

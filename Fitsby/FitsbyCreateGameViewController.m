@@ -7,6 +7,10 @@
 //
 
 #import "FitsbyCreateGameViewController.h"
+#import "User.h"
+#import "UserApplication.h"
+#import "CreateGameResponse.h"
+#import "GameCommunication.h"
 
 //wager consants
 static int DEFAULT_WAGER = 0;
@@ -24,7 +28,9 @@ static int DEFAULT_GOAL = 4;
 static int MIN_GOAL_PER_DURATION_STEP = 4;
 static int STEP_GOAL = 1;
 
-@interface FitsbyCreateGameViewController ()
+@interface FitsbyCreateGameViewController () {
+    User *user;
+}
 
 - (void)initializeLabels;
 - (void)initializeSteppers;
@@ -49,6 +55,8 @@ static int STEP_GOAL = 1;
     [self initializeLabels];
     [self initializeSteppers];
     
+    UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+    user = userApplication.user;
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,6 +81,10 @@ static int STEP_GOAL = 1;
     int tempWager = self.wagerStepper.value;
     self.wager.text = [NSString stringWithFormat:@"$%d", tempWager];
     
+}
+
+- (IBAction)createDoneClicked:(id)sender {
+    CreateGameResponse *response = [GameCommunication createGame:user._id duration:self.durationStepper.value isPrivate:self.privateSwitch.on wager:self.wagerStepper.value goal:self.goalStepper.value cardNumber:@"" expYear:@"" expMonth:@"" cvc:@""];
 }
 
 /** private methods **/

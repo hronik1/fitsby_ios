@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Fitsby/FitsbyCreateGameViewController.m"
-         timestampString = "384724927.859035"
+         timestampString = "384963065.850739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "73"
-         endingLineNumber = "73"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
          landmarkName = "-wagerValueChanged:"
          landmarkType = "5">
       </FileBreakpoint>

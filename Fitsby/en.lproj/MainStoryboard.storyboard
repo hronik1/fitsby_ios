@@ -506,13 +506,18 @@
                                 <segue destination="GTO-jh-NXL" kind="unwind" identifier="CancelAdd" unwindAction="cancelAdd:" id="vHC-y5-KTq"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QVJ-YC-bbz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QVJ-YC-bbz">
+                            <connections>
+                                <action selector="createDoneClicked:" destination="o6G-nS-uPp" id="BTH-CK-eMs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="duration" destination="6EK-C7-nOw" id="gfI-4p-a95"/>
                         <outlet property="durationStepper" destination="rnX-dX-6J7" id="XA6-6E-a82"/>
                         <outlet property="goal" destination="MBb-6L-Cvh" id="znP-cn-xPX"/>
                         <outlet property="goalStepper" destination="us9-Q8-JL5" id="7UX-Ou-yci"/>
+                        <outlet property="privateSwitch" destination="qAt-Vw-GfJ" id="mR7-9V-V5M"/>
                         <outlet property="wager" destination="31l-LA-Bjv" id="pq3-dh-QPc"/>
                         <outlet property="wagerStepper" destination="CBM-DH-sFo" id="CLH-6z-X2L"/>
                     </connections>
@@ -846,6 +851,7 @@
         <class className="FitsbyCreateGameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyCreateGameViewController.h"/>
             <relationships>
+                <relationship kind="action" name="createDoneClicked:"/>
                 <relationship kind="action" name="durationValueChanged:"/>
                 <relationship kind="action" name="goalValueChanged:"/>
                 <relationship kind="action" name="wagerValueChanged:"/>
@@ -853,6 +859,7 @@
                 <relationship kind="outlet" name="durationStepper" candidateClass="UIStepper"/>
                 <relationship kind="outlet" name="goal" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="goalStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="privateSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="wager" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="wagerStepper" candidateClass="UIStepper"/>
             </relationships>

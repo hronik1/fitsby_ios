@@ -10,6 +10,7 @@
 		F249EF4A16E4EC00007DB593 /* GravatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F249EF4916E4EC00007DB593 /* GravatarHelper.m */; };
 		F2BA493516ED051200591B49 /* FitsbyDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */; };
 		F2BA493816EE4E8B00591B49 /* FitsbyCreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493716EE4E8B00591B49 /* FitsbyCreateGameViewController.m */; };
+		F2BA493B16F0C23D00591B49 /* CreateGameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493A16F0C23D00591B49 /* CreateGameResponse.m */; };
 		F2C0000116DAB5A600F869BB /* MyHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0000016DAB5A600F869BB /* MyHttpClient.m */; };
 		F2C0000416DAF1CD00F869BB /* UserCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0000316DAF1CD00F869BB /* UserCommunication.m */; };
 		F2C0000816DDA18800F869BB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0000716DDA18800F869BB /* User.m */; };
@@ -45,6 +46,8 @@
 		F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyDetailContainerViewController.m; sourceTree = "<group>"; };
 		F2BA493616EE4E8B00591B49 /* FitsbyCreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCreateGameViewController.h; sourceTree = "<group>"; };
 		F2BA493716EE4E8B00591B49 /* FitsbyCreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyCreateGameViewController.m; sourceTree = "<group>"; };
+		F2BA493916F0C23D00591B49 /* CreateGameResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGameResponse.h; sourceTree = "<group>"; };
+		F2BA493A16F0C23D00591B49 /* CreateGameResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameResponse.m; sourceTree = "<group>"; };
 		F2C0000016DAB5A600F869BB /* MyHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHttpClient.m; sourceTree = "<group>"; };
 		F2C0000216DAF1CD00F869BB /* UserCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCommunication.h; sourceTree = "<group>"; };
 		F2C0000316DAF1CD00F869BB /* UserCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCommunication.m; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				F2EA228E16E2927800B8918E /* JoinGameResponse.m */,
 				F2EA229016E293AE00B8918E /* PublicGamesResponse.h */,
 				F2EA229116E293AE00B8918E /* PublicGamesResponse.m */,
+				F2BA493916F0C23D00591B49 /* CreateGameResponse.h */,
+				F2BA493A16F0C23D00591B49 /* CreateGameResponse.m */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				F249EF4A16E4EC00007DB593 /* GravatarHelper.m in Sources */,
 				F2BA493516ED051200591B49 /* FitsbyDetailContainerViewController.m in Sources */,
 				F2BA493816EE4E8B00591B49 /* FitsbyCreateGameViewController.m in Sources */,
+				F2BA493B16F0C23D00591B49 /* CreateGameResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
