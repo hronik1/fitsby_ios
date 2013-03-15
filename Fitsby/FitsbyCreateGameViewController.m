@@ -28,6 +28,10 @@ static int DEFAULT_GOAL = 4;
 static int MIN_GOAL_PER_DURATION_STEP = 4;
 static int STEP_GOAL = 1;
 
+//Segue constants
+static NSString *const FREE_SEGUE_ID = @"//TODO"; //TODO
+static NSString *const PAY_SEGUE_ID = @"creditCard";
+
 @interface FitsbyCreateGameViewController () {
     User *user;
 }
@@ -84,7 +88,12 @@ static int STEP_GOAL = 1;
 }
 
 - (IBAction)createDoneClicked:(id)sender {
+    if (self.wagerStepper.value == 0) {
     CreateGameResponse *response = [GameCommunication createGame:user._id duration:self.durationStepper.value isPrivate:self.privateSwitch.on wager:self.wagerStepper.value goal:self.goalStepper.value cardNumber:@"" expYear:@"" expMonth:@"" cvc:@""];
+    } else {
+        //TODO send stuff to next view controller
+        [self performSegueWithIdentifier:PAY_SEGUE_ID sender:sender];
+    }
 }
 
 /** private methods **/

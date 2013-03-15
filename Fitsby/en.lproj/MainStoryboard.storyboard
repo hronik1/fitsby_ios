@@ -509,6 +509,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="QVJ-YC-bbz">
                             <connections>
                                 <action selector="createDoneClicked:" destination="o6G-nS-uPp" id="BTH-CK-eMs"/>
+                                <segue destination="Yx9-oO-JCO" kind="modal" identifier="creditCard" id="LMe-q5-N2Y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -526,6 +527,58 @@
                 <exit id="GTO-jh-NXL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3101" y="-394"/>
+        </scene>
+        <!--Fitsby Credit Card View Controller-->
+        <scene sceneID="HyW-AB-AF9">
+            <objects>
+                <viewController id="qdk-Zc-HTC" customClass="FitsbyCreditCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PPV-EU-kXH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="exp mm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQS-f3-nzW">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="exp yyyy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WwH-46-P8V">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cvc" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leE-u4-yCa">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="xjC-VR-yHM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="credit card number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYJ-Lh-ofu">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oYJ-Lh-ofu" firstAttribute="leading" secondItem="PPV-EU-kXH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9f1-qL-nou"/>
+                            <constraint firstItem="leE-u4-yCa" firstAttribute="leading" secondItem="WwH-46-P8V" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="DwV-6E-HO8"/>
+                            <constraint firstAttribute="trailing" secondItem="oYJ-Lh-ofu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HP3-2S-0um"/>
+                            <constraint firstAttribute="trailing" secondItem="leE-u4-yCa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QPb-L3-jmp"/>
+                            <constraint firstAttribute="bottom" secondItem="PQS-f3-nzW" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="WLT-hQ-zh7"/>
+                            <constraint firstItem="PQS-f3-nzW" firstAttribute="top" secondItem="oYJ-Lh-ofu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XQ5-ov-Wpb"/>
+                            <constraint firstItem="PQS-f3-nzW" firstAttribute="leading" secondItem="PPV-EU-kXH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Xyb-dJ-Gb2"/>
+                            <constraint firstAttribute="bottom" secondItem="WwH-46-P8V" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="fpX-tH-XK7"/>
+                            <constraint firstAttribute="bottom" secondItem="leE-u4-yCa" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="uRW-i3-beL"/>
+                            <constraint firstItem="WwH-46-P8V" firstAttribute="centerX" secondItem="oYJ-Lh-ofu" secondAttribute="centerX" type="default" id="xbf-M9-zuQ"/>
+                            <constraint firstItem="WwH-46-P8V" firstAttribute="leading" secondItem="PQS-f3-nzW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zSl-Ov-pdy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KE5-oE-YyG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lB0-7F-22u"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wJO-7i-2gF"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFY-nS-UFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4357" y="-644"/>
         </scene>
         <!--Fitsby Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -846,6 +899,24 @@
             </objects>
             <point key="canvasLocation" x="2575" y="-394"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fol-um-tVb">
+            <objects>
+                <navigationController id="Yx9-oO-JCO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i1f-ju-BFv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qdk-Zc-HTC" kind="relationship" relationship="rootViewController" id="ygp-pe-a4p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1J9-55-U7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3831" y="-644"/>
+        </scene>
     </scenes>
     <classes>
         <class className="FitsbyCreateGameViewController" superclassName="UIViewController">
@@ -863,6 +934,9 @@
                 <relationship kind="outlet" name="wager" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="wagerStepper" candidateClass="UIStepper"/>
             </relationships>
+        </class>
+        <class className="FitsbyCreditCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyCreditCardViewController.h"/>
         </class>
         <class className="FitsbyDetailContainerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyDetailContainerViewController.h"/>
