@@ -12,6 +12,7 @@
 #import "CreateGameResponse.h"
 
 static NSString *const ID_KEY = @"user_id";
+static NSString *const GAME_ID_KEY = @"game_id";
 static NSString *const DURATION_KEY = @"duration";
 static NSString *const PRIVATE_KEY = @"is_private";
 static NSString *const WAGER_KEY = @"wager";
@@ -23,7 +24,7 @@ static NSString *const CVC_KEY = @"credit_card_cvc";
 
 static NSString *const GET_PUBLIC_GAMES_ROUTE = @"public_games";
 static NSString *const CREATE_GAME_ROUTE = @"create_game";
-
+static NSString *const JOIN_GAME_ROUTE = @"join_game";
 
 @implementation GameCommunication
 
@@ -61,5 +62,24 @@ static NSString *const CREATE_GAME_ROUTE = @"create_game";
         NSLog(@"key:%@, value:%@", key, [jsonDictionary objectForKey:key]);
     }
     return [[CreateGameResponse alloc] initWithDictionary:jsonDictionary];
+}
+
++ (StatusResponse *)joinGame:(int)userID gameID:(int)gameID cardNumber:(NSString *)cardNumber expYear:(NSString *)expYear expMonth:(NSString *)expMonth cvc:(NSString *)cvc {
+    NSArray *keys = [NSArray arrayWithObjects:ID_KEY, GAME_ID_KEY, CARD_NUMBER_KEY, EXP_MONTH_KEY,
+                     EXP_YEAR_KEY, CVC_KEY, nil];
+    NSArray *objects = [NSArray arrayWithObjects:[NSNumber numberWithInt:userID],[NSNumber numberWithInt:gameID],
+                        cardNumber, expMonth, expYear, cvc, nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    
+    NSData *response = [MyHttpClient createPostRequest:JOIN_GAME_ROUTE withParams:dictionary];
+    NSError *error = nil;
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
+    if (error)
+        return nil;
+    
+    for (id key in jsonDictionary) {
+        NSLog(@"key:%@, value:%@", key, [jsonDictionary objectForKey:key]);
+    }
+    return [[StatusResponse alloc] initWithDictionary:jsonDictionary];
 }
 @end

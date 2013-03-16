@@ -584,7 +584,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFY-nS-UFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jEw-eW-Eih" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4357" y="-644"/>
+            <point key="canvasLocation" x="4353" y="360"/>
         </scene>
         <!--Fitsby Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -618,10 +618,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="26">
-                        <barButtonItem key="rightBarButtonItem" title="Join" id="AMr-LQ-Arb"/>
+                        <barButtonItem key="rightBarButtonItem" title="Join" id="AMr-LQ-Arb">
+                            <connections>
+                                <action selector="joinButtonPressed:" destination="21" id="t3g-Ur-Nc6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="profileIV" destination="mYh-13-2cI" id="fFc-U4-ewe"/>
+                        <segue destination="Yx9-oO-JCO" kind="modal" identifier="joinPay" id="6kb-z5-20U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -887,7 +892,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr5-fN-zqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3090" y="441"/>
+            <point key="canvasLocation" x="3090" y="797"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TlC-dD-10h">
@@ -923,7 +928,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1J9-55-U7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3831" y="-644"/>
+            <point key="canvasLocation" x="3803" y="360"/>
         </scene>
     </scenes>
     <classes>
@@ -962,14 +967,8 @@
         <class className="FitsbyDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyDetailViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="goalLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="idLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="playersLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="potLabel" candidateClass="UILabel"/>
+                <relationship kind="action" name="joinButtonPressed:"/>
                 <relationship kind="outlet" name="profileIV" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wagerLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="FitsbyLoginViewController" superclassName="UITableViewController">
@@ -1028,5 +1027,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="YPG-lU-WVF"/>
+        <segue reference="6kb-z5-20U"/>
     </inferredMetricsTieBreakers>
 </document>

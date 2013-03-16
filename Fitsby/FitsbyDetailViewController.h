@@ -15,12 +15,6 @@
 @property (strong, nonatomic) Game *game;
 @property (strong, nonatomic) IBOutlet UIImageView *profileIV;
 
-@property (strong, nonatomic) IBOutlet UILabel *idLabel;
-@property (strong, nonatomic) IBOutlet UILabel *typeLabel;
-@property (strong, nonatomic) IBOutlet UILabel *playersLabel;
-@property (strong, nonatomic) IBOutlet UILabel *wagerLabel;
-@property (strong, nonatomic) IBOutlet UILabel *potLabel;
-@property (strong, nonatomic) IBOutlet UILabel *goalLabel;
-@property (strong, nonatomic) IBOutlet UILabel *durationLabel;
+- (IBAction)joinButtonPressed:(id)sender;
 
 @end

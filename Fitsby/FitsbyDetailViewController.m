@@ -8,9 +8,18 @@
 
 #import "FitsbyDetailViewController.h"
 #import "Game.h"
+#import "GameCommunication.h"
+#import "UserApplication.h"
+#import "User.h"
+#import "StatusResponse.h"
 
-@interface FitsbyDetailViewController ()
+static NSString *const PAY_SEGUE_ID = @"joinPay";
+
+@interface FitsbyDetailViewController () {
+    User *user;
+}
 - (void)configureView;
+- (UIActivityIndicatorView *)initializeProgress;
 @end
 
 @implementation FitsbyDetailViewController
@@ -38,6 +47,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+    user = userApplication.user;
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,4 +65,41 @@
     }
 }
 
+- (IBAction)joinButtonPressed:(id)sender {
+    if (self.game.wager == 0) {
+        UIActivityIndicatorView *progress = [self initializeProgress];
+        [progress startAnimating];
+        
+        dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
+        dispatch_async(queue, ^{
+            StatusResponse *response = [GameCommunication joinGame:user._id gameID:self.game._id cardNumber:@""
+                                expYear:@"" expMonth:@"" cvc:@""];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [progress stopAnimating];
+                if (!response) {
+                    //TODO alert user of failure
+                    NSLog(@"response nil");
+                } else if (!response.successful) {
+                    //TODO alert user of failure
+                    NSLog(@"not nil response but failure joining");
+                } else {
+                    //TODO alert user of success
+                    NSLog(@"join success");
+                }
+            });
+        });
+    } else {
+        [self performSegueWithIdentifier:PAY_SEGUE_ID sender:sender];
+    }
+}
+
+/** private methods **/
+- (UIActivityIndicatorView *)initializeProgress {
+    UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.view addSubview:progress];
+    progress.color = [UIColor redColor];
+    progress.center = self.view.center;
+    progress.hidesWhenStopped = YES;
+    return progress;
+}
 @end

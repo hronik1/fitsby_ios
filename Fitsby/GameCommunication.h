@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 @class PublicGamesResponse;
 @class CreateGameResponse;
+@class StatusResponse;
 
 @interface GameCommunication : NSObject
 
@@ -42,4 +43,19 @@
  */
 + (CreateGameResponse *)createGame:(int)creatorID duration:(int)duration isPrivate:(BOOL)isPrivate wager:(int)wager goal:(int)      goal cardNumber:(NSString *)cardNumber expYear:(NSString *)expYear expMonth:(NSString *)expMonth cvc:(NSString *)cvc;
 
+/**
+ *  joinGame
+ *
+ *  Joins a game for a given user.
+ *
+ *  @param  userID  The id of the user who is attempting to join the game.
+ *  @param  gameID  The id of the game that is attempted to be joinged.
+ *  @param  cardNumber  The users credit card number, only used if wager > 0.
+ *  @param  expYear  The expiration year of the users credit card, only used if wager > 0.
+ *  @param  expMonth  The expiration month of the users credit card, only used if wager > 0.
+ *  @param  cvc  The cvc of the users credit card, only used if wager > 0.
+ *
+ *  @return  A StatusResponse corresponding to success of failure of joining the game.
+ */
++ (StatusResponse *)joinGame:(int)userID gameID:(int)gameID cardNumber:(NSString *)cardNumber expYear:(NSString *)expYear expMonth:(NSString *)expMonth cvc:(NSString *)cvc;
 @end
