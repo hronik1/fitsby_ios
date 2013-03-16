@@ -8,9 +8,14 @@
 
 #import "FitsbyRegisterViewController.h"
 #import "UserCommunication.h"
+#import "UserResponse.h"
+#import "UserApplication.h"
 
+static NSString *const SEGUE_ID = @"register";
 @interface FitsbyRegisterViewController ()
 
+//initializes a progress indicator
+- (UIActivityIndicatorView *)initializeProgress;
 @end
 
 @implementation FitsbyRegisterViewController
@@ -141,8 +146,45 @@
         NSLog((@"password does not match confirm password"));
         //TODO alert user
     } else {
-        [UserCommunication registerUser:email withPassword:password confirmPassword:confirmPassword firstName:firstName lastName:lastName];
+        UIActivityIndicatorView *progress = [self initializeProgress];
+        [progress startAnimating];
+        
+        dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
+        dispatch_async(queue, ^{
+            UserResponse *userResponse = [UserCommunication registerUser:email withPassword:password confirmPassword:confirmPassword firstName:firstName lastName:lastName];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [progress stopAnimating];
+                if (!userResponse) {
+                    //TODO alertUser of failure
+                    NSLog(@"userResponse nil");
+                    return;
+                } else if (!userResponse.successful) {
+                    //TODO alert user of failure
+                    NSLog(@"failure");
+                    return;
+                }
+                User *user = userResponse.user;
+                if (!user) {
+                    //TODO alert user of failure
+                    NSLog(@"user nil");
+                } else {
+                    UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+                    userApplication.user = user;
+                    (NSLog(@"segue initiated"));
+                    [self performSegueWithIdentifier:SEGUE_ID sender:sender];
+                }
+            });
+        });
     }
 }
 
+/** private methods **/
+- (UIActivityIndicatorView *)initializeProgress {
+    UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.view addSubview:progress];
+    progress.color = [UIColor redColor];
+    progress.center = self.view.center;
+    progress.hidesWhenStopped = YES;
+    return progress;
+}
 @end

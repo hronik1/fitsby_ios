@@ -13,10 +13,12 @@
 #import "User.h"
 #import "UserApplication.h"
 
-NSString *const SEGUE_ID = @"LoggedIn";
+static NSString *const SEGUE_ID = @"LoggedIn";
 
 @interface FitsbyLoginViewController ()
 
+//helper to initialize a indeterminate spinner
+- (UIActivityIndicatorView *)initializeProgress;
 @end
 
 @implementation FitsbyLoginViewController
@@ -112,11 +114,7 @@ NSString *const SEGUE_ID = @"LoggedIn";
         //TODO alert user
     } else {
         [self.view endEditing:YES];
-        UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        [self.view addSubview:progress];
-        progress.color = [UIColor redColor];
-        progress.center = self.view.center;
-        progress.hidesWhenStopped = YES;
+        UIActivityIndicatorView *progress = [self initializeProgress];
         [progress startAnimating];
         
         dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
@@ -127,6 +125,11 @@ NSString *const SEGUE_ID = @"LoggedIn";
                 if (!userResponse) {
                     //TODO alertUser of failure
                     NSLog(@"userResponse nil");
+                    return;
+                } else if (!userResponse.successful) {
+                    //TODO alert user of failure
+                    NSLog(@"failure");
+                    return;
                 }
                 User *user = userResponse.user;
                 if (!user) {
@@ -144,4 +147,13 @@ NSString *const SEGUE_ID = @"LoggedIn";
     }
 }
 
+/** private methods **/
+- (UIActivityIndicatorView *)initializeProgress {
+    UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.view addSubview:progress];
+    progress.color = [UIColor redColor];
+    progress.center = self.view.center;
+    progress.hidesWhenStopped = YES;
+    return progress;
+}
 @end

@@ -208,7 +208,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5f-Or-ehw">
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="eta-Yy-7P5" id="hQI-Vz-ROW"/>
                                                     </connections>
@@ -294,12 +294,13 @@
                         <outlet property="firstNameInput" destination="G7Z-AA-LbM" id="mwa-Gi-nVX"/>
                         <outlet property="lastNameInput" destination="pYV-hr-R6d" id="3Wo-ku-ZgB"/>
                         <outlet property="passwordInput" destination="Sfs-0O-7HT" id="tr7-UV-VeR"/>
+                        <segue destination="3" kind="modal" identifier="register" id="YPG-lU-WVF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWt-9k-QRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cZf-ra-GL2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="520" y="599"/>
+            <point key="canvasLocation" x="606" y="599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="11">
@@ -509,7 +510,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="QVJ-YC-bbz">
                             <connections>
                                 <action selector="createDoneClicked:" destination="o6G-nS-uPp" id="BTH-CK-eMs"/>
-                                <segue destination="Yx9-oO-JCO" kind="modal" identifier="creditCard" id="LMe-q5-N2Y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -521,6 +521,7 @@
                         <outlet property="privateSwitch" destination="qAt-Vw-GfJ" id="mR7-9V-V5M"/>
                         <outlet property="wager" destination="31l-LA-Bjv" id="pq3-dh-QPc"/>
                         <outlet property="wagerStepper" destination="CBM-DH-sFo" id="CLH-6z-X2L"/>
+                        <segue destination="Yx9-oO-JCO" kind="modal" identifier="creditCard" id="bfo-xo-fa5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S17-Ou-9VB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -538,22 +539,22 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="exp mm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQS-f3-nzW">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="exp yyyy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WwH-46-P8V">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cvc" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leE-u4-yCa">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="xjC-VR-yHM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="credit card number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYJ-Lh-ofu">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -616,7 +617,9 @@
                             <constraint firstItem="w0f-jE-6P3" firstAttribute="top" secondItem="mYh-13-2cI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xkY-y7-Z07"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <navigationItem key="navigationItem" title="Detail" id="26">
+                        <barButtonItem key="rightBarButtonItem" title="Join" id="AMr-LQ-Arb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="profileIV" destination="mYh-13-2cI" id="fFc-U4-ewe"/>
                     </connections>
@@ -1023,4 +1026,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="YPG-lU-WVF"/>
+    </inferredMetricsTieBreakers>
 </document>

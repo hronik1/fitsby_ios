@@ -39,6 +39,8 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
 - (void)initializeLabels;
 - (void)initializeSteppers;
 - (void)validateGoal;
+- (UIActivityIndicatorView *)initializeProgress;
+
 @end
 
 @implementation FitsbyCreateGameViewController
@@ -89,9 +91,29 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
 
 - (IBAction)createDoneClicked:(id)sender {
     if (self.wagerStepper.value == 0) {
-    CreateGameResponse *response = [GameCommunication createGame:user._id duration:self.durationStepper.value isPrivate:self.privateSwitch.on wager:self.wagerStepper.value goal:self.goalStepper.value cardNumber:@"" expYear:@"" expMonth:@"" cvc:@""];
+        NSLog(@"zero stepper value");
+        UIActivityIndicatorView *progress = [self initializeProgress];
+        
+        dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
+        dispatch_async(queue, ^{
+            CreateGameResponse *response = [GameCommunication createGame:user._id duration:self.durationStepper.value isPrivate:self.privateSwitch.on wager:self.wagerStepper.value goal:self.goalStepper.value cardNumber:@"" expYear:@"" expMonth:@"" cvc:@""];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [progress stopAnimating];
+                if (!response) {
+                    //TODO alert user of failure
+                    NSLog(@"create game response is nil");
+                } else if (!response.successful) {
+                    //TODO alert user of failure
+                    NSLog(@"response not nil, but failed");
+                } else {
+                    //TODO alert user of success
+                    NSLog(@"success, game id:%d", response.gameID);
+                }
+            });
+        });
     } else {
         //TODO send stuff to next view controller
+        NSLog(@"nonzero wager value");
         [self performSegueWithIdentifier:PAY_SEGUE_ID sender:sender];
     }
 }
@@ -147,4 +169,14 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
         self.goalStepper.value = tempGoal;
     }
 }
+
+- (UIActivityIndicatorView *)initializeProgress {
+    UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.view addSubview:progress];
+    progress.color = [UIColor redColor];
+    progress.center = self.view.center;
+    progress.hidesWhenStopped = YES;
+    return progress;
+}
+
 @end
