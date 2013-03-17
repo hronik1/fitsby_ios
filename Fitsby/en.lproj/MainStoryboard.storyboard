@@ -12,6 +12,12 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="S7J-7X-2Lw">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="MSP-fT-4as"/>
+                                    <constraint firstAttribute="height" constant="128" id="S7Z-qj-qfA"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6K-Lw-sMb">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Login">
@@ -39,13 +45,15 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="FUe-kN-LKP" secondAttribute="bottom" constant="74" id="7zl-Fq-Ad0"/>
+                            <constraint firstItem="C6K-Lw-sMb" firstAttribute="centerX" secondItem="k7l-n3-rBa" secondAttribute="centerX" type="default" id="GpW-tJ-Ggk"/>
+                            <constraint firstItem="FUe-kN-LKP" firstAttribute="top" secondItem="C6K-Lw-sMb" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="IX0-LG-eBB"/>
                             <constraint firstItem="FUe-kN-LKP" firstAttribute="leading" secondItem="C6K-Lw-sMb" secondAttribute="leading" type="default" id="Jnt-1x-4o8"/>
+                            <constraint firstAttribute="bottom" secondItem="FUe-kN-LKP" secondAttribute="bottom" constant="74" type="user" id="WfE-Ta-kRC"/>
                             <constraint firstItem="FUe-kN-LKP" firstAttribute="trailing" secondItem="C6K-Lw-sMb" secondAttribute="trailing" type="default" id="Z4x-Ph-y0n"/>
-                            <constraint firstAttribute="bottom" secondItem="C6K-Lw-sMb" secondAttribute="bottom" constant="156" id="aMN-Br-pg4"/>
-                            <constraint firstItem="C6K-Lw-sMb" firstAttribute="centerX" secondItem="k7l-n3-rBa" secondAttribute="centerX" type="default" id="dN0-aY-nTY"/>
+                            <constraint firstItem="S7J-7X-2Lw" firstAttribute="leading" secondItem="k7l-n3-rBa" secondAttribute="leading" constant="45" id="haU-S1-Zbb"/>
+                            <constraint firstItem="S7J-7X-2Lw" firstAttribute="top" secondItem="k7l-n3-rBa" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yZz-38-eFT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wrQ-BH-zW5"/>
@@ -302,6 +310,26 @@
             </objects>
             <point key="canvasLocation" x="606" y="599"/>
         </scene>
+        <!--Fitsby Registration Onboard View Controller-->
+        <scene sceneID="BvQ-zg-TDd">
+            <objects>
+                <viewController id="yPZ-ln-V1r" customClass="FitsbyRegistrationOnboardViewController" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" image="registration_onboard1.png" id="2YD-C3-sKx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
+                    <navigationItem key="navigationItem" id="wqU-M8-0F8">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2hg-P1-Gd0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5aa-rF-2yZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="2YD-C3-sKx" id="8To-Ph-sxr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Crs-HP-MtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2027" y="-1003"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
@@ -527,7 +555,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S17-Ou-9VB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GTO-jh-NXL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3101" y="-394"/>
+            <point key="canvasLocation" x="3627" y="-394"/>
         </scene>
         <!--Fitsby Credit Card View Controller-->
         <scene sceneID="HyW-AB-AF9">
@@ -910,7 +938,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXy-rV-uRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2575" y="-394"/>
+            <point key="canvasLocation" x="3101" y="-394"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fol-um-tVb">
@@ -930,7 +958,29 @@
             </objects>
             <point key="canvasLocation" x="3803" y="360"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s8d-aF-tif">
+            <objects>
+                <navigationController id="Lwz-kP-JNd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DsN-eg-xib">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yPZ-ln-V1r" kind="relationship" relationship="rootViewController" id="Txk-24-5jK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJP-oT-UA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="-1011"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="logo_text.png" width="581" height="400"/>
+        <image name="registration_onboard1.png" width="437" height="656"/>
+    </resources>
     <classes>
         <class className="FitsbyCreateGameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyCreateGameViewController.h"/>
@@ -994,6 +1044,12 @@
                 <relationship kind="outlet" name="firstNameInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="lastNameInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FitsbyRegistrationOnboardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyRegistrationOnboardViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="JoinPublicGameCell" superclassName="UITableViewCell">

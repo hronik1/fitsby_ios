@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		F249EF4A16E4EC00007DB593 /* GravatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F249EF4916E4EC00007DB593 /* GravatarHelper.m */; };
 		F2A3C2E816F359D800DA56EF /* FitsbyCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C2E716F359D800DA56EF /* FitsbyCreditCardViewController.m */; };
+		F2A3C2EC16F6143200DA56EF /* logo_text.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2EB16F6143200DA56EF /* logo_text.png */; };
+		F2A3C2EE16F61C0D00DA56EF /* registration_onboard1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2ED16F61C0D00DA56EF /* registration_onboard1.png */; };
+		F2A3C2F016F61C1300DA56EF /* registration_onboard2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2EF16F61C1300DA56EF /* registration_onboard2.png */; };
+		F2A3C2F216F61C1900DA56EF /* registration_onboard3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2F116F61C1900DA56EF /* registration_onboard3.png */; };
+		F2A3C2F416F61C1E00DA56EF /* registration_onboard4.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2F316F61C1E00DA56EF /* registration_onboard4.png */; };
+		F2A3C2F616F61C2600DA56EF /* registration_onboard5.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2F516F61C2600DA56EF /* registration_onboard5.png */; };
+		F2A3C2F916F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C2F816F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m */; };
 		F2BA493516ED051200591B49 /* FitsbyDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */; };
 		F2BA493816EE4E8B00591B49 /* FitsbyCreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493716EE4E8B00591B49 /* FitsbyCreateGameViewController.m */; };
 		F2BA493B16F0C23D00591B49 /* CreateGameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493A16F0C23D00591B49 /* CreateGameResponse.m */; };
@@ -44,6 +51,14 @@
 		F249EF4916E4EC00007DB593 /* GravatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravatarHelper.m; sourceTree = "<group>"; };
 		F2A3C2E616F359D800DA56EF /* FitsbyCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCreditCardViewController.h; sourceTree = "<group>"; };
 		F2A3C2E716F359D800DA56EF /* FitsbyCreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyCreditCardViewController.m; sourceTree = "<group>"; };
+		F2A3C2EB16F6143200DA56EF /* logo_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_text.png; sourceTree = "<group>"; };
+		F2A3C2ED16F61C0D00DA56EF /* registration_onboard1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registration_onboard1.png; sourceTree = "<group>"; };
+		F2A3C2EF16F61C1300DA56EF /* registration_onboard2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registration_onboard2.png; sourceTree = "<group>"; };
+		F2A3C2F116F61C1900DA56EF /* registration_onboard3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registration_onboard3.png; sourceTree = "<group>"; };
+		F2A3C2F316F61C1E00DA56EF /* registration_onboard4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registration_onboard4.png; sourceTree = "<group>"; };
+		F2A3C2F516F61C2600DA56EF /* registration_onboard5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registration_onboard5.png; sourceTree = "<group>"; };
+		F2A3C2F716F61CCF00DA56EF /* FitsbyRegistrationOnboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyRegistrationOnboardViewController.h; sourceTree = "<group>"; };
+		F2A3C2F816F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyRegistrationOnboardViewController.m; sourceTree = "<group>"; };
 		F2BA493316ED051200591B49 /* FitsbyDetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyDetailContainerViewController.h; sourceTree = "<group>"; };
 		F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyDetailContainerViewController.m; sourceTree = "<group>"; };
 		F2BA493616EE4E8B00591B49 /* FitsbyCreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCreateGameViewController.h; sourceTree = "<group>"; };
@@ -110,6 +125,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F2A3C2E916F6140900DA56EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2A3C2EA16F6141B00DA56EF /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F2A3C2EA16F6141B00DA56EF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F2A3C2ED16F61C0D00DA56EF /* registration_onboard1.png */,
+				F2A3C2EF16F61C1300DA56EF /* registration_onboard2.png */,
+				F2A3C2F116F61C1900DA56EF /* registration_onboard3.png */,
+				F2A3C2F316F61C1E00DA56EF /* registration_onboard4.png */,
+				F2A3C2F516F61C2600DA56EF /* registration_onboard5.png */,
+				F2A3C2EB16F6143200DA56EF /* logo_text.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		F2C0000516DD022500F869BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +196,7 @@
 		F2C0FFA616D474F700F869BB /* Fitsby */ = {
 			isa = PBXGroup;
 			children = (
+				F2A3C2E916F6140900DA56EF /* Resources */,
 				F2EA228016E2882000B8918E /* TableCells */,
 				F2EA227916DFA97A00B8918E /* Responses */,
 				F2C0000916DDB79100F869BB /* Application Sublcass */,
@@ -184,6 +221,8 @@
 				F2C0FFBF16D474F700F869BB /* FitsbyDetailViewController.m */,
 				F2A3C2E616F359D800DA56EF /* FitsbyCreditCardViewController.h */,
 				F2A3C2E716F359D800DA56EF /* FitsbyCreditCardViewController.m */,
+				F2A3C2F716F61CCF00DA56EF /* FitsbyRegistrationOnboardViewController.h */,
+				F2A3C2F816F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m */,
 				F2C0FFA716D474F700F869BB /* Supporting Files */,
 			);
 			path = Fitsby;
@@ -299,6 +338,12 @@
 				F2C0FFB516D474F700F869BB /* Default@2x.png in Resources */,
 				F2C0FFB716D474F700F869BB /* Default-568h@2x.png in Resources */,
 				F2C0FFBA16D474F700F869BB /* MainStoryboard.storyboard in Resources */,
+				F2A3C2EC16F6143200DA56EF /* logo_text.png in Resources */,
+				F2A3C2EE16F61C0D00DA56EF /* registration_onboard1.png in Resources */,
+				F2A3C2F016F61C1300DA56EF /* registration_onboard2.png in Resources */,
+				F2A3C2F216F61C1900DA56EF /* registration_onboard3.png in Resources */,
+				F2A3C2F416F61C1E00DA56EF /* registration_onboard4.png in Resources */,
+				F2A3C2F616F61C2600DA56EF /* registration_onboard5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +376,7 @@
 				F2BA493816EE4E8B00591B49 /* FitsbyCreateGameViewController.m in Sources */,
 				F2BA493B16F0C23D00591B49 /* CreateGameResponse.m in Sources */,
 				F2A3C2E816F359D800DA56EF /* FitsbyCreditCardViewController.m in Sources */,
+				F2A3C2F916F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
