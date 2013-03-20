@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xkj-pZ-whb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KLt-IR-Xzq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -41,7 +41,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ujv-fp-UaS" kind="modal" id="Zhk-zR-Ul0"/>
+                                    <segue destination="Lwz-kP-JNd" kind="modal" id="jzv-L6-Fxe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -287,7 +287,7 @@
                     <navigationItem key="navigationItem" id="fHM-du-lCc">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9Lq-bA-7Si">
                             <connections>
-                                <segue destination="cZf-ra-GL2" kind="unwind" unwindAction="cancel:" id="rFL-AT-Lhr"/>
+                                <segue destination="cZf-ra-GL2" kind="unwind" unwindAction="cancelRegister:" id="cNe-Y0-Hly"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="ZLt-jd-9W7">
@@ -302,33 +302,39 @@
                         <outlet property="firstNameInput" destination="G7Z-AA-LbM" id="mwa-Gi-nVX"/>
                         <outlet property="lastNameInput" destination="pYV-hr-R6d" id="3Wo-ku-ZgB"/>
                         <outlet property="passwordInput" destination="Sfs-0O-7HT" id="tr7-UV-VeR"/>
-                        <segue destination="3" kind="modal" identifier="register" id="YPG-lU-WVF"/>
+                        <segue destination="3" kind="modal" identifier="register" id="PqV-OB-9Yw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWt-9k-QRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cZf-ra-GL2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="606" y="599"/>
+            <point key="canvasLocation" x="1014" y="599"/>
         </scene>
         <!--Fitsby Registration Onboard View Controller-->
         <scene sceneID="BvQ-zg-TDd">
             <objects>
                 <viewController id="yPZ-ln-V1r" customClass="FitsbyRegistrationOnboardViewController" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" image="registration_onboard1.png" id="2YD-C3-sKx">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </imageView>
                     <navigationItem key="navigationItem" id="wqU-M8-0F8">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2hg-P1-Gd0"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5aa-rF-2yZ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2hg-P1-Gd0">
+                            <connections>
+                                <segue destination="1Oq-Ww-21V" kind="unwind" unwindAction="cancel:" id="o3u-wc-Q81"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5aa-rF-2yZ">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="yPZ-ln-V1r" id="Sdo-XB-diB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="2YD-C3-sKx" id="8To-Ph-sxr"/>
+                        <outlet property="doneButton" destination="5aa-rF-2yZ" id="QrO-J8-yhi"/>
+                        <segue destination="Ujv-fp-UaS" kind="modal" identifier="registrationOnboardComplete" id="usr-RI-GL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crs-HP-MtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1Oq-Ww-21V" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2027" y="-1003"/>
+            <point key="canvasLocation" x="-6" y="599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="11">
@@ -343,7 +349,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1577" y="64"/>
+            <point key="canvasLocation" x="1613" y="64"/>
         </scene>
         <!--Fitsby Master View Controller - Master-->
         <scene sceneID="18">
@@ -714,7 +720,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPr-oQ-Xtg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="599"/>
+            <point key="canvasLocation" x="547" y="599"/>
         </scene>
         <!--Fitsby Detail Container View Controller-->
         <scene sceneID="X1r-bS-DUW">
@@ -974,12 +980,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJP-oT-UA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1577" y="-1011"/>
+            <point key="canvasLocation" x="-419" y="599"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo_text.png" width="581" height="400"/>
-        <image name="registration_onboard1.png" width="437" height="656"/>
     </resources>
     <classes>
         <class className="FitsbyCreateGameViewController" superclassName="UIViewController">
@@ -1049,7 +1054,9 @@
         <class className="FitsbyRegistrationOnboardViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyRegistrationOnboardViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="action" name="cancelRegister:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="doneButtonClicked:"/>
+                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="JoinPublicGameCell" superclassName="UITableViewCell">
@@ -1082,7 +1089,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YPG-lU-WVF"/>
+        <segue reference="PqV-OB-9Yw"/>
         <segue reference="6kb-z5-20U"/>
     </inferredMetricsTieBreakers>
 </document>

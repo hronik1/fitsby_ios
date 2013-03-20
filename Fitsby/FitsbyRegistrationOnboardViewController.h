@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FitsbyRegistrationOnboardViewController : UIViewController
+@interface FitsbyRegistrationOnboardViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) UIPageViewController *pageViewController;
 @property (nonatomic, strong) NSMutableArray *modelArray;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+- (IBAction)doneButtonClicked:(id)sender;
+- (IBAction)cancelRegister:(UIStoryboardSegue *)segue;
 @end

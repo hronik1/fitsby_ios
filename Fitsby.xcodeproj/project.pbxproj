@@ -16,6 +16,8 @@
 		F2A3C2F416F61C1E00DA56EF /* registration_onboard4.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2F316F61C1E00DA56EF /* registration_onboard4.png */; };
 		F2A3C2F616F61C2600DA56EF /* registration_onboard5.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2F516F61C2600DA56EF /* registration_onboard5.png */; };
 		F2A3C2F916F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C2F816F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m */; };
+		F2A3C30E16F8AB4E00DA56EF /* FitsbyChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C30C16F8AB4D00DA56EF /* FitsbyChildViewController.m */; };
+		F2A3C30F16F8AB4E00DA56EF /* FitsbyChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C30D16F8AB4E00DA56EF /* FitsbyChildViewController.xib */; };
 		F2BA493516ED051200591B49 /* FitsbyDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */; };
 		F2BA493816EE4E8B00591B49 /* FitsbyCreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493716EE4E8B00591B49 /* FitsbyCreateGameViewController.m */; };
 		F2BA493B16F0C23D00591B49 /* CreateGameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493A16F0C23D00591B49 /* CreateGameResponse.m */; };
@@ -59,6 +61,9 @@
 		F2A3C2F516F61C2600DA56EF /* registration_onboard5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registration_onboard5.png; sourceTree = "<group>"; };
 		F2A3C2F716F61CCF00DA56EF /* FitsbyRegistrationOnboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyRegistrationOnboardViewController.h; sourceTree = "<group>"; };
 		F2A3C2F816F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyRegistrationOnboardViewController.m; sourceTree = "<group>"; };
+		F2A3C30B16F8AB4D00DA56EF /* FitsbyChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyChildViewController.h; sourceTree = "<group>"; };
+		F2A3C30C16F8AB4D00DA56EF /* FitsbyChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyChildViewController.m; sourceTree = "<group>"; };
+		F2A3C30D16F8AB4E00DA56EF /* FitsbyChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FitsbyChildViewController.xib; sourceTree = "<group>"; };
 		F2BA493316ED051200591B49 /* FitsbyDetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyDetailContainerViewController.h; sourceTree = "<group>"; };
 		F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyDetailContainerViewController.m; sourceTree = "<group>"; };
 		F2BA493616EE4E8B00591B49 /* FitsbyCreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCreateGameViewController.h; sourceTree = "<group>"; };
@@ -211,6 +216,9 @@
 				F2C0FFAF16D474F700F869BB /* FitsbyAppDelegate.h */,
 				F2C0FFB016D474F700F869BB /* FitsbyAppDelegate.m */,
 				F2C0FFB816D474F700F869BB /* MainStoryboard.storyboard */,
+				F2A3C30B16F8AB4D00DA56EF /* FitsbyChildViewController.h */,
+				F2A3C30C16F8AB4D00DA56EF /* FitsbyChildViewController.m */,
+				F2A3C30D16F8AB4E00DA56EF /* FitsbyChildViewController.xib */,
 				F2BA493316ED051200591B49 /* FitsbyDetailContainerViewController.h */,
 				F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */,
 				F2BA493616EE4E8B00591B49 /* FitsbyCreateGameViewController.h */,
@@ -344,6 +352,7 @@
 				F2A3C2F216F61C1900DA56EF /* registration_onboard3.png in Resources */,
 				F2A3C2F416F61C1E00DA56EF /* registration_onboard4.png in Resources */,
 				F2A3C2F616F61C2600DA56EF /* registration_onboard5.png in Resources */,
+				F2A3C30F16F8AB4E00DA56EF /* FitsbyChildViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +386,7 @@
 				F2BA493B16F0C23D00591B49 /* CreateGameResponse.m in Sources */,
 				F2A3C2E816F359D800DA56EF /* FitsbyCreditCardViewController.m in Sources */,
 				F2A3C2F916F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m in Sources */,
+				F2A3C30E16F8AB4E00DA56EF /* FitsbyChildViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
