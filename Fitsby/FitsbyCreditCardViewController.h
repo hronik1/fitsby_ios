@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *cvcField;
 @property (weak, nonatomic) IBOutlet UILabel *wagerAmountLabel;
 
+- (IBAction)cancelClicked:(id)sender;
+
 /**
  *
  *  setNewWager

@@ -58,4 +58,16 @@
     else if (self.wager)
         self.wagerAmountLabel.text = [NSString stringWithFormat:@"$%d",self.wager];
 }
+
+
+- (IBAction)cancelClicked:(id)sender {
+    NSLog(@"cancel clicked");
+    UINavigationController *parent = [self parentViewController];
+    if (self.game) {
+        [parent performSegueWithIdentifier:@"cancelJoinGame" sender:self];
+    }
+    else {
+        [parent performSegueWithIdentifier:@"CancelCreditCard" sender:self];
+    }
+}
 @end
