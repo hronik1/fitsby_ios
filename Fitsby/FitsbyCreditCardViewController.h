@@ -19,6 +19,28 @@
 @property (weak, nonatomic) IBOutlet UITextField *cvcField;
 @property (weak, nonatomic) IBOutlet UILabel *wagerAmountLabel;
 
+/**
+ *
+ *  doneClicked
+ *
+ *  A callback for when the done button is clicked. Lightly validates credit card and then calls join or create game.
+ *
+ *  @param  sender  The id of what is responsible for this callback being called.
+ *
+ *  @return  Nothing
+ */ 
+- (IBAction)doneClicked:(id)sender;
+
+/**
+ *
+ *  cancelClicked
+ *
+ *  A callback for the cancel button being clicked. Unwinds segue to appropriate view controller.
+ *
+ *  @param  sender  The id of what is responsible for this callback being called.
+ *
+ *  @return Nothing
+ */
 - (IBAction)cancelClicked:(id)sender;
 
 /**

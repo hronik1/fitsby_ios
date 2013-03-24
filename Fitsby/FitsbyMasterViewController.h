@@ -10,6 +10,16 @@
 
 @interface FitsbyMasterViewController : UITableViewController
 
+/**
+ *
+ *  cancelAdd
+ *
+ *  Called to attempt to unwind segue from creating a new game.
+ *
+ *  @param  segue  The segue which is attempting to be unwound.
+ *
+ *  @return  Nothing.
+ */
 - (IBAction)cancelAdd:(UIStoryboardSegue *)segue;
 
 @end

@@ -60,6 +60,10 @@
 }
 
 
+- (IBAction)doneClicked:(id)sender {
+    //TODO implement
+}
+
 - (IBAction)cancelClicked:(id)sender {
     NSLog(@"cancel clicked");
     UINavigationController *parent = [self parentViewController];

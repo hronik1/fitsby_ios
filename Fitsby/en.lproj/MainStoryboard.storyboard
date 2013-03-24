@@ -33,7 +33,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUe-kN-LKP">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="Get Started">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -44,16 +44,23 @@
                                     <segue destination="Lwz-kP-JNd" kind="modal" id="jzv-L6-Fxe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stay motivated to work out." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="206" translatesAutoresizingMaskIntoConstraints="NO" id="Xbe-fB-Dn2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="C6K-Lw-sMb" firstAttribute="centerX" secondItem="k7l-n3-rBa" secondAttribute="centerX" type="default" id="GpW-tJ-Ggk"/>
-                            <constraint firstItem="FUe-kN-LKP" firstAttribute="top" secondItem="C6K-Lw-sMb" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="IX0-LG-eBB"/>
-                            <constraint firstItem="FUe-kN-LKP" firstAttribute="leading" secondItem="C6K-Lw-sMb" secondAttribute="leading" type="default" id="Jnt-1x-4o8"/>
-                            <constraint firstAttribute="bottom" secondItem="FUe-kN-LKP" secondAttribute="bottom" constant="74" type="user" id="WfE-Ta-kRC"/>
-                            <constraint firstItem="FUe-kN-LKP" firstAttribute="trailing" secondItem="C6K-Lw-sMb" secondAttribute="trailing" type="default" id="Z4x-Ph-y0n"/>
-                            <constraint firstItem="S7J-7X-2Lw" firstAttribute="leading" secondItem="k7l-n3-rBa" secondAttribute="leading" constant="45" id="haU-S1-Zbb"/>
-                            <constraint firstItem="S7J-7X-2Lw" firstAttribute="top" secondItem="k7l-n3-rBa" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yZz-38-eFT"/>
+                            <constraint firstItem="Xbe-fB-Dn2" firstAttribute="centerX" secondItem="k7l-n3-rBa" secondAttribute="centerX" type="default" id="3m5-Pe-9Il"/>
+                            <constraint firstAttribute="bottom" secondItem="C6K-Lw-sMb" secondAttribute="bottom" constant="65" type="user" id="G6P-cj-kef"/>
+                            <constraint firstItem="C6K-Lw-sMb" firstAttribute="leading" secondItem="FUe-kN-LKP" secondAttribute="leading" type="default" id="Mtm-1f-fcW"/>
+                            <constraint firstItem="FUe-kN-LKP" firstAttribute="top" secondItem="Xbe-fB-Dn2" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="OaJ-N0-8xx"/>
+                            <constraint firstItem="C6K-Lw-sMb" firstAttribute="top" secondItem="FUe-kN-LKP" secondAttribute="bottom" constant="17" type="user" id="OzA-9y-aTQ"/>
+                            <constraint firstItem="S7J-7X-2Lw" firstAttribute="centerX" secondItem="Xbe-fB-Dn2" secondAttribute="centerX" type="default" id="ZN2-Z5-MFp"/>
+                            <constraint firstItem="Xbe-fB-Dn2" firstAttribute="top" secondItem="S7J-7X-2Lw" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="bVs-2c-ibW"/>
+                            <constraint firstItem="C6K-Lw-sMb" firstAttribute="trailing" secondItem="FUe-kN-LKP" secondAttribute="trailing" type="default" id="iV9-Fl-kbs"/>
+                            <constraint firstItem="FUe-kN-LKP" firstAttribute="centerX" secondItem="Xbe-fB-Dn2" secondAttribute="centerX" type="default" id="sOp-lF-liT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wrQ-BH-zW5"/>
@@ -639,7 +646,11 @@
                                 <action selector="cancelClicked:" destination="qdk-Zc-HTC" id="qb5-zE-6HH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wJO-7i-2gF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wJO-7i-2gF">
+                            <connections>
+                                <action selector="doneClicked:" destination="qdk-Zc-HTC" id="iJs-W6-Vge"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cvcField" destination="leE-u4-yCa" id="CJm-rx-hKg"/>
@@ -1044,6 +1055,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyCreditCardViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancelClicked:"/>
+                <relationship kind="action" name="doneClicked:"/>
                 <relationship kind="outlet" name="cvcField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="monthField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="numberField" candidateClass="UITextField"/>

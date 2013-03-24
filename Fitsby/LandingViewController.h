@@ -10,6 +10,16 @@
 
 @interface LandingViewController : UIViewController
 
+/**
+ *
+ *  cancel
+ *
+ *  Attempt to unwind segue from either registration onboard or loging page.
+ *
+ *  @param  segue  The segue which is attempting to be unwound.
+ *
+ *  @return  Nothing
+ */
 - (IBAction)cancel:(UIStoryboardSegue *)segue;
 
 @end
