@@ -10,6 +10,7 @@
 
 @interface FitsbyCreditCardViewController ()
 
+- (void)configureView;
 @end
 
 @implementation FitsbyCreditCardViewController
@@ -27,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self configureView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +37,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setNewWager:(int)newWager
+{
+    NSLog(@"set wager:%d", newWager);
+    self.wager = newWager;
+    [self configureView];
+}
+
+- (void)configureView
+{
+    if (self.wager)
+        self.wagerAmountLabel.text = [NSString stringWithFormat:@"$%d",self.wager];
+}
 @end

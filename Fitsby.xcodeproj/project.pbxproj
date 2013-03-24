@@ -18,6 +18,9 @@
 		F2A3C2F916F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C2F816F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m */; };
 		F2A3C30E16F8AB4E00DA56EF /* FitsbyChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C30C16F8AB4D00DA56EF /* FitsbyChildViewController.m */; };
 		F2A3C30F16F8AB4E00DA56EF /* FitsbyChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C30D16F8AB4E00DA56EF /* FitsbyChildViewController.xib */; };
+		F2A3C36F16FC9F4900DA56EF /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C36E16FC9F4900DA56EF /* lock.png */; };
+		F2A3C37116FC9F5400DA56EF /* stripe_cards.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C37016FC9F5400DA56EF /* stripe_cards.png */; };
+		F2A3C37316FC9F6100DA56EF /* secure_payment_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C37216FC9F6100DA56EF /* secure_payment_logo.png */; };
 		F2BA493516ED051200591B49 /* FitsbyDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */; };
 		F2BA493816EE4E8B00591B49 /* FitsbyCreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493716EE4E8B00591B49 /* FitsbyCreateGameViewController.m */; };
 		F2BA493B16F0C23D00591B49 /* CreateGameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493A16F0C23D00591B49 /* CreateGameResponse.m */; };
@@ -64,6 +67,9 @@
 		F2A3C30B16F8AB4D00DA56EF /* FitsbyChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyChildViewController.h; sourceTree = "<group>"; };
 		F2A3C30C16F8AB4D00DA56EF /* FitsbyChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyChildViewController.m; sourceTree = "<group>"; };
 		F2A3C30D16F8AB4E00DA56EF /* FitsbyChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FitsbyChildViewController.xib; sourceTree = "<group>"; };
+		F2A3C36E16FC9F4900DA56EF /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		F2A3C37016FC9F5400DA56EF /* stripe_cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stripe_cards.png; sourceTree = "<group>"; };
+		F2A3C37216FC9F6100DA56EF /* secure_payment_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_payment_logo.png; sourceTree = "<group>"; };
 		F2BA493316ED051200591B49 /* FitsbyDetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyDetailContainerViewController.h; sourceTree = "<group>"; };
 		F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyDetailContainerViewController.m; sourceTree = "<group>"; };
 		F2BA493616EE4E8B00591B49 /* FitsbyCreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCreateGameViewController.h; sourceTree = "<group>"; };
@@ -141,6 +147,9 @@
 		F2A3C2EA16F6141B00DA56EF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F2A3C37016FC9F5400DA56EF /* stripe_cards.png */,
+				F2A3C36E16FC9F4900DA56EF /* lock.png */,
+				F2A3C37216FC9F6100DA56EF /* secure_payment_logo.png */,
 				F2A3C2ED16F61C0D00DA56EF /* registration_onboard1.png */,
 				F2A3C2EF16F61C1300DA56EF /* registration_onboard2.png */,
 				F2A3C2F116F61C1900DA56EF /* registration_onboard3.png */,
@@ -353,6 +362,9 @@
 				F2A3C2F416F61C1E00DA56EF /* registration_onboard4.png in Resources */,
 				F2A3C2F616F61C2600DA56EF /* registration_onboard5.png in Resources */,
 				F2A3C30F16F8AB4E00DA56EF /* FitsbyChildViewController.xib in Resources */,
+				F2A3C36F16FC9F4900DA56EF /* lock.png in Resources */,
+				F2A3C37116FC9F5400DA56EF /* stripe_cards.png in Resources */,
+				F2A3C37316FC9F6100DA56EF /* secure_payment_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #import "UserApplication.h"
 #import "CreateGameResponse.h"
 #import "GameCommunication.h"
+#import "FitsbyCreditCardViewController.h"
 
 //wager consants
 static int DEFAULT_WAGER = 0;
@@ -71,6 +72,17 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"entered preparing segue");
+    if ([[segue identifier] isEqualToString:PAY_SEGUE_ID]) {
+        // Get destination view
+        NSLog(@"segue being prepared oh yeah");
+        UINavigationController *vc = [segue destinationViewController];
+        FitsbyCreditCardViewController *fitsbyVC = [vc visibleViewController];
+        [fitsbyVC setNewWager:self.wagerStepper.value];
+    }
+}
 /** action implementations **/
 - (IBAction)durationValueChanged:(id)sender {
     int tempDuration = self.durationStepper.value;
