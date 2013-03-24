@@ -35,8 +35,6 @@
 {
     [super viewDidLoad];
     NSLog(@"segue started on master side");
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
     User *user = userApplication.user;
