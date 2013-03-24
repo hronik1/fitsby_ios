@@ -7,6 +7,7 @@
 //
 
 #import "FitsbyCreditCardViewController.h"
+#import "Game.h"
 
 @interface FitsbyCreditCardViewController ()
 
@@ -44,9 +45,17 @@
     [self configureView];
 }
 
+- (void)setNewGame:(Game *)newGame
+{
+    NSLog(@"setting game");
+    self.game = newGame;
+    [self configureView];
+}
 - (void)configureView
 {
-    if (self.wager)
+    if (self.game)
+        self.wagerAmountLabel.text = [NSString stringWithFormat:@"$%d",self.game.wager];
+    else if (self.wager)
         self.wagerAmountLabel.text = [NSString stringWithFormat:@"$%d",self.wager];
 }
 @end

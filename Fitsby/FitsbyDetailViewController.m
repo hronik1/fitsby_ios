@@ -12,6 +12,7 @@
 #import "UserApplication.h"
 #import "User.h"
 #import "StatusResponse.h"
+#import "FitsbyCreditCardViewController.h"
 
 static NSString *const PAY_SEGUE_ID = @"joinPay";
 
@@ -62,6 +63,12 @@ static NSString *const PAY_SEGUE_ID = @"joinPay";
 {
     if ([[segue identifier] isEqualToString:@"detailContainer"]) {
         [[segue destinationViewController] setGame:self.game];
+    } else if ([[segue identifier] isEqualToString:PAY_SEGUE_ID]) {
+        // Get destination view
+        NSLog(@"segue being prepared oh yeah");
+        UINavigationController *vc = [segue destinationViewController];
+        FitsbyCreditCardViewController *fitsbyVC = [vc visibleViewController];
+        [fitsbyVC setNewGame:self.game];
     }
 }
 
@@ -90,6 +97,12 @@ static NSString *const PAY_SEGUE_ID = @"joinPay";
         });
     } else {
         [self performSegueWithIdentifier:PAY_SEGUE_ID sender:sender];
+    }
+}
+
+- (IBAction)cancelJoinGame:(UIStoryboardSegue *)segue {
+    if ([[segue identifier] isEqualToString:@"cancelJoinGame"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
     }
 }
 

@@ -636,7 +636,7 @@
                     <navigationItem key="navigationItem" id="KE5-oE-YyG">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lB0-7F-22u">
                             <connections>
-                                <segue destination="jEw-eW-Eih" kind="unwind" identifier="CancelCreditCard" unwindAction="cancelCreditCard:" id="zXp-Dl-5qa"/>
+                                <segue destination="jEw-eW-Eih" kind="unwind" identifier="cancelJoinGame" unwindAction="cancelJoinGame:" id="40S-3S-9WD"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="wJO-7i-2gF"/>
@@ -1063,6 +1063,7 @@
         <class className="FitsbyDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyDetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelJoinGame:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="action" name="joinButtonPressed:"/>
                 <relationship kind="outlet" name="profileIV" candidateClass="UIImageView"/>
             </relationships>
@@ -1131,6 +1132,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="PqV-OB-9Yw"/>
-        <segue reference="KoP-F9-bLp"/>
+        <segue reference="6kb-z5-20U"/>
     </inferredMetricsTieBreakers>
 </document>

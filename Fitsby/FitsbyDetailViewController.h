@@ -16,5 +16,5 @@
 @property (strong, nonatomic) IBOutlet UIImageView *profileIV;
 
 - (IBAction)joinButtonPressed:(id)sender;
-
+- (IBAction)cancelJoinGame:(UIStoryboardSegue *)segue;
 @end
