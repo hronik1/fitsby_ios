@@ -583,22 +583,34 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="exp mm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQS-f3-nzW">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qdk-Zc-HTC" id="xMq-zg-dql"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="exp yyyy" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WwH-46-P8V">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qdk-Zc-HTC" id="tLX-2t-MEn"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cvc" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="leE-u4-yCa">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="xjC-VR-yHM"/>
+                                    <constraint firstAttribute="width" constant="79" id="HHk-pa-6zx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qdk-Zc-HTC" id="Gc3-93-SwF"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="credit card number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYJ-Lh-ofu">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qdk-Zc-HTC" id="hSM-wx-wWB"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plus $.50 processing fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7L-Kp-nN1">
                                 <constraints>
@@ -622,22 +634,22 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ReM-vx-CGe" firstAttribute="leading" secondItem="PPV-EU-kXH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3Uk-vt-AtP"/>
-                            <constraint firstItem="i7L-Kp-nN1" firstAttribute="top" secondItem="ReM-vx-CGe" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="6mW-ym-wlg"/>
-                            <constraint firstItem="1UO-fT-ikz" firstAttribute="baseline" secondItem="ReM-vx-CGe" secondAttribute="baseline" type="default" id="8Nz-tf-Paj"/>
-                            <constraint firstItem="oYJ-Lh-ofu" firstAttribute="leading" secondItem="PPV-EU-kXH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9f1-qL-nou"/>
-                            <constraint firstItem="leE-u4-yCa" firstAttribute="leading" secondItem="WwH-46-P8V" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="DwV-6E-HO8"/>
-                            <constraint firstAttribute="trailing" secondItem="oYJ-Lh-ofu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HP3-2S-0um"/>
+                            <constraint firstItem="oYJ-Lh-ofu" firstAttribute="leading" secondItem="PPV-EU-kXH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8A5-bI-kDu"/>
+                            <constraint firstItem="leE-u4-yCa" firstAttribute="baseline" secondItem="WwH-46-P8V" secondAttribute="baseline" type="default" id="9QZ-dg-YZk"/>
+                            <constraint firstItem="oYJ-Lh-ofu" firstAttribute="top" secondItem="PPV-EU-kXH" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EGq-ub-9N0"/>
+                            <constraint firstItem="1UO-fT-ikz" firstAttribute="baseline" secondItem="ReM-vx-CGe" secondAttribute="baseline" type="default" id="EPq-gC-4Gt"/>
+                            <constraint firstItem="PQS-f3-nzW" firstAttribute="baseline" secondItem="WwH-46-P8V" secondAttribute="baseline" type="default" id="Ehu-u3-Zdm"/>
                             <constraint firstItem="1UO-fT-ikz" firstAttribute="leading" secondItem="ReM-vx-CGe" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="MIP-3K-Hm4"/>
-                            <constraint firstAttribute="trailing" secondItem="leE-u4-yCa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QPb-L3-jmp"/>
-                            <constraint firstAttribute="bottom" secondItem="PQS-f3-nzW" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="WLT-hQ-zh7"/>
-                            <constraint firstItem="PQS-f3-nzW" firstAttribute="top" secondItem="oYJ-Lh-ofu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XQ5-ov-Wpb"/>
-                            <constraint firstItem="PQS-f3-nzW" firstAttribute="leading" secondItem="PPV-EU-kXH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Xyb-dJ-Gb2"/>
-                            <constraint firstItem="oYJ-Lh-ofu" firstAttribute="top" secondItem="i7L-Kp-nN1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ZLd-0f-iEE"/>
-                            <constraint firstAttribute="bottom" secondItem="WwH-46-P8V" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="fpX-tH-XK7"/>
+                            <constraint firstItem="PQS-f3-nzW" firstAttribute="top" secondItem="oYJ-Lh-ofu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Prv-EO-1Xt"/>
+                            <constraint firstAttribute="trailing" secondItem="oYJ-Lh-ofu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cXc-2K-PdL"/>
+                            <constraint firstItem="WwH-46-P8V" firstAttribute="leading" secondItem="PQS-f3-nzW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="e0U-Er-YBI"/>
+                            <constraint firstItem="leE-u4-yCa" firstAttribute="leading" secondItem="WwH-46-P8V" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="f9k-i4-Ngs"/>
+                            <constraint firstItem="WwH-46-P8V" firstAttribute="centerX" secondItem="oYJ-Lh-ofu" secondAttribute="centerX" type="default" id="hU5-yG-RyY"/>
+                            <constraint firstAttribute="trailing" secondItem="leE-u4-yCa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jMR-rj-Oyo"/>
+                            <constraint firstItem="ReM-vx-CGe" firstAttribute="top" secondItem="PQS-f3-nzW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nxm-JI-zv1"/>
+                            <constraint firstItem="PQS-f3-nzW" firstAttribute="leading" secondItem="PPV-EU-kXH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pNC-57-6cD"/>
                             <constraint firstItem="i7L-Kp-nN1" firstAttribute="leading" secondItem="PPV-EU-kXH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="q9Y-F7-LUM"/>
-                            <constraint firstAttribute="bottom" secondItem="leE-u4-yCa" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="uRW-i3-beL"/>
-                            <constraint firstItem="WwH-46-P8V" firstAttribute="centerX" secondItem="oYJ-Lh-ofu" secondAttribute="centerX" type="default" id="xbf-M9-zuQ"/>
-                            <constraint firstItem="WwH-46-P8V" firstAttribute="leading" secondItem="PQS-f3-nzW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zSl-Ov-pdy"/>
+                            <constraint firstItem="i7L-Kp-nN1" firstAttribute="top" secondItem="ReM-vx-CGe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="snk-lz-GYl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KE5-oE-YyG">
@@ -662,7 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFY-nS-UFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4353" y="360"/>
+            <point key="canvasLocation" x="4353" y="352"/>
         </scene>
         <!--Fitsby Detail View Controller - Detail-->
         <scene sceneID="24">
