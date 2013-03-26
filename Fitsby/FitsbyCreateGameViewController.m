@@ -80,7 +80,7 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
         NSLog(@"segue being prepared oh yeah");
         UINavigationController *vc = [segue destinationViewController];
         FitsbyCreditCardViewController *fitsbyVC = [vc visibleViewController];
-        [fitsbyVC setNewWager:self.wagerStepper.value];
+        [fitsbyVC setNewWager:self.wagerStepper.value duration:self.durationStepper.value goal:self.goalStepper.value isPrivate:self.privateSwitch.on];
     }
 }
 /** action implementations **/

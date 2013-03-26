@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Fitsby/FitsbyCreditCardViewController.m"
-         timestampString = "385913596.598701"
+         timestampString = "386000990.536848"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
          landmarkName = "@implementation FitsbyCreditCardViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Fitsby/FitsbyCreditCardViewController.m"
-         timestampString = "385912788.900138"
+         timestampString = "386000990.536848"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
+         startingLineNumber = "100"
+         endingLineNumber = "100"
          landmarkName = "-doneClicked:"
          landmarkType = "5">
       </FileBreakpoint>

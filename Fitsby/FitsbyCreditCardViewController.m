@@ -8,16 +8,28 @@
 
 #import "FitsbyCreditCardViewController.h"
 #import "Game.h"
+#import "StatusResponse.h"
+#import "User.h"
+#import "UserApplication.h"
+#import "GameCommunication.h"
+#import "CreateGameResponse.h"
 
 static const int CARD_NUMBER_LENGTH = 16;
 static const int EXP_MONTH_LENGTH = 2;
 static const int EXP_YEAR_LENGTH = 4;
 static const int CVC_LENGTH = 3;
 
-@interface FitsbyCreditCardViewController ()
-
+@interface FitsbyCreditCardViewController () {
+    User *user;
+}
 - (void)configureView;
 - (void)configureTags;
+//helper to initialize a indeterminate spinner
+- (UIActivityIndicatorView *)initializeProgress;
+- (void)sendCreditCard;
+- (StatusResponse *)performCreate;
+- (StatusResponse *)performJoin;
+
 @end
 
 @implementation FitsbyCreditCardViewController
@@ -37,6 +49,9 @@ static const int CVC_LENGTH = 3;
 	// Do any additional setup after loading the view.
     [self configureView];
     [self configureTags];
+    
+    UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+    user = userApplication.user;
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,10 +60,13 @@ static const int CVC_LENGTH = 3;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setNewWager:(int)newWager
+- (void)setNewWager:(int)newWager duration:(int)duration goal:(int)goal isPrivate:(BOOL)isPrivate
 {
     NSLog(@"set wager:%d", newWager);
     self.wager = newWager;
+    self.duration = duration;
+    self.goal = goal;
+    self.isPrivate = isPrivate;
     [self configureView];
 }
 
@@ -90,7 +108,7 @@ static const int CVC_LENGTH = 3;
     
     if ([warning isEqual:@""]) {
         [self.view endEditing:YES];
-        //TODO submit data
+        [self sendCreditCard];
     }
         
     NSLog(@"warning:%@",warning);
@@ -127,4 +145,69 @@ static const int CVC_LENGTH = 3;
     }
     return NO; // We do not want UITextField to insert line-breaks.
 }
+
+- (UIActivityIndicatorView *)initializeProgress
+{
+    UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.view addSubview:progress];
+    progress.color = [UIColor redColor];
+    progress.center = self.view.center;
+    progress.hidesWhenStopped = YES;
+    return progress;
+}
+
+- (void)sendCreditCard
+{
+    UIActivityIndicatorView *progress = [self initializeProgress];
+    [progress startAnimating];
+    
+    dispatch_queue_t queue = dispatch_queue_create("fitsby",NULL);
+    dispatch_async(queue, ^{
+        StatusResponse *response;
+        if (self.game) {
+            response = [self performJoin];
+        } else {
+            response = [self performCreate];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [progress stopAnimating];
+            if (!response) {
+                NSLog(@"null response");
+                //TODO alert user
+            } else if (!response.successful) {
+                NSLog(@"response was not successful");
+                //TODO alert user of failure
+            } else {
+                NSLog(@"success");
+                //TODO alert user of success
+                //TODO perform segue of some sort
+            }
+        });
+    });
+}
+
+- (StatusResponse *)performJoin
+{
+    NSString *number = self.numberField.text;
+    NSString *year = self.yearField.text;
+    NSString *month = self.monthField.text;
+    NSString *cvc = self.cvcField.text;
+    int _id = self.game._id;
+    
+    StatusResponse *response = [GameCommunication joinGame:user._id gameID:_id cardNumber:number expYear:year expMonth:month cvc:cvc];
+    return response;
+    
+}
+
+- (StatusResponse *)performCreate
+{
+    NSString *number = self.numberField.text;
+    NSString *year = self.yearField.text;
+    NSString *month = self.monthField.text;
+    NSString *cvc = self.cvcField.text;
+    
+    StatusResponse *response = [GameCommunication createGame:user._id duration:self.duration isPrivate:self.isPrivate wager:self.wager goal:self.goal cardNumber:number expYear:year expMonth:month cvc:cvc];
+    return response;
+}
+
 @end

@@ -12,6 +12,9 @@
 @interface FitsbyCreditCardViewController : UIViewController
 
 @property int wager;
+@property int duration;
+@property int goal;
+@property BOOL isPrivate;
 @property (strong, nonatomic) Game *game;
 @property (weak, nonatomic) IBOutlet UITextField *numberField;
 @property (weak, nonatomic) IBOutlet UITextField *monthField;
@@ -50,10 +53,13 @@
  *  This method is called when a nonzero wager game attempted to be created. Sets the to send to process the credit card.
  *
  *  @param  newWager  Wager of the game which is attempted to be created.
+ *  @param  duration  Duration of the game which is attempted to be created.
+ *  @param  goal  Goal of the game which is attempted to be created.
+ *  @param  isPrivate  True if the game that is attempted to be created is private, false otherwise.
  *
  *  @return  Nothing
  */
-- (void)setNewWager:(int)newWager;
+- (void)setNewWager:(int)newWager duration:(int)duration goal:(int)goal isPrivate:(BOOL)isPrivate;
 
 /**
  *
