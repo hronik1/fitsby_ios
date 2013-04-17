@@ -17,6 +17,7 @@
 @property int stakes;
 @property int goal;
 @property int duration;
+@property (strong, nonatomic) NSString *startDate;
 @property (strong, nonatomic) NSString *creatorEmail;
 @property (strong, nonatomic) UIImage *creatorImage;
 

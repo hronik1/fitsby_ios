@@ -17,7 +17,7 @@
  *
  *  Default initializer for CreateGameResponse class.
  *
- *  @return  Reference to this instance of a CreateResponse.
+ *  @return  Reference to this instance of a CreateGameResponse.
  */
 -(id)init;
 

@@ -17,12 +17,12 @@
  *
  *  Default initializer for PublicGamesResponse class.
  *
- *  @return  Reference to this instance of a JoinGameResponse.
+ *  @return  Reference to this instance of PublicGamesResponse.
  */
 -(id)init;
 
 /**
- *  initWithDictionar
+ *  initWithDictionary
  *
  *  Initialize a PublicGamesResponse objct with a NSDictionary.
  *

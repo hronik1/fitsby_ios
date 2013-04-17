@@ -10,6 +10,7 @@
 @class PublicGamesResponse;
 @class CreateGameResponse;
 @class StatusResponse;
+@class PrivateGameResponse;
 
 @interface GameCommunication : NSObject
 
@@ -58,4 +59,18 @@
  *  @return  A StatusResponse corresponding to success of failure of joining the game.
  */
 + (StatusResponse *)joinGame:(int)userID gameID:(int)gameID cardNumber:(NSString *)cardNumber expYear:(NSString *)expYear expMonth:(NSString *)expMonth cvc:(NSString *)cvc;
+
+/**
+ *  getPrivateGame
+ *
+ *  Attempts to get the private game with given credentials.
+ *
+ *  @param  gameID  The id of the game which is being searched for.
+ *  @param  creatorName  The first name of the person who created the game.
+ *  @param  creatorID  The id of the user who is searching for this game.
+ *
+ *  @return  A PrivateGameResponse corresponding to the finding or not finding of the game.
+ */
++ (PrivateGameResponse *)getPrivateGame:(NSString *)gameID creatorName:(NSString *)creatorName userID:(int)userID;
+
 @end

@@ -21,6 +21,8 @@
 		F2A3C36F16FC9F4900DA56EF /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C36E16FC9F4900DA56EF /* lock.png */; };
 		F2A3C37116FC9F5400DA56EF /* stripe_cards.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C37016FC9F5400DA56EF /* stripe_cards.png */; };
 		F2A3C37316FC9F6100DA56EF /* secure_payment_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C37216FC9F6100DA56EF /* secure_payment_logo.png */; };
+		F2A3C37917032F7500DA56EF /* FitsbyPrivateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C37817032F7500DA56EF /* FitsbyPrivateGameViewController.m */; };
+		F2A3C37C170334AD00DA56EF /* PrivateGameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C37B170334AD00DA56EF /* PrivateGameResponse.m */; };
 		F2BA493516ED051200591B49 /* FitsbyDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */; };
 		F2BA493816EE4E8B00591B49 /* FitsbyCreateGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493716EE4E8B00591B49 /* FitsbyCreateGameViewController.m */; };
 		F2BA493B16F0C23D00591B49 /* CreateGameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA493A16F0C23D00591B49 /* CreateGameResponse.m */; };
@@ -70,6 +72,10 @@
 		F2A3C36E16FC9F4900DA56EF /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		F2A3C37016FC9F5400DA56EF /* stripe_cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stripe_cards.png; sourceTree = "<group>"; };
 		F2A3C37216FC9F6100DA56EF /* secure_payment_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secure_payment_logo.png; sourceTree = "<group>"; };
+		F2A3C37717032F7500DA56EF /* FitsbyPrivateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyPrivateGameViewController.h; sourceTree = SOURCE_ROOT; };
+		F2A3C37817032F7500DA56EF /* FitsbyPrivateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyPrivateGameViewController.m; sourceTree = SOURCE_ROOT; };
+		F2A3C37A170334AD00DA56EF /* PrivateGameResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateGameResponse.h; sourceTree = "<group>"; };
+		F2A3C37B170334AD00DA56EF /* PrivateGameResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateGameResponse.m; sourceTree = "<group>"; };
 		F2BA493316ED051200591B49 /* FitsbyDetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyDetailContainerViewController.h; sourceTree = "<group>"; };
 		F2BA493416ED051200591B49 /* FitsbyDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyDetailContainerViewController.m; sourceTree = "<group>"; };
 		F2BA493616EE4E8B00591B49 /* FitsbyCreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCreateGameViewController.h; sourceTree = "<group>"; };
@@ -218,6 +224,8 @@
 				F2C0FFFE16DAB45800F869BB /* NetworkControllers */,
 				F2C0FFF816D7237000F869BB /* FitsbyLoginViewController.h */,
 				F2C0FFF916D7237000F869BB /* FitsbyLoginViewController.m */,
+				F2A3C37717032F7500DA56EF /* FitsbyPrivateGameViewController.h */,
+				F2A3C37817032F7500DA56EF /* FitsbyPrivateGameViewController.m */,
 				F2C0FFFB16DAAA0800F869BB /* FitsbyRegisterViewController.h */,
 				F2C0FFFC16DAAA0800F869BB /* FitsbyRegisterViewController.m */,
 				F2C0FFEF16D476FA00F869BB /* LandingViewController.h */,
@@ -285,6 +293,8 @@
 				F2EA229116E293AE00B8918E /* PublicGamesResponse.m */,
 				F2BA493916F0C23D00591B49 /* CreateGameResponse.h */,
 				F2BA493A16F0C23D00591B49 /* CreateGameResponse.m */,
+				F2A3C37A170334AD00DA56EF /* PrivateGameResponse.h */,
+				F2A3C37B170334AD00DA56EF /* PrivateGameResponse.m */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -399,6 +409,8 @@
 				F2A3C2E816F359D800DA56EF /* FitsbyCreditCardViewController.m in Sources */,
 				F2A3C2F916F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m in Sources */,
 				F2A3C30E16F8AB4E00DA56EF /* FitsbyChildViewController.m in Sources */,
+				F2A3C37917032F7500DA56EF /* FitsbyPrivateGameViewController.m in Sources */,
+				F2A3C37C170334AD00DA56EF /* PrivateGameResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
