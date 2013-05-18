@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FitsbyLoginViewController : UITableViewController
+@interface FitsbyLoginViewController : UIViewController
 <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *emailAddressInput;

@@ -15,7 +15,7 @@
 
 /**
  *
- *  dondClicked
+ *  doneClicked
  *
  *  Callback for pressing done, searches for the requested game and segues to detail page if found.
  *

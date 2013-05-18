@@ -69,94 +69,6 @@
             </objects>
             <point key="canvasLocation" x="-914" y="40"/>
         </scene>
-        <!--Fitsby Login View Controller-->
-        <scene sceneID="ONh-6t-QWp">
-            <objects>
-                <tableViewController id="LVu-DL-BZg" customClass="FitsbyLoginViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="m8R-J5-KCL">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="sE6-Qp-rZO">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RLT-A9-Rbb">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MFq-mR-c4l">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="LVu-DL-BZg" id="PqN-w4-Fgh"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="MFq-mR-c4l" secondAttribute="trailing" constant="20" type="default" id="NtB-7I-1ZQ"/>
-                                            <constraint firstItem="MFq-mR-c4l" firstAttribute="centerY" secondItem="RLT-A9-Rbb" secondAttribute="centerY" type="default" id="OQi-t5-2aF"/>
-                                            <constraint firstItem="MFq-mR-c4l" firstAttribute="leading" secondItem="RLT-A9-Rbb" secondAttribute="leading" constant="20" type="default" id="uvm-zJ-kPB"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XBp-Ye-E9X">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXQ-1a-MoB">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="LVu-DL-BZg" id="ma1-TY-kUl"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="ZXQ-1a-MoB" firstAttribute="leading" secondItem="XBp-Ye-E9X" secondAttribute="leading" constant="20" type="default" id="cVU-Mj-VWm"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZXQ-1a-MoB" secondAttribute="trailing" constant="20" type="default" id="mxz-bW-P7e"/>
-                                            <constraint firstItem="ZXQ-1a-MoB" firstAttribute="centerY" secondItem="XBp-Ye-E9X" secondAttribute="centerY" type="default" id="rV5-AS-L4f"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="LVu-DL-BZg" id="SnE-X6-Q8j"/>
-                            <outlet property="delegate" destination="LVu-DL-BZg" id="Z0L-cL-HvJ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="VLk-Ew-aPz">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kfb-c5-u7K">
-                            <connections>
-                                <segue destination="mnu-1F-aZz" kind="unwind" unwindAction="cancel:" id="kOa-ip-zAH"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="POG-qh-1LB">
-                            <connections>
-                                <action selector="doneClicked:" destination="LVu-DL-BZg" id="m1u-s1-jPI"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="emailAddressInput" destination="MFq-mR-c4l" id="HfI-Ig-qwX"/>
-                        <outlet property="passwordInput" destination="ZXQ-1a-MoB" id="BU2-ff-JiJ"/>
-                        <segue destination="niU-tn-2Ut" kind="modal" identifier="LoggedIn" id="UKb-ht-TTm"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oeN-8x-K52" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="mnu-1F-aZz" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="606" y="-571"/>
-        </scene>
         <!--Fitsby Register View Controller-->
         <scene sceneID="2Ho-h3-edX">
             <objects>
@@ -775,6 +687,7 @@
         <!--Navigation Controller-->
         <scene sceneID="8g3-gZ-Tkz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L16-13-zui" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="xC8-07-88j" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GmE-cl-mce"/>
@@ -784,12 +697,62 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="LVu-DL-BZg" kind="relationship" relationship="rootViewController" id="kmY-OL-m9u"/>
+                        <segue destination="GKd-Iq-Mn6" kind="relationship" relationship="rootViewController" id="PQQ-sY-jZS"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L16-13-zui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="-571"/>
+            <point key="canvasLocation" x="-78" y="-581"/>
+        </scene>
+        <!--Fitsby Login View Controller-->
+        <scene sceneID="DFZ-Iz-kbd">
+            <objects>
+                <viewController id="GKd-Iq-Mn6" customClass="FitsbyLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OdV-d2-kos">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4IT-mI-S9i">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GKd-Iq-Mn6" id="X2f-n8-42G"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1B-Rh-IfY">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GKd-Iq-Mn6" id="uUK-Cf-mKv"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E1B-Rh-IfY" firstAttribute="leading" secondItem="OdV-d2-kos" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3ZC-FV-KpR"/>
+                            <constraint firstAttribute="trailing" secondItem="4IT-mI-S9i" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IAS-vB-VXt"/>
+                            <constraint firstAttribute="trailing" secondItem="E1B-Rh-IfY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="elH-Pu-Ti0"/>
+                            <constraint firstItem="4IT-mI-S9i" firstAttribute="top" secondItem="OdV-d2-kos" secondAttribute="top" constant="20" symbolic="YES" type="default" id="kHu-Mi-WVK"/>
+                            <constraint firstItem="4IT-mI-S9i" firstAttribute="leading" secondItem="OdV-d2-kos" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="oiI-Ul-nIc"/>
+                            <constraint firstItem="E1B-Rh-IfY" firstAttribute="top" secondItem="4IT-mI-S9i" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="r3u-sH-d9R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YL8-cc-9ix">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0Yx-k4-uVN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="em6-AG-eEO">
+                            <connections>
+                                <action selector="doneClicked:" destination="GKd-Iq-Mn6" id="qfa-wm-dmH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailAddressInput" destination="4IT-mI-S9i" id="fKG-dJ-lLe"/>
+                        <outlet property="passwordInput" destination="E1B-Rh-IfY" id="dXC-ae-Lvm"/>
+                        <segue destination="3" kind="modal" id="dZs-Qb-n7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGM-6i-ydZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="-581"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m7w-P2-IT1">
@@ -1162,7 +1125,7 @@
                 <relationship kind="outlet" name="profileIV" candidateClass="UIImageView"/>
             </relationships>
         </class>
-        <class className="FitsbyLoginViewController" superclassName="UITableViewController">
+        <class className="FitsbyLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyLoginViewController.h"/>
             <relationships>
                 <relationship kind="action" name="doneClicked:"/>
@@ -1236,5 +1199,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="6kb-z5-20U"/>
         <segue reference="p4a-bk-L2U"/>
+        <segue reference="dZs-Qb-n7O"/>
     </inferredMetricsTieBreakers>
 </document>
