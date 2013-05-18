@@ -687,7 +687,6 @@
         <!--Navigation Controller-->
         <scene sceneID="8g3-gZ-Tkz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L16-13-zui" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="xC8-07-88j" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="GmE-cl-mce"/>
@@ -700,6 +699,7 @@
                         <segue destination="GKd-Iq-Mn6" kind="relationship" relationship="rootViewController" id="PQQ-sY-jZS"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L16-13-zui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-78" y="-581"/>
         </scene>
@@ -747,7 +747,7 @@
                     <connections>
                         <outlet property="emailAddressInput" destination="4IT-mI-S9i" id="fKG-dJ-lLe"/>
                         <outlet property="passwordInput" destination="E1B-Rh-IfY" id="dXC-ae-Lvm"/>
-                        <segue destination="3" kind="modal" id="dZs-Qb-n7O"/>
+                        <segue destination="niU-tn-2Ut" kind="modal" identifier="LoggedIn" id="tna-Ep-Ppy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGM-6i-ydZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1197,8 +1197,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6kb-z5-20U"/>
         <segue reference="p4a-bk-L2U"/>
-        <segue reference="dZs-Qb-n7O"/>
+        <segue reference="6kb-z5-20U"/>
     </inferredMetricsTieBreakers>
 </document>
