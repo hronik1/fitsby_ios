@@ -566,7 +566,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="E1B-Rh-IfY" firstAttribute="leading" secondItem="OdV-d2-kos" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3ZC-FV-KpR"/>
                             <constraint firstAttribute="trailing" secondItem="4IT-mI-S9i" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IAS-vB-VXt"/>
@@ -679,7 +679,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dZg-Hz-uxm" firstAttribute="top" secondItem="gug-Rc-VuO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3mN-TA-3jE"/>
                             <constraint firstAttribute="trailing" secondItem="ecV-Go-VF4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4WV-cc-fkR"/>
