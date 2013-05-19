@@ -694,7 +694,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fYa-ci-8Dp">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="L5C-MB-PqK"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="L5C-MB-PqK">
+                            <connections>
+                                <segue destination="nXY-lG-Ls2" kind="unwind" unwindAction="cancelRegister:" id="c4G-T0-Wul"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mt9-r3-Rq9">
                             <connections>
                                 <action selector="doneClicked:" destination="D8n-LO-8nE" id="z2u-4I-Jm8"/>
@@ -711,6 +715,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYK-Ym-dtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nXY-lG-Ls2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="953" y="599"/>
         </scene>
@@ -1072,7 +1077,7 @@
                 <relationship kind="outlet" name="idField" candidateClass="UITextField"/>
             </relationships>
         </class>
-        <class className="FitsbyRegisterViewController" superclassName="UITableViewController">
+        <class className="FitsbyRegisterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyRegisterViewController.h"/>
             <relationships>
                 <relationship kind="action" name="doneClicked:"/>
