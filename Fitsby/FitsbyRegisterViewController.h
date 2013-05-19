@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FitsbyRegisterViewController : UITableViewController
+@interface FitsbyRegisterViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameInput;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameInput;

@@ -69,166 +69,6 @@
             </objects>
             <point key="canvasLocation" x="-914" y="40"/>
         </scene>
-        <!--Fitsby Register View Controller-->
-        <scene sceneID="2Ho-h3-edX">
-            <objects>
-                <tableViewController id="eta-Yy-7P5" customClass="FitsbyRegisterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tNr-hR-Vso">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="RJO-5k-URo">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jH1-x9-aZT">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G7Z-AA-LbM">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="eta-Yy-7P5" id="V6e-JM-RAD"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="G7Z-AA-LbM" firstAttribute="centerY" secondItem="jH1-x9-aZT" secondAttribute="centerY" type="default" id="Qeo-24-0rB"/>
-                                            <constraint firstItem="G7Z-AA-LbM" firstAttribute="leading" secondItem="jH1-x9-aZT" secondAttribute="leading" constant="20" type="default" id="tKZ-uA-Mez"/>
-                                            <constraint firstAttribute="trailing" secondItem="G7Z-AA-LbM" secondAttribute="trailing" constant="20" type="default" id="wBY-zW-9kY"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sNz-kX-hFe">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-hr-R6d">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="eta-Yy-7P5" id="gHM-bs-N4T"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="pYV-hr-R6d" firstAttribute="centerY" secondItem="sNz-kX-hFe" secondAttribute="centerY" type="default" id="XTI-w2-WwD"/>
-                                            <constraint firstItem="pYV-hr-R6d" firstAttribute="leading" secondItem="sNz-kX-hFe" secondAttribute="leading" constant="20" type="default" id="eDb-xY-kKY"/>
-                                            <constraint firstAttribute="trailing" secondItem="pYV-hr-R6d" secondAttribute="trailing" constant="20" type="default" id="s7R-d4-hBy"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uxu-kO-KQA">
-                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5f-Or-ehw">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="eta-Yy-7P5" id="hQI-Vz-ROW"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="g5f-Or-ehw" firstAttribute="centerY" secondItem="uxu-kO-KQA" secondAttribute="centerY" type="default" id="QFo-Te-A5B"/>
-                                            <constraint firstAttribute="trailing" secondItem="g5f-Or-ehw" secondAttribute="trailing" constant="20" type="default" id="TYS-Bq-zBN"/>
-                                            <constraint firstItem="g5f-Or-ehw" firstAttribute="leading" secondItem="uxu-kO-KQA" secondAttribute="leading" constant="20" type="default" id="veE-Vb-IL1"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RbQ-Tv-cH4">
-                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sfs-0O-7HT">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="eta-Yy-7P5" id="Azp-Yv-RVt"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Sfs-0O-7HT" secondAttribute="trailing" constant="20" type="default" id="23f-5q-yQB"/>
-                                            <constraint firstItem="Sfs-0O-7HT" firstAttribute="leading" secondItem="RbQ-Tv-cH4" secondAttribute="leading" constant="20" type="default" id="DWA-sr-Ack"/>
-                                            <constraint firstItem="Sfs-0O-7HT" firstAttribute="centerY" secondItem="RbQ-Tv-cH4" secondAttribute="centerY" type="default" id="TlP-iC-pey"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uD8-ZB-YY4">
-                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvY-OS-Efm">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="eta-Yy-7P5" id="ddS-e2-2B1"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="YvY-OS-Efm" firstAttribute="leading" secondItem="uD8-ZB-YY4" secondAttribute="leading" constant="20" type="default" id="Jli-gh-LpH"/>
-                                            <constraint firstItem="YvY-OS-Efm" firstAttribute="centerY" secondItem="uD8-ZB-YY4" secondAttribute="centerY" type="default" id="MLa-Rm-Wv9"/>
-                                            <constraint firstAttribute="trailing" secondItem="YvY-OS-Efm" secondAttribute="trailing" constant="20" type="default" id="d53-kx-eIO"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="eta-Yy-7P5" id="m9e-d1-xCZ"/>
-                            <outlet property="delegate" destination="eta-Yy-7P5" id="IkU-Qe-gn7"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="fHM-du-lCc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9Lq-bA-7Si">
-                            <connections>
-                                <segue destination="cZf-ra-GL2" kind="unwind" unwindAction="cancelRegister:" id="cNe-Y0-Hly"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ZLt-jd-9W7">
-                            <connections>
-                                <action selector="doneClicked:" destination="eta-Yy-7P5" id="fOH-Ea-jmq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="confirmPasswordInput" destination="YvY-OS-Efm" id="SHM-KT-afy"/>
-                        <outlet property="emailAddressInput" destination="g5f-Or-ehw" id="bnx-nO-GT6"/>
-                        <outlet property="firstNameInput" destination="G7Z-AA-LbM" id="mwa-Gi-nVX"/>
-                        <outlet property="lastNameInput" destination="pYV-hr-R6d" id="3Wo-ku-ZgB"/>
-                        <outlet property="passwordInput" destination="Sfs-0O-7HT" id="tr7-UV-VeR"/>
-                        <segue destination="3" kind="modal" identifier="register" id="PqV-OB-9Yw"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HWt-9k-QRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="cZf-ra-GL2" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1014" y="599"/>
-        </scene>
         <!--Fitsby Registration Onboard View Controller-->
         <scene sceneID="BvQ-zg-TDd">
             <objects>
@@ -783,12 +623,96 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eta-Yy-7P5" kind="relationship" relationship="rootViewController" id="95Y-37-4do"/>
+                        <segue destination="D8n-LO-8nE" kind="relationship" relationship="rootViewController" id="MPH-og-fqC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPr-oQ-Xtg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="547" y="599"/>
+            <point key="canvasLocation" x="549" y="599"/>
+        </scene>
+        <!--Fitsby Register View Controller-->
+        <scene sceneID="Lai-8c-1K5">
+            <objects>
+                <viewController id="D8n-LO-8nE" customClass="FitsbyRegisterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lHP-ai-Qcy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gug-Rc-VuO">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D8n-LO-8nE" id="cFa-pf-pSw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-Hz-uxm">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D8n-LO-8nE" id="LNJ-1i-Hn6"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xK3-7R-ODx">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D8n-LO-8nE" id="EiF-57-yaA"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecV-Go-VF4">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D8n-LO-8nE" id="mVg-Ym-OMP"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Bo-ll-aTt">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="D8n-LO-8nE" id="4hs-mP-fmy"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dZg-Hz-uxm" firstAttribute="top" secondItem="gug-Rc-VuO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3mN-TA-3jE"/>
+                            <constraint firstAttribute="trailing" secondItem="ecV-Go-VF4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4WV-cc-fkR"/>
+                            <constraint firstAttribute="trailing" secondItem="5Bo-ll-aTt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8De-MZ-4AD"/>
+                            <constraint firstAttribute="trailing" secondItem="dZg-Hz-uxm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9nP-dI-ipN"/>
+                            <constraint firstItem="xK3-7R-ODx" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C6h-Qq-baa"/>
+                            <constraint firstItem="5Bo-ll-aTt" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ko6-o5-EG7"/>
+                            <constraint firstItem="ecV-Go-VF4" firstAttribute="top" secondItem="xK3-7R-ODx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Lwb-ma-NpE"/>
+                            <constraint firstItem="ecV-Go-VF4" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RQV-Fj-iPq"/>
+                            <constraint firstAttribute="trailing" secondItem="gug-Rc-VuO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UNj-Sb-uuy"/>
+                            <constraint firstItem="dZg-Hz-uxm" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XsD-xl-wJM"/>
+                            <constraint firstItem="xK3-7R-ODx" firstAttribute="top" secondItem="dZg-Hz-uxm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YN6-bv-3Kx"/>
+                            <constraint firstAttribute="trailing" secondItem="xK3-7R-ODx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gri-BD-gTM"/>
+                            <constraint firstItem="gug-Rc-VuO" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hOf-qb-XUz"/>
+                            <constraint firstItem="gug-Rc-VuO" firstAttribute="top" secondItem="lHP-ai-Qcy" secondAttribute="top" constant="20" symbolic="YES" type="default" id="s4c-ME-CUT"/>
+                            <constraint firstItem="5Bo-ll-aTt" firstAttribute="top" secondItem="ecV-Go-VF4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xps-ml-ubW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fYa-ci-8Dp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="L5C-MB-PqK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mt9-r3-Rq9">
+                            <connections>
+                                <action selector="doneClicked:" destination="D8n-LO-8nE" id="z2u-4I-Jm8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="confirmPasswordInput" destination="5Bo-ll-aTt" id="oP3-6q-Mhc"/>
+                        <outlet property="emailAddressInput" destination="xK3-7R-ODx" id="7EL-jq-SdZ"/>
+                        <outlet property="firstNameInput" destination="gug-Rc-VuO" id="ydy-ZF-4Xr"/>
+                        <outlet property="lastNameInput" destination="dZg-Hz-uxm" id="0oX-4c-kii"/>
+                        <outlet property="passwordInput" destination="ecV-Go-VF4" id="6Vb-jY-g1W"/>
+                        <segue destination="3" kind="modal" identifier="register" id="ltT-2S-L58"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYK-Ym-dtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="599"/>
         </scene>
         <!--Fitsby Detail Container View Controller-->
         <scene sceneID="X1r-bS-DUW">
