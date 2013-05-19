@@ -678,24 +678,45 @@
                                     <outlet property="delegate" destination="D8n-LO-8nE" id="4hs-mP-fmy"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="By creating a Fitsby account, you agree to our" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGH-l8-QnS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yoP-yw-jxh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="and" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaR-tN-A1A">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G3r-bu-J6n"/>
+                                    <constraint firstAttribute="width" constant="42" id="Ph1-Yq-z0B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dZg-Hz-uxm" firstAttribute="top" secondItem="gug-Rc-VuO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3mN-TA-3jE"/>
+                            <constraint firstItem="dZg-Hz-uxm" firstAttribute="top" secondItem="gug-Rc-VuO" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="3mN-TA-3jE"/>
                             <constraint firstAttribute="trailing" secondItem="ecV-Go-VF4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4WV-cc-fkR"/>
                             <constraint firstAttribute="trailing" secondItem="5Bo-ll-aTt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8De-MZ-4AD"/>
                             <constraint firstAttribute="trailing" secondItem="dZg-Hz-uxm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9nP-dI-ipN"/>
+                            <constraint firstItem="gaR-tN-A1A" firstAttribute="centerX" secondItem="eGH-l8-QnS" secondAttribute="centerX" type="default" id="Biw-qY-mV7"/>
                             <constraint firstItem="xK3-7R-ODx" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C6h-Qq-baa"/>
                             <constraint firstItem="5Bo-ll-aTt" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ko6-o5-EG7"/>
-                            <constraint firstItem="ecV-Go-VF4" firstAttribute="top" secondItem="xK3-7R-ODx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Lwb-ma-NpE"/>
+                            <constraint firstItem="ecV-Go-VF4" firstAttribute="top" secondItem="xK3-7R-ODx" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Lwb-ma-NpE"/>
                             <constraint firstItem="ecV-Go-VF4" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RQV-Fj-iPq"/>
                             <constraint firstAttribute="trailing" secondItem="gug-Rc-VuO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UNj-Sb-uuy"/>
                             <constraint firstItem="dZg-Hz-uxm" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XsD-xl-wJM"/>
-                            <constraint firstItem="xK3-7R-ODx" firstAttribute="top" secondItem="dZg-Hz-uxm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YN6-bv-3Kx"/>
+                            <constraint firstItem="xK3-7R-ODx" firstAttribute="top" secondItem="dZg-Hz-uxm" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="YN6-bv-3Kx"/>
+                            <constraint firstItem="gaR-tN-A1A" firstAttribute="top" secondItem="eGH-l8-QnS" secondAttribute="bottom" constant="-2" type="user" id="ZXL-Ix-a8G"/>
                             <constraint firstAttribute="trailing" secondItem="xK3-7R-ODx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gri-BD-gTM"/>
                             <constraint firstItem="gug-Rc-VuO" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hOf-qb-XUz"/>
-                            <constraint firstItem="gug-Rc-VuO" firstAttribute="top" secondItem="lHP-ai-Qcy" secondAttribute="top" constant="20" symbolic="YES" type="default" id="s4c-ME-CUT"/>
-                            <constraint firstItem="5Bo-ll-aTt" firstAttribute="top" secondItem="ecV-Go-VF4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xps-ml-ubW"/>
+                            <constraint firstItem="gug-Rc-VuO" firstAttribute="top" secondItem="lHP-ai-Qcy" secondAttribute="top" constant="20" symbolic="YES" type="user" id="s4c-ME-CUT"/>
+                            <constraint firstItem="eGH-l8-QnS" firstAttribute="centerX" secondItem="5Bo-ll-aTt" secondAttribute="centerX" type="default" id="uVj-fv-s5V"/>
+                            <constraint firstItem="5Bo-ll-aTt" firstAttribute="top" secondItem="ecV-Go-VF4" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="xps-ml-ubW"/>
+                            <constraint firstItem="eGH-l8-QnS" firstAttribute="top" secondItem="5Bo-ll-aTt" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="zbY-Cp-756"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fYa-ci-8Dp">
