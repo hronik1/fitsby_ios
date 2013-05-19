@@ -577,7 +577,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YL8-cc-9ix">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0Yx-k4-uVN"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0Yx-k4-uVN">
+                            <connections>
+                                <segue destination="J69-kO-r5i" kind="unwind" unwindAction="cancel:" id="TwE-B3-XQM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="em6-AG-eEO">
                             <connections>
                                 <action selector="doneClicked:" destination="GKd-Iq-Mn6" id="qfa-wm-dmH"/>
@@ -591,6 +595,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGM-6i-ydZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="J69-kO-r5i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="364" y="-581"/>
         </scene>
