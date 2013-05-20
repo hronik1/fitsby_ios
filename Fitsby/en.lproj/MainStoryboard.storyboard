@@ -686,13 +686,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="and" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaR-tN-A1A">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Terms of Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1o-7K-yoj">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="G3r-bu-J6n"/>
-                                    <constraint firstAttribute="width" constant="42" id="Ph1-Yq-z0B"/>
+                                    <constraint firstAttribute="height" constant="21" id="ecs-AN-fn0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-DY-Dyn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="x8i-5b-kv0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -700,17 +706,20 @@
                         <constraints>
                             <constraint firstItem="dZg-Hz-uxm" firstAttribute="top" secondItem="gug-Rc-VuO" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="3mN-TA-3jE"/>
                             <constraint firstAttribute="trailing" secondItem="ecV-Go-VF4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4WV-cc-fkR"/>
+                            <constraint firstItem="V1o-7K-yoj" firstAttribute="top" secondItem="eGH-l8-QnS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5F0-ST-9KH"/>
+                            <constraint firstItem="hDs-DY-Dyn" firstAttribute="leading" secondItem="V1o-7K-yoj" secondAttribute="leading" type="default" id="6OE-Qs-we0"/>
                             <constraint firstAttribute="trailing" secondItem="5Bo-ll-aTt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8De-MZ-4AD"/>
                             <constraint firstAttribute="trailing" secondItem="dZg-Hz-uxm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9nP-dI-ipN"/>
-                            <constraint firstItem="gaR-tN-A1A" firstAttribute="centerX" secondItem="eGH-l8-QnS" secondAttribute="centerX" type="default" id="Biw-qY-mV7"/>
+                            <constraint firstItem="hDs-DY-Dyn" firstAttribute="top" secondItem="V1o-7K-yoj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AKu-3n-yZb"/>
                             <constraint firstItem="xK3-7R-ODx" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C6h-Qq-baa"/>
                             <constraint firstItem="5Bo-ll-aTt" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ko6-o5-EG7"/>
                             <constraint firstItem="ecV-Go-VF4" firstAttribute="top" secondItem="xK3-7R-ODx" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Lwb-ma-NpE"/>
+                            <constraint firstItem="hDs-DY-Dyn" firstAttribute="trailing" secondItem="V1o-7K-yoj" secondAttribute="trailing" type="default" id="O8O-mw-lfb"/>
                             <constraint firstItem="ecV-Go-VF4" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RQV-Fj-iPq"/>
                             <constraint firstAttribute="trailing" secondItem="gug-Rc-VuO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UNj-Sb-uuy"/>
                             <constraint firstItem="dZg-Hz-uxm" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XsD-xl-wJM"/>
                             <constraint firstItem="xK3-7R-ODx" firstAttribute="top" secondItem="dZg-Hz-uxm" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="YN6-bv-3Kx"/>
-                            <constraint firstItem="gaR-tN-A1A" firstAttribute="top" secondItem="eGH-l8-QnS" secondAttribute="bottom" constant="-2" type="user" id="ZXL-Ix-a8G"/>
+                            <constraint firstItem="V1o-7K-yoj" firstAttribute="centerX" secondItem="eGH-l8-QnS" secondAttribute="centerX" type="default" id="aEh-Hc-rTT"/>
                             <constraint firstAttribute="trailing" secondItem="xK3-7R-ODx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gri-BD-gTM"/>
                             <constraint firstItem="gug-Rc-VuO" firstAttribute="leading" secondItem="lHP-ai-Qcy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hOf-qb-XUz"/>
                             <constraint firstItem="gug-Rc-VuO" firstAttribute="top" secondItem="lHP-ai-Qcy" secondAttribute="top" constant="20" symbolic="YES" type="user" id="s4c-ME-CUT"/>
@@ -737,6 +746,8 @@
                         <outlet property="firstNameInput" destination="gug-Rc-VuO" id="ydy-ZF-4Xr"/>
                         <outlet property="lastNameInput" destination="dZg-Hz-uxm" id="0oX-4c-kii"/>
                         <outlet property="passwordInput" destination="ecV-Go-VF4" id="6Vb-jY-g1W"/>
+                        <outlet property="privacyLabel" destination="hDs-DY-Dyn" id="gHr-Va-aHx"/>
+                        <outlet property="termsLabel" destination="V1o-7K-yoj" id="hhK-pw-N01"/>
                         <segue destination="3" kind="modal" identifier="register" id="ltT-2S-L58"/>
                     </connections>
                 </viewController>
@@ -1112,6 +1123,8 @@
                 <relationship kind="outlet" name="firstNameInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="lastNameInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="privacyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="termsLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="FitsbyRegistrationOnboardViewController" superclassName="UIViewController">
