@@ -53,9 +53,9 @@ static int const PRIVACY_TAG = 1;
 {
     for (UITouch *touch in touches) {
         if (touch.view.tag == TERMS_TAG)
-            NSLog(@"terms touched");
+            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"http://fitsby.com/terms.html"]];
         else if (touch.view.tag == PRIVACY_TAG)
-            NSLog(@"privacy touched");
+            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"http://fitsby.com/privacy.html"]];
         else
             NSLog(@"something else touch, %d", touch.view.tag);
     }
