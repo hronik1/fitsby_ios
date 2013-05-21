@@ -12,6 +12,9 @@
 #import "UserApplication.h"
 
 static NSString *const SEGUE_ID = @"register";
+static int const TERMS_TAG = 3;
+static int const PRIVACY_TAG = 1;
+
 @interface FitsbyRegisterViewController ()
 
 //initializes a progress indicator
@@ -44,6 +47,18 @@ static NSString *const SEGUE_ID = @"register";
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
+{
+    for (UITouch *touch in touches) {
+        if (touch.view.tag == TERMS_TAG)
+            NSLog(@"terms touched");
+        else if (touch.view.tag == PRIVACY_TAG)
+            NSLog(@"privacy touched");
+        else
+            NSLog(@"something else touch, %d", touch.view.tag);
+    }
 }
 
 - (IBAction)doneClicked:(id)sender {
