@@ -34,8 +34,6 @@ NSString *const SERVER_URL = @"https://f-app.herokuapp.com/"; //production serve
     [request setValue:[NSString stringWithFormat:@"%d", [jsonParams length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody: jsonParams];
     
-    //NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-    
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSString *responseString = [[NSString alloc]initWithData:response encoding:NSUTF8StringEncoding];
     NSLog(@"Response is %@", responseString);
