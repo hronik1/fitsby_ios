@@ -22,12 +22,65 @@ static const int CVC_LENGTH = 3;
 @interface FitsbyCreditCardViewController () {
     User *user;
 }
+
+/**
+ *
+ * configureView
+ *
+ * Helper method to configure the view.
+ *
+ * @return Nothing
+ */
 - (void)configureView;
+
+/**
+ *
+ * configureTags
+ *
+ * Helper method to configre tags.
+ *
+ * @return  Nothing
+ */
 - (void)configureTags;
-//helper to initialize a indeterminate spinner
+
+/**
+ *
+ * initializeProgress
+ *
+ * Helper method to contain all of the initialization information of the spinner.
+ *
+ * @return  A fully initialized progress spinner
+ */
 - (UIActivityIndicatorView *)initializeProgress;
+
+/**
+ *
+ * sendCreditCard
+ *
+ * Helper method to abstract the details of sending creditcard information.
+ *
+ * @return  Nothing.
+ */
 - (void)sendCreditCard;
+
+/**
+ *
+ * performCreate
+ *
+ * Helper method to create paid league.
+ *
+ * @return  StatusResponse  Corresponds to sucess or failure.
+ */
 - (StatusResponse *)performCreate;
+
+/**
+ *
+ * performJoin
+ *
+ * Helper method to join paid league.
+ *
+ * @return  StatusResponse  Corresponds to sucess or failure.
+ */
 - (StatusResponse *)performJoin;
 
 @end
