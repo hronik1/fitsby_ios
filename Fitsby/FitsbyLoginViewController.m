@@ -17,8 +17,36 @@ static NSString *const SEGUE_ID = @"LoggedIn";
 
 @interface FitsbyLoginViewController ()
 
-//helper to initialize a indeterminate spinner
+/**
+ *
+ * initializeProgress
+ *
+ * Helper method to contain all of the initialization information of the spinner.
+ *
+ * @return A fully initialized progress spinner
+ */
 - (UIActivityIndicatorView *)initializeProgress;
+
+/**
+ *
+ * showFailureDialog
+ *
+ * Pops up an UIAlertView alerting user that their registratin failed.
+ *
+ * @return Nothing
+ */
+- (void) showFailureDialog;
+
+/**
+ *
+ * showRememberMeDialog
+ *
+ * Pops up an UIAlertView prompting the user if they want to store their credentials.
+ *
+ * @return Nothing
+ */
+- (void) showRememberMeDialog;
+
 @end
 
 @implementation FitsbyLoginViewController
@@ -73,8 +101,8 @@ static NSString *const SEGUE_ID = @"LoggedIn";
                     NSLog(@"userResponse nil");
                     return;
                 } else if (!userResponse.successful) {
-                    //TODO alert user of failure
                     NSLog(@"failure");
+                    [self showFailureDialog];
                     return;
                 }
                 User *user = userResponse.user;
@@ -94,6 +122,7 @@ static NSString *const SEGUE_ID = @"LoggedIn";
 }
 
 /** private methods **/
+
 - (UIActivityIndicatorView *)initializeProgress {
     UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [self.view addSubview:progress];
@@ -101,5 +130,18 @@ static NSString *const SEGUE_ID = @"LoggedIn";
     progress.center = self.view.center;
     progress.hidesWhenStopped = YES;
     return progress;
+}
+
+- (void)showFailureDialog {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Doh, either your username or password is wrong"
+                                                    message:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)showRememberMeDialog {
+    //TODO
 }
 @end
