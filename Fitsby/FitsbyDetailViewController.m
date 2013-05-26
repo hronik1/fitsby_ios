@@ -19,8 +19,27 @@ static NSString *const PAY_SEGUE_ID = @"joinPay";
 @interface FitsbyDetailViewController () {
     User *user;
 }
+
+/**
+ *
+ * configureView
+ *
+ * Helper method to configure the view.
+ *
+ * @return Nothing
+ */
 - (void)configureView;
+
+/**
+ *
+ * initializeProgress
+ *
+ * Helper method to contain all of the initialization information of the spinner.
+ *
+ * @return A fully initialized progress spinner
+ */
 - (UIActivityIndicatorView *)initializeProgress;
+
 @end
 
 @implementation FitsbyDetailViewController
