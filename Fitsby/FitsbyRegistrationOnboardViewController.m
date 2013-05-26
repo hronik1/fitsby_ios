@@ -12,8 +12,10 @@
 static NSString *const SEGUE_ID = @"registrationOnboardComplete";
 
 @interface FitsbyRegistrationOnboardViewController () {
-    int index;
+
 }
+
+- (NSUInteger) indexOfCurrentViewController;
 
 @end
 
@@ -56,7 +58,6 @@ static NSString *const SEGUE_ID = @"registrationOnboardComplete";
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-    index = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,7 +77,6 @@ static NSString *const SEGUE_ID = @"registrationOnboardComplete";
     }
     FitsbyChildViewController *contentViewController = [[FitsbyChildViewController alloc] init];
     contentViewController.image = [self.modelArray objectAtIndex:currentIndex - 1];
-    index--;
     return contentViewController;
 }
 
@@ -90,16 +90,20 @@ static NSString *const SEGUE_ID = @"registrationOnboardComplete";
     }
     FitsbyChildViewController *contentViewController = [[FitsbyChildViewController alloc] init];
     contentViewController.image = [self.modelArray objectAtIndex:currentIndex + 1];
-    index++;
     return contentViewController;
 }
 
+/** Delegate methods **/
+
 - (IBAction)doneButtonClicked:(id)sender {
-    if (index == self.modelArray.count-1) {
+    int currentIndex = [self indexOfCurrentViewController];
+    NSLog(@"index=%d", currentIndex);
+    if (currentIndex == self.modelArray.count-1) {
         [self performSegueWithIdentifier:SEGUE_ID sender:sender];
     } else {
         //TODO alert user that that need to finish
     }
+    
 }
 
 - (IBAction)cancelRegister:(UIStoryboardSegue *)segue
@@ -108,5 +112,11 @@ static NSString *const SEGUE_ID = @"registrationOnboardComplete";
     //    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
     //        [self dismissViewControllerAnimated:YES completion:NULL];
     //    }
+}
+
+/** private methods **/
+- (NSUInteger) indexOfCurrentViewController
+{
+    return [self.modelArray indexOfObject:[[self.pageViewController viewControllers][0] image]];
 }
 @end
