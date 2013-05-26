@@ -17,8 +17,26 @@ static int const PRIVACY_TAG = 1;
 
 @interface FitsbyRegisterViewController ()
 
-//initializes a progress indicator
+/**
+ *
+ * initializeProgress
+ *
+ * Helper method to contain all of the initialization information of the spinner.
+ *
+ * @return A fully initialized progress spinner
+ */
 - (UIActivityIndicatorView *)initializeProgress;
+
+/**
+ *
+ * showFailureDialog
+ *
+ * Pops up an AlertView alerting the user that their registration failed.
+ *
+ * @return Nothing
+ */
+- (void) showFailureDialog;
+
 @end
 
 @implementation FitsbyRegisterViewController
@@ -87,17 +105,20 @@ static int const PRIVACY_TAG = 1;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [progress stopAnimating];
                 if (!userResponse) {
-                    //TODO alertUser of failure
+                    //TODO tailor failure message
+                    [self showFailureDialog];
                     NSLog(@"userResponse nil");
                     return;
                 } else if (!userResponse.successful) {
-                    //TODO alert user of failure
+                    //TODO tailor failure message
+                    [self showFailureDialog];
                     NSLog(@"failure");
                     return;
                 }
                 User *user = userResponse.user;
                 if (!user) {
-                    //TODO alert user of failure
+                    //TODO tailor failure
+                    [self showFailureDialog];
                     NSLog(@"user nil");
                 } else {
                     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
@@ -111,6 +132,7 @@ static int const PRIVACY_TAG = 1;
 }
 
 /** private methods **/
+
 - (UIActivityIndicatorView *)initializeProgress {
     UIActivityIndicatorView *progress = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [self.view addSubview:progress];
@@ -118,5 +140,14 @@ static int const PRIVACY_TAG = 1;
     progress.center = self.view.center;
     progress.hidesWhenStopped = YES;
     return progress;
+}
+
+- (void) showFailureDialog {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Doh, your registration was didn't work"
+                                                    message:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 @end
