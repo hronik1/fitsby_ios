@@ -116,10 +116,7 @@ static NSString *const SEGUE_ID = @"registrationOnboardComplete";
 
 - (IBAction)cancelRegister:(UIStoryboardSegue *)segue
 {
-    //TODO possible implement
-    //    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
-    //        [self dismissViewControllerAnimated:YES completion:NULL];
-    //    }
+
 }
 
 /** private methods **/
