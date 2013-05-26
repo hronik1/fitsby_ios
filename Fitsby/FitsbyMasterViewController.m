@@ -20,8 +20,17 @@
 
 }
 
-//callback for when the response is finished being fetched from the server
--(void) fetchedGamesResponse:(PublicGamesResponse *)response;
+/**
+ *
+ * fetchedGamesResponse
+ *
+ * Callback for when the response is finished being fetched from the server.
+ * Sets table rows from response.
+ *
+ * @return Nothing
+ */
+- (void)fetchedGamesResponse:(PublicGamesResponse *)response;
+
 @end
 
 @implementation FitsbyMasterViewController
