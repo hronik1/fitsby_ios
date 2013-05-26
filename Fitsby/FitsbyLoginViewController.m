@@ -97,17 +97,20 @@ static NSString *const SEGUE_ID = @"LoggedIn";
             dispatch_async(dispatch_get_main_queue(), ^{
                 [progress stopAnimating];
                 if (!userResponse) {
-                    //TODO alertUser of failure
+                    //TODO tailor failure message
+                    [self showFailureDialog];
                     NSLog(@"userResponse nil");
                     return;
                 } else if (!userResponse.successful) {
                     NSLog(@"failure");
+                    //TODO tailor failure message
                     [self showFailureDialog];
                     return;
                 }
                 User *user = userResponse.user;
                 if (!user) {
-                    //TODO alert user of failure
+                    //TODO tailor failure message
+                    [self showFailureDialog];
                     NSLog(@"user nil");
                 } else {
                     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
