@@ -23,7 +23,7 @@ static int const PRIVACY_TAG = 1;
  *
  * Helper method to contain all of the initialization information of the spinner.
  *
- * @return A fully initialized progress spinner
+ * @return  A fully initialized progress spinner
  */
 - (UIActivityIndicatorView *)initializeProgress;
 
@@ -33,9 +33,9 @@ static int const PRIVACY_TAG = 1;
  *
  * Pops up an AlertView alerting the user that their registration failed.
  *
- * @return Nothing
+ * @return  Nothing
  */
-- (void) showFailureDialog;
+- (void)showFailureDialog;
 
 @end
 
@@ -142,7 +142,7 @@ static int const PRIVACY_TAG = 1;
     return progress;
 }
 
-- (void) showFailureDialog {
+- (void)showFailureDialog {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Doh, your registration was didn't work"
                                                     message:nil
                                                    delegate:nil
