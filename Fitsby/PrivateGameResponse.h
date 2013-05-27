@@ -29,7 +29,7 @@
  *
  *  @param  jsonDictionary  Dictionary object corresponding to the response to be parsed.
  *
- *  @return Reference to this instance of PrivateGameResponse
+ *  @return  Reference to this instance of PrivateGameResponse
  */
 - (id)initWithDictionary:(NSDictionary *)jsonDictionary;
 
