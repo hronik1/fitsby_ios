@@ -25,13 +25,13 @@ static NSString *const STAKES_KEY = @"stakes";
 @interface PublicGamesResponse()
 
 //Parses and individual game and returns it
--(Game *) parseGame:(NSDictionary *)jsonDictionary;
+- (Game *)parseGame:(NSDictionary *)jsonDictionary;
 
 @end
 
 @implementation PublicGamesResponse
 
--(id)init {
+- (id)init {
     self = [super init];
     if (!self)
         return nil;
@@ -43,7 +43,7 @@ static NSString *const STAKES_KEY = @"stakes";
     return self;
 }
 
--(id)initWithDictionary:(NSDictionary *)jsonDictionary {
+- (id)initWithDictionary:(NSDictionary *)jsonDictionary {
     self = [super initWithDictionary:jsonDictionary];
     if (!self)
         return nil;
@@ -60,7 +60,7 @@ static NSString *const STAKES_KEY = @"stakes";
     return self;
 }
 
--(Game *) parseGame:(NSDictionary *)jsonDictionary {
+- (Game *)parseGame:(NSDictionary *)jsonDictionary {
     Game *game = [[Game alloc] init];
     if (!game)
         return nil;

@@ -19,7 +19,7 @@
  *
  *  @return  Reference to this instance of PublicGamesResponse.
  */
--(id)init;
+- (id)init;
 
 /**
  *  initWithDictionary
@@ -28,8 +28,8 @@
  *
  *  @param  jsonDictionary  Dictionary object corresponding to the response to be parsed.
  *
- *  @return Reference to this instance of PublicGamesResponse
+ *  @return  Reference to this instance of PublicGamesResponse
  */
--(id)initWithDictionary:(NSDictionary *)jsonDictionary;
+- (id)initWithDictionary:(NSDictionary *)jsonDictionary;
 
 @end
