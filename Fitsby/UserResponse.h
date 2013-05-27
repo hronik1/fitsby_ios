@@ -20,7 +20,7 @@
  *
  *  @return  Reference to this instance of a UserResponse.
  */
--(id) init;
+- (id)init;
 
 /**
  *  initWithData
@@ -31,6 +31,6 @@
  *
  *  @return  Referenece to this instance of a UserResponse.
  */
--(id) initWithDictionary:(NSDictionary *)jsonDictionary;
+- (id)initWithDictionary:(NSDictionary *)jsonDictionary;
 
 @end
