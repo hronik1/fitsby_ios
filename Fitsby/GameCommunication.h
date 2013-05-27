@@ -23,7 +23,7 @@
  *
  *  @return  A PublicGamesResponse wrapper corresponding to the games;
  */
-+ (PublicGamesResponse *) getPublicGames:(int) userID;
++ (PublicGamesResponse *)getPublicGames:(int) userID;
 
 /**
  *  createGame

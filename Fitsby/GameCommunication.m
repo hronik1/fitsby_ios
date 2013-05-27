@@ -31,7 +31,7 @@ static NSString *const PRIVATE_GAME_ROUTE = @"get_private_game_info";
 
 @implementation GameCommunication
 
-+(PublicGamesResponse *) getPublicGames:(int) userID {
++ (PublicGamesResponse *)getPublicGames:(int) userID {
     NSArray *keys = [NSArray arrayWithObjects:ID_KEY, nil];
     NSArray *objects = [NSArray arrayWithObjects:[NSNumber numberWithInt:userID], nil];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
@@ -102,4 +102,5 @@ static NSString *const PRIVATE_GAME_ROUTE = @"get_private_game_info";
     }
     return [[PrivateGameResponse alloc] initWithDictionary:jsonDictionary];
 }
+
 @end
