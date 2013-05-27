@@ -24,7 +24,7 @@ static NSString const *SEGUE_ID = @"privateGameFound";
  *
  * Helper method to contain all of the initialization information of the spinner.
  *
- * @return A fully initialized progress spinner
+ * @return  A fully initialized progress spinner
  */
 - (UIActivityIndicatorView *)initializeProgress;
 @end
