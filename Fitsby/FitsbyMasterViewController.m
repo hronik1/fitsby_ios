@@ -27,7 +27,7 @@
  * Callback for when the response is finished being fetched from the server.
  * Sets table rows from response.
  *
- * @return Nothing
+ * @return  Nothing
  */
 - (void)fetchedGamesResponse:(PublicGamesResponse *)response;
 
@@ -130,7 +130,7 @@
 }
 
 /** private method **/
--(void) fetchedGamesResponse:(PublicGamesResponse *)response {
+- (void)fetchedGamesResponse:(PublicGamesResponse *)response {
     if (!response) {
         //TODO alert user
         return;
