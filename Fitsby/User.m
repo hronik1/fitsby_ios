@@ -10,7 +10,7 @@
 
 @implementation User
 
--(id)init {
+- (id)init {
     self = [super init];
     if (!self)
         return nil;
@@ -23,7 +23,7 @@
     return self;
 }
 
--(id)initWithId:(int)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email {
+- (id)initWithId:(int)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email {
     self = [super init];
     if (!self)
         return nil;

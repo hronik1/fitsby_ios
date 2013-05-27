@@ -22,7 +22,7 @@
  *
  * @return  This instance of a User
  */
--(id)init;
+- (id)init;
 
 /**
  * initWithId:firstName:lastName:email
@@ -36,6 +36,6 @@
  *
  * @return  This instance of a User
  */
--(id)initWithId:(int)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email;
+- (id)initWithId:(int)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email;
 
 @end
