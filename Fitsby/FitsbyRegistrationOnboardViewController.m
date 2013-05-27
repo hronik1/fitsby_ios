@@ -23,7 +23,7 @@ static NSString *const SEGUE_ID = @"registrationOnboardComplete";
  *
  * @return The index of the currently displayed view, or -1 on fail.
  */
-- (NSUInteger) indexOfCurrentViewController;
+- (NSUInteger)indexOfCurrentViewController;
 
 @end
 
@@ -120,7 +120,7 @@ static NSString *const SEGUE_ID = @"registrationOnboardComplete";
 }
 
 /** private methods **/
-- (NSUInteger) indexOfCurrentViewController
+- (NSUInteger)indexOfCurrentViewController
 {
     return [self.modelArray indexOfObject:[[self.pageViewController viewControllers][0] image]];
 }
