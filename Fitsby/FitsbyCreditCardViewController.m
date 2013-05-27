@@ -29,7 +29,7 @@ static const int CVC_LENGTH = 3;
  *
  * Helper method to configure the view.
  *
- * @return Nothing
+ * @return  Nothing
  */
 - (void)configureView;
 
@@ -180,7 +180,7 @@ static const int CVC_LENGTH = 3;
     }
 }
 
--(BOOL)textFieldShouldReturn:(UITextField*)textField;
+- (BOOL)textFieldShouldReturn:(UITextField*)textField;
 {
     NSLog(@"delegate entered");
     NSInteger nextTag = textField.tag + 1;
