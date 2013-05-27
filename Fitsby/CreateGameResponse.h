@@ -19,7 +19,7 @@
  *
  *  @return  Reference to this instance of a CreateGameResponse.
  */
--(id)init;
+- (id)init;
 
 /**
  *  initWithDictionar
@@ -28,8 +28,8 @@
  *
  *  @param  jsonDictionary  Dictionary object corresponding to the response to be parsed.
  *
- *  @return Reference to this instance of CreateGameResponse
+ *  @return  Reference to this instance of CreateGameResponse
  */
--(id)initWithDictionary:(NSDictionary *)jsonDictionary;
+- (id)initWithDictionary:(NSDictionary *)jsonDictionary;
 
 @end

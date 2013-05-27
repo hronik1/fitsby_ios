@@ -12,7 +12,7 @@ static NSString *const GAME_ID = @"game_id";
 
 @implementation CreateGameResponse
 
--(id)init {
+- (id)init {
     self = [super init];
     if (!self)
         return nil;
@@ -21,7 +21,7 @@ static NSString *const GAME_ID = @"game_id";
     return self;
 }
 
--(id)initWithDictionary:(NSDictionary *)jsonDictionary {
+- (id)initWithDictionary:(NSDictionary *)jsonDictionary {
     self = [super initWithDictionary:jsonDictionary];
     if (!self)
         return nil;
