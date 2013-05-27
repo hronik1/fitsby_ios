@@ -20,7 +20,7 @@ static NSString *const IMAGE_PARAM = @"d";
 
 @implementation GravatarHelper
 
-+(NSURL*) getGravatarURL:(NSString *)emailAddress {
++ (NSURL*)getGravatarURL:(NSString *)emailAddress {
     
     NSString *curatedEmail = [[emailAddress stringByTrimmingCharactersInSet:
                                [NSCharacterSet whitespaceCharacterSet]] lowercaseString];
@@ -30,7 +30,7 @@ static NSString *const IMAGE_PARAM = @"d";
     return [NSURL URLWithString:formattedQuery];
 }
 
-+(NSString *) md5:(NSString *)unhashedString {
++ (NSString *)md5:(NSString *)unhashedString {
     
     const char *cStr = [unhashedString UTF8String];
     unsigned char digest[16];
@@ -45,7 +45,7 @@ static NSString *const IMAGE_PARAM = @"d";
     
 }
 
-+(NSString *) formQueryString:(NSString *)formattedEmail {
++ (NSString *)formQueryString:(NSString *)formattedEmail {
     
     NSMutableString *stringUrl = [GRAVATAR_BASE_URL mutableCopy];
     [stringUrl appendString:formattedEmail];

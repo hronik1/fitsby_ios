@@ -19,7 +19,7 @@
  *
  *  @return  The URL corresponding to the gravatar.
  */
-+(NSURL*) getGravatarURL:(NSString *)emailAddress;
++ (NSURL*)getGravatarURL:(NSString *)emailAddress;
 
 /**
  *  md5
@@ -30,7 +30,7 @@
  *
  *  @return  The md5-hashed string representation of unhashedString.
  */
-+(NSString *) md5:(NSString *)unhashedString;
++ (NSString *)md5:(NSString *)unhashedString;
 
 /**
  *  formQueryString
@@ -41,5 +41,6 @@
  *
  *  @return  A well formatted query string for the target email.
  */
-+(NSString *) formQueryString:(NSString *)formattedEmail;
++ (NSString *)formQueryString:(NSString *)formattedEmail;
+
 @end
