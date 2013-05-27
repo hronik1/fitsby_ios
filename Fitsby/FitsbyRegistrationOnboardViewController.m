@@ -21,7 +21,7 @@ static NSString *const SEGUE_ID = @"registrationOnboardComplete";
  *
  * Returns the index of the currently displayed view
  *
- * @return The index of the currently displayed view, or -1 on fail.
+ * @return  The index of the currently displayed view, or -1 on fail.
  */
 - (NSUInteger)indexOfCurrentViewController;
 
