@@ -17,7 +17,7 @@ static NSString *const RESPONSE_FAIL = @"fail";
 
 @implementation StatusResponse
 
--(id) init {
+- (id)init {
     self = [super init];
     if (!self)
         return nil;
@@ -27,7 +27,7 @@ static NSString *const RESPONSE_FAIL = @"fail";
     return self;
 }
 
--(id) initWithDictionary:(NSDictionary *)jsonDictionary {
+- (id)initWithDictionary:(NSDictionary *)jsonDictionary {
     self = [super init];
     if (!self)
         return nil;

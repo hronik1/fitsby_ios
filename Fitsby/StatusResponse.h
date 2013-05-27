@@ -20,7 +20,7 @@
  *
  *  @return  Reference to this instance of a StatusResponse.
  */
--(id) init;
+- (id)init;
 
 /**
  *  initWithDictionar
@@ -31,6 +31,6 @@
  *
  *  @return Reference to this instance of StatusResponse
  */
--(id) initWithDictionary:(NSDictionary *)jsonDictionary;
+- (id)initWithDictionary:(NSDictionary *)jsonDictionary;
 
 @end
