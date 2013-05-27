@@ -13,7 +13,7 @@
 
 @implementation UserCommunication
 
-+ (UserResponse *) loginUser:(NSString *)email withPassword:(NSString *)password {
++ (UserResponse *)loginUser:(NSString *)email withPassword:(NSString *)password {
     NSArray *keys = [NSArray arrayWithObjects:@"email", @"password", nil];
     NSArray *objects = [NSArray arrayWithObjects:email, password, nil];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
@@ -31,7 +31,7 @@
     }
 }
 
-+ (UserResponse *) registerUser:(NSString *)email withPassword:(NSString *)password
++ (UserResponse *)registerUser:(NSString *)email withPassword:(NSString *)password
           confirmPassword:(NSString *)confirmPassword firstName:(NSString *)firstName lastName:(NSString *)lastName {
     NSArray *keys = [NSArray arrayWithObjects:@"email", @"password", @"confirm_password",
                      @"first_name", @"last_name", nil];
@@ -51,7 +51,6 @@
         NSLog(@"error");
         return nil;
     }
-    
 }
 
 @end

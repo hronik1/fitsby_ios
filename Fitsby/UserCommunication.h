@@ -21,7 +21,7 @@
  *
  * @ereturn  UserResponse corresponding to the parsed request.
  */
-+ (UserResponse *) loginUser:(NSString *)email withPassword:(NSString *)password;
++ (UserResponse *)loginUser:(NSString *)email withPassword:(NSString *)password;
 
 /**
  *  registerUser:withPassword:confirmPassword:firstName:lastName
@@ -36,6 +36,7 @@
  *
  * @ereturn  UserResponse corresponding to the parsed request.
  */
-+ (UserResponse *) registerUser:(NSString *)email withPassword:(NSString *)password
++ (UserResponse *)registerUser:(NSString *)email withPassword:(NSString *)password
           confirmPassword:(NSString *)confirmPassword firstName:(NSString *)firstName lastName:(NSString *)lastName;
+
 @end
