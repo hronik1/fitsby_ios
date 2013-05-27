@@ -53,7 +53,7 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
  *
  * Helper method to avstract the initialization of the steppers.
  *
- * @return Nothing.
+ * @return  Nothing
  */
 - (void)initializeSteppers;
 
@@ -64,7 +64,7 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
  * Helper callback that will change the stepper values to ensure 
  * goals and duration are properly related.
  *
- * @return Nothing
+ * @return  Nothing
  */
 - (void)validateGoal;
 
@@ -74,7 +74,7 @@ static NSString *const PAY_SEGUE_ID = @"creditCard";
  *
  * Helper method to contain all of the initialization information of the spinner.
  *
- * @return A fully initialized progress spinner
+ * @return  A fully initialized progress spinner
  */
 - (UIActivityIndicatorView *)initializeProgress;
 
