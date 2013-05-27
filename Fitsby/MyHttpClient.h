@@ -18,7 +18,7 @@
  *
  * @ereturn  Raw data returned from the server
  */
-+ (NSData *) createPostRequest:(NSString *)route withParams:(NSDictionary *)params;
++ (NSData *)createPostRequest:(NSString *)route withParams:(NSDictionary *)params;
 
 /**
  *  createGetRequest
@@ -28,6 +28,6 @@
  *
  * @ereturn  Raw data returned from the server
  */
-+ (NSData *) createGetRequest:(NSString *)route withParams:(NSDictionary *)params;
++ (NSData *)createGetRequest:(NSString *)route withParams:(NSDictionary *)params;
 
 @end

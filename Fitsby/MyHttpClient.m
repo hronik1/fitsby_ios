@@ -15,7 +15,7 @@ NSString *const SERVER_URL = @"https://f-app.herokuapp.com/"; //production serve
 
 @implementation MyHttpClient
 
-+ (NSData *) createPostRequest:(NSString *)route withParams:(NSDictionary *)params {
++ (NSData *)createPostRequest:(NSString *)route withParams:(NSDictionary *)params {
     //create url
     NSMutableString *stringRequest = [SERVER_URL mutableCopy];
     [stringRequest appendString:route];
@@ -40,7 +40,7 @@ NSString *const SERVER_URL = @"https://f-app.herokuapp.com/"; //production serve
     return response;
 }
 
-+ (NSData *) createGetRequest:(NSString *)route withParams:(NSDictionary *)params {
++ (NSData *)createGetRequest:(NSString *)route withParams:(NSDictionary *)params {
     //format base route
     NSMutableString *request = [SERVER_URL mutableCopy];
     [request appendString:route];
@@ -67,4 +67,5 @@ NSString *const SERVER_URL = @"https://f-app.herokuapp.com/"; //production serve
    
     return data;
 }
+
 @end
