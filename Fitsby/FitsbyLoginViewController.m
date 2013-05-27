@@ -23,7 +23,7 @@ static NSString *const SEGUE_ID = @"LoggedIn";
  *
  * Helper method to contain all of the initialization information of the spinner.
  *
- * @return A fully initialized progress spinner
+ * @return  A fully initialized progress spinner
  */
 - (UIActivityIndicatorView *)initializeProgress;
 
@@ -33,7 +33,7 @@ static NSString *const SEGUE_ID = @"LoggedIn";
  *
  * Pops up an UIAlertView alerting user that their registratin failed.
  *
- * @return Nothing
+ * @return  Nothing
  */
 - (void) showFailureDialog;
 
@@ -43,7 +43,7 @@ static NSString *const SEGUE_ID = @"LoggedIn";
  *
  * Pops up an UIAlertView prompting the user if they want to store their credentials.
  *
- * @return Nothing
+ * @return  Nothing
  */
 - (void) showRememberMeDialog;
 
