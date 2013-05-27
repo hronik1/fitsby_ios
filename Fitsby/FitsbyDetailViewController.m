@@ -26,7 +26,7 @@ static NSString *const PAY_SEGUE_ID = @"joinPay";
  *
  * Helper method to configure the view.
  *
- * @return Nothing
+ * @return  Nothing
  */
 - (void)configureView;
 
@@ -36,7 +36,7 @@ static NSString *const PAY_SEGUE_ID = @"joinPay";
  *
  * Helper method to contain all of the initialization information of the spinner.
  *
- * @return A fully initialized progress spinner
+ * @return  A fully initialized progress spinner
  */
 - (UIActivityIndicatorView *)initializeProgress;
 
