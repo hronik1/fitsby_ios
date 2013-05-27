@@ -64,9 +64,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "47"
-         endingLineNumber = "47"
-         landmarkName = "-initWithDictionary:"
-         landmarkType = "5">
+         endingLineNumber = "47">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -77,9 +75,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "32"
-         endingLineNumber = "32"
-         landmarkName = "@implementation PublicGamesResponse"
-         landmarkType = "3">
+         endingLineNumber = "32">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -90,9 +86,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "72"
-         endingLineNumber = "72"
-         landmarkName = "-parseGame:"
-         landmarkType = "5">
+         endingLineNumber = "72">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

@@ -24,7 +24,16 @@ static NSString *const STAKES_KEY = @"stakes";
 
 @interface PublicGamesResponse()
 
-//Parses and individual game and returns it
+/**
+ *
+ * parseGame
+ *
+ * Helper method to parse a dictionary and return a corresponding game.
+ *
+ * @param  jsonDictionar  The dictionary to be parsed
+ *
+ * @return  The corresponding game, or nil on error
+ */
 - (Game *)parseGame:(NSDictionary *)jsonDictionary;
 
 @end
