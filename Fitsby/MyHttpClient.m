@@ -8,8 +8,8 @@
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
-NSString *const SERVER_URL = @"https://f-app.herokuapp.com/"; //production server
-//NSString *const SERVER_URL = @"https://fitsby-test.herokuapp.com/"; //test server
+//NSString *const SERVER_URL = @"https://f-app.herokuapp.com/"; //production server
+NSString *const SERVER_URL = @"https://Test-fitsby.herokuapp.com/"; //test server
 
 #import "MyHttpClient.h"
 
