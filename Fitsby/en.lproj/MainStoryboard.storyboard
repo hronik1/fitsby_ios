@@ -110,6 +110,55 @@
             </objects>
             <point key="canvasLocation" x="1613" y="64"/>
         </scene>
+        <!--View Controller - Item 2-->
+        <scene sceneID="xSd-Z8-dNT">
+            <objects>
+                <viewController id="Fw4-cb-BgR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bq0-oh-T7z">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="hCP-ZF-0cs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6x-gx-srp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063" y="-784"/>
+        </scene>
+        <!--View Controller - Item 1-->
+        <scene sceneID="7i9-vL-Wuh">
+            <objects>
+                <viewController id="1L2-uq-QRG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zp9-n5-O8X">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="q9F-g3-Kfi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71U-uF-prX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063" y="-1432"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oME-U4-0Y9">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="SU6-Oi-Acx" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="2vg-EJ-Mgg">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1L2-uq-QRG" kind="relationship" relationship="viewControllers" id="kWR-9h-TWg"/>
+                        <segue destination="Fw4-cb-BgR" kind="relationship" relationship="viewControllers" id="NOU-Sa-iZQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBY-Yo-p5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535" y="-1104"/>
+        </scene>
         <!--Fitsby Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
@@ -591,7 +640,7 @@
                     <connections>
                         <outlet property="emailAddressInput" destination="4IT-mI-S9i" id="fKG-dJ-lLe"/>
                         <outlet property="passwordInput" destination="E1B-Rh-IfY" id="dXC-ae-Lvm"/>
-                        <segue destination="niU-tn-2Ut" kind="modal" identifier="LoggedIn" id="tna-Ep-Ppy"/>
+                        <segue destination="SU6-Oi-Acx" kind="modal" identifier="LoggedIn" id="Gvp-zD-7fX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGM-6i-ydZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1041,6 +1090,124 @@
     <resources>
         <image name="logo_text.png" width="581" height="400"/>
     </resources>
+    <classes>
+        <class className="FitsbyCreateGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyCreateGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelCreditCard:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="createDoneClicked:"/>
+                <relationship kind="action" name="durationValueChanged:"/>
+                <relationship kind="action" name="goalValueChanged:"/>
+                <relationship kind="action" name="wagerValueChanged:"/>
+                <relationship kind="outlet" name="duration" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="durationStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="goal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goalStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="privateSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="wager" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wagerStepper" candidateClass="UIStepper"/>
+            </relationships>
+        </class>
+        <class className="FitsbyCreditCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyCreditCardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelClicked:"/>
+                <relationship kind="action" name="doneClicked:"/>
+                <relationship kind="outlet" name="cvcField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="monthField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="numberField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="wagerAmountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yearField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FitsbyDetailContainerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyDetailContainerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="idLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="potLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="typeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wagerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FitsbyDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelJoinGame:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="joinButtonPressed:"/>
+                <relationship kind="outlet" name="profileIV" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="FitsbyLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneClicked:"/>
+                <relationship kind="outlet" name="emailAddressInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FitsbyMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyMasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelAdd:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="FitsbyPrivateGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyPrivateGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelClicked:"/>
+                <relationship kind="action" name="doneClicked:"/>
+                <relationship kind="outlet" name="creatorField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="idField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FitsbyRegisterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyRegisterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneClicked:"/>
+                <relationship kind="outlet" name="confirmPasswordInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailAddressInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstNameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastNameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="privacyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="termsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FitsbyRegistrationOnboardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyRegistrationOnboardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelRegister:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="doneButtonClicked:"/>
+                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="JoinPublicGameCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JoinPublicGameCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="idLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playersLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profileIV" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="wagerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LandingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LandingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
