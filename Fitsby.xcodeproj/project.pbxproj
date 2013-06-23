@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F23DA6C41777682B00C1E86B /* FitsbyCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23DA6C31777682B00C1E86B /* FitsbyCheckinViewController.m */; };
 		F249EF4A16E4EC00007DB593 /* GravatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F249EF4916E4EC00007DB593 /* GravatarHelper.m */; };
 		F2A3C2E816F359D800DA56EF /* FitsbyCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C2E716F359D800DA56EF /* FitsbyCreditCardViewController.m */; };
 		F2A3C2EC16F6143200DA56EF /* logo_text.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2EB16F6143200DA56EF /* logo_text.png */; };
@@ -54,6 +55,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F23DA6C21777682B00C1E86B /* FitsbyCheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCheckinViewController.h; sourceTree = "<group>"; };
+		F23DA6C31777682B00C1E86B /* FitsbyCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyCheckinViewController.m; sourceTree = "<group>"; };
 		F249EF4816E4EC00007DB593 /* GravatarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravatarHelper.h; sourceTree = "<group>"; };
 		F249EF4916E4EC00007DB593 /* GravatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravatarHelper.m; sourceTree = "<group>"; };
 		F2A3C2E616F359D800DA56EF /* FitsbyCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCreditCardViewController.h; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 				F2A3C2F716F61CCF00DA56EF /* FitsbyRegistrationOnboardViewController.h */,
 				F2A3C2F816F61CD000DA56EF /* FitsbyRegistrationOnboardViewController.m */,
 				F2C0FFA716D474F700F869BB /* Supporting Files */,
+				F23DA6C21777682B00C1E86B /* FitsbyCheckinViewController.h */,
+				F23DA6C31777682B00C1E86B /* FitsbyCheckinViewController.m */,
 			);
 			path = Fitsby;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 				F2A3C30E16F8AB4E00DA56EF /* FitsbyChildViewController.m in Sources */,
 				F2A3C37917032F7500DA56EF /* FitsbyPrivateGameViewController.m in Sources */,
 				F2A3C37C170334AD00DA56EF /* PrivateGameResponse.m in Sources */,
+				F23DA6C41777682B00C1E86B /* FitsbyCheckinViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
