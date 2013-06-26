@@ -48,25 +48,10 @@
         {
             
             NSMutableArray *feedsArray;
-            //NSLog(@"full : %@",[feedResponse objectForKey:key]);
             feedsArray=[feedResponse objectForKey:key];
             userApplication.feedArray=feedsArray;
-            for(id feed in feedsArray)
-            {
-                NSLog(@"START++++++++");
-                NSDictionary *feedObject;
-                feedObject=feed;
-                //NSLog(@"Feed : %@",feed);
-                for(id feedKey in feedObject)
-                {
-                    NSLog(@"%@ %@",feedKey,[feedObject objectForKey:feedKey]);
-                }
-                NSLog(@"END++++++++");
-                
-            }
         }
     }
-    [newsFeedTableView reloadData];
 
 }
 
@@ -84,12 +69,11 @@
 {
     
     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
-    //return 1;
     return [userApplication.feedArray count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Create an instance of UITableViewCell, with default appearance
+    
     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
     UITableViewCell *cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"UITableViewCell"];
     NSDictionary *feedObject=[userApplication.feedArray objectAtIndex:[indexPath row]];
