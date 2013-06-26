@@ -28,6 +28,7 @@ static NSString *const GET_PUBLIC_GAMES_ROUTE = @"public_games";
 static NSString *const CREATE_GAME_ROUTE = @"create_game";
 static NSString *const JOIN_GAME_ROUTE = @"join_game";
 static NSString *const PRIVATE_GAME_ROUTE = @"get_private_game_info";
+static NSString *const GAME_COMMENTS = @"game_comments";
 
 @implementation GameCommunication
 
@@ -101,6 +102,21 @@ static NSString *const PRIVATE_GAME_ROUTE = @"get_private_game_info";
         NSLog(@"key:%@, value:%@", key, [jsonDictionary objectForKey:key]);
     }
     return [[PrivateGameResponse alloc] initWithDictionary:jsonDictionary];
+}
+
++ (NSDictionary*)getGameComments:(NSString *)gameID  {
+    NSArray *keys = [NSArray arrayWithObjects: GAME_ID_KEY, nil];
+    NSArray *objects = [NSArray arrayWithObjects:gameID, nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    
+    NSData *response = [MyHttpClient createGetRequest:GAME_COMMENTS withParams:dictionary];
+    NSError *error = nil;
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
+    if (error)
+        return nil;
+    else
+        return jsonDictionary;
+    
 }
 
 @end

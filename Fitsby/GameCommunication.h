@@ -73,4 +73,16 @@
  */
 + (PrivateGameResponse *)getPrivateGame:(NSString *)gameID creatorName:(NSString *)creatorName userID:(int)userID;
 
+/**
+ *  getGameComments
+ *
+ *  Returns the comments for a particular game which is passed as an arugument
+ *
+ *  @param  gameID  The id of the game which is being searched for.
+ *
+ *  @return  A NSDictionary with a status and then an array of array of comments with all the details
+ */
++ (NSDictionary*)getGameComments:(NSString *)gameID;
+
+
 @end
