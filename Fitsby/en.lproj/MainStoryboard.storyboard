@@ -110,16 +110,28 @@
             </objects>
             <point key="canvasLocation" x="1613" y="64"/>
         </scene>
-        <!--View Controller - Item 2-->
+        <!--Fitsby Map View Controller - Item 2-->
         <scene sceneID="xSd-Z8-dNT">
             <objects>
-                <viewController id="Fw4-cb-BgR" sceneMemberID="viewController">
+                <viewController id="Fw4-cb-BgR" customClass="FitsbyMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bq0-oh-T7z">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tcC-9K-h6Z"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tcC-9K-h6Z" firstAttribute="leading" secondItem="bq0-oh-T7z" secondAttribute="leading" type="default" id="3kK-8r-Hb1"/>
+                            <constraint firstItem="tcC-9K-h6Z" firstAttribute="bottom" secondItem="bq0-oh-T7z" secondAttribute="bottom" type="default" id="5Yl-8h-Dr4"/>
+                            <constraint firstItem="tcC-9K-h6Z" firstAttribute="top" secondItem="bq0-oh-T7z" secondAttribute="top" type="default" id="aIR-9z-lwg"/>
+                            <constraint firstItem="tcC-9K-h6Z" firstAttribute="trailing" secondItem="bq0-oh-T7z" secondAttribute="trailing" type="default" id="jTW-LX-zzE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="hCP-ZF-0cs"/>
+                    <connections>
+                        <outlet property="mapView" destination="tcC-9K-h6Z" id="2aS-PP-yha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6x-gx-srp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1183,6 +1195,9 @@
                 <relationship kind="outlet" name="emailAddressInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordInput" candidateClass="UITextField"/>
             </relationships>
+        </class>
+        <class className="FitsbyMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyMapViewController.h"/>
         </class>
         <class className="FitsbyMasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FitsbyMasterViewController.h"/>

@@ -8,6 +8,7 @@
 
 #import "FitsbyCheckinViewController.h"
 
+
 @interface FitsbyCheckinViewController () {
     NSTimer *pollingTimer;
 }
@@ -48,7 +49,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 - (void)pollTime
 {

@@ -8,6 +8,7 @@
 
 #import "FitsbyAppDelegate.h"
 
+
 @implementation FitsbyAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
