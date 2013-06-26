@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F23DA6C41777682B00C1E86B /* FitsbyCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23DA6C31777682B00C1E86B /* FitsbyCheckinViewController.m */; };
-		F23DA6D71777708B00C1E86B /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23DA6C71777708B00C1E86B /* Common.framework */; };
-		F23DA6D81777708B00C1E86B /* ContextCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23DA6CA1777708B00C1E86B /* ContextCore.framework */; };
-		F23DA6D91777708B00C1E86B /* ContextLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23DA6CD1777708B00C1E86B /* ContextLocation.framework */; };
-		F23DA6DA1777708B00C1E86B /* DataModels.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F23DA6CF1777708B00C1E86B /* DataModels.bundle */; };
-		F23DA6DB1777708B00C1E86B /* ContextProfiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23DA6D11777708B00C1E86B /* ContextProfiling.framework */; };
-		F23DA6DC1777708B00C1E86B /* rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = F23DA6D31777708B00C1E86B /* rules.txt */; };
-		F23DA6DD1777708B00C1E86B /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23DA6D51777708B00C1E86B /* NetworkServices.framework */; };
 		F249EF4A16E4EC00007DB593 /* GravatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F249EF4916E4EC00007DB593 /* GravatarHelper.m */; };
 		F2A3C2E816F359D800DA56EF /* FitsbyCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C2E716F359D800DA56EF /* FitsbyCreditCardViewController.m */; };
 		F2A3C2EC16F6143200DA56EF /* logo_text.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C2EB16F6143200DA56EF /* logo_text.png */; };
@@ -64,13 +57,6 @@
 /* Begin PBXFileReference section */
 		F23DA6C21777682B00C1E86B /* FitsbyCheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCheckinViewController.h; sourceTree = "<group>"; };
 		F23DA6C31777682B00C1E86B /* FitsbyCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyCheckinViewController.m; sourceTree = "<group>"; };
-		F23DA6C71777708B00C1E86B /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Common.framework; sourceTree = "<group>"; };
-		F23DA6CA1777708B00C1E86B /* ContextCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextCore.framework; sourceTree = "<group>"; };
-		F23DA6CD1777708B00C1E86B /* ContextLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextLocation.framework; sourceTree = "<group>"; };
-		F23DA6CF1777708B00C1E86B /* DataModels.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DataModels.bundle; sourceTree = "<group>"; };
-		F23DA6D11777708B00C1E86B /* ContextProfiling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextProfiling.framework; sourceTree = "<group>"; };
-		F23DA6D31777708B00C1E86B /* rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rules.txt; sourceTree = "<group>"; };
-		F23DA6D51777708B00C1E86B /* NetworkServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = "<group>"; };
 		F249EF4816E4EC00007DB593 /* GravatarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravatarHelper.h; sourceTree = "<group>"; };
 		F249EF4916E4EC00007DB593 /* GravatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravatarHelper.m; sourceTree = "<group>"; };
 		F2A3C2E616F359D800DA56EF /* FitsbyCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCreditCardViewController.h; sourceTree = "<group>"; };
@@ -153,111 +139,12 @@
 				F2C0FFA116D474F700F869BB /* UIKit.framework in Frameworks */,
 				F2C0FFA316D474F700F869BB /* Foundation.framework in Frameworks */,
 				F2C0FFA516D474F700F869BB /* CoreGraphics.framework in Frameworks */,
-				F23DA6D71777708B00C1E86B /* Common.framework in Frameworks */,
-				F23DA6D81777708B00C1E86B /* ContextCore.framework in Frameworks */,
-				F23DA6D91777708B00C1E86B /* ContextLocation.framework in Frameworks */,
-				F23DA6DB1777708B00C1E86B /* ContextProfiling.framework in Frameworks */,
-				F23DA6DD1777708B00C1E86B /* NetworkServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F23DA6C51777704200C1E86B /* context-beta-ios-sdk */ = {
-			isa = PBXGroup;
-			children = (
-				F23DA6C61777708B00C1E86B /* Common.embeddedframework */,
-				F23DA6C91777708B00C1E86B /* ContextCore.embeddedframework */,
-				F23DA6CC1777708B00C1E86B /* ContextLocation.embeddedframework */,
-				F23DA6D01777708B00C1E86B /* ContextProfiling.embeddedframework */,
-				F23DA6D41777708B00C1E86B /* NetworkServices.embeddedframework */,
-			);
-			name = "context-beta-ios-sdk";
-			sourceTree = "<group>";
-		};
-		F23DA6C61777708B00C1E86B /* Common.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				F23DA6C71777708B00C1E86B /* Common.framework */,
-				F23DA6C81777708B00C1E86B /* Resources */,
-			);
-			path = Common.embeddedframework;
-			sourceTree = "<group>";
-		};
-		F23DA6C81777708B00C1E86B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		F23DA6C91777708B00C1E86B /* ContextCore.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				F23DA6CA1777708B00C1E86B /* ContextCore.framework */,
-				F23DA6CB1777708B00C1E86B /* Resources */,
-			);
-			path = ContextCore.embeddedframework;
-			sourceTree = "<group>";
-		};
-		F23DA6CB1777708B00C1E86B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		F23DA6CC1777708B00C1E86B /* ContextLocation.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				F23DA6CD1777708B00C1E86B /* ContextLocation.framework */,
-				F23DA6CE1777708B00C1E86B /* Resources */,
-			);
-			path = ContextLocation.embeddedframework;
-			sourceTree = "<group>";
-		};
-		F23DA6CE1777708B00C1E86B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F23DA6CF1777708B00C1E86B /* DataModels.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		F23DA6D01777708B00C1E86B /* ContextProfiling.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				F23DA6D11777708B00C1E86B /* ContextProfiling.framework */,
-				F23DA6D21777708B00C1E86B /* Resources */,
-			);
-			path = ContextProfiling.embeddedframework;
-			sourceTree = "<group>";
-		};
-		F23DA6D21777708B00C1E86B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F23DA6D31777708B00C1E86B /* rules.txt */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		F23DA6D41777708B00C1E86B /* NetworkServices.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				F23DA6D51777708B00C1E86B /* NetworkServices.framework */,
-				F23DA6D61777708B00C1E86B /* Resources */,
-			);
-			path = NetworkServices.embeddedframework;
-			sourceTree = "<group>";
-		};
-		F23DA6D61777708B00C1E86B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		F2A3C2E916F6140900DA56EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,7 +219,6 @@
 		F2C0FFA616D474F700F869BB /* Fitsby */ = {
 			isa = PBXGroup;
 			children = (
-				F23DA6C51777704200C1E86B /* context-beta-ios-sdk */,
 				F2A3C2E916F6140900DA56EF /* Resources */,
 				F2EA228016E2882000B8918E /* TableCells */,
 				F2EA227916DFA97A00B8918E /* Responses */,
@@ -494,8 +380,6 @@
 				F2A3C36F16FC9F4900DA56EF /* lock.png in Resources */,
 				F2A3C37116FC9F5400DA56EF /* stripe_cards.png in Resources */,
 				F2A3C37316FC9F6100DA56EF /* secure_payment_logo.png in Resources */,
-				F23DA6DA1777708B00C1E86B /* DataModels.bundle in Resources */,
-				F23DA6DC1777708B00C1E86B /* rules.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +508,11 @@
 					"\"$(SRCROOT)/Fitsby/ContextLocation.embeddedframework\"",
 					"\"$(SRCROOT)/Fitsby/ContextProfiling.embeddedframework\"",
 					"\"$(SRCROOT)/Fitsby/NetworkServices.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/Common.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/ContextCore.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/ContextLocation.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/ContextProfiling.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/NetworkServices.embeddedframework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fitsby/Fitsby-Prefix.pch";
@@ -643,6 +532,11 @@
 					"\"$(SRCROOT)/Fitsby/ContextLocation.embeddedframework\"",
 					"\"$(SRCROOT)/Fitsby/ContextProfiling.embeddedframework\"",
 					"\"$(SRCROOT)/Fitsby/NetworkServices.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/Common.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/ContextCore.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/ContextLocation.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/ContextProfiling.embeddedframework\"",
+					"\"$(SRCROOT)/Fitsby/context-beta-ios-sdk/NetworkServices.embeddedframework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fitsby/Fitsby-Prefix.pch";
