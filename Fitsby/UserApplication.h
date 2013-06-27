@@ -10,6 +10,13 @@
 @class User;
 
 @interface UserApplication : UIApplication
+{
+    NSNumber *gameID;
+    NSArray *feedArray;
+}
 
 @property (strong, atomic) User *user;
+@property NSString *gameID;
+@property NSArray *feedArray;
+
 @end
