@@ -101,15 +101,22 @@
                                                    delegate:self
                                           cancelButtonTitle:@"No"
                                           otherButtonTitles:@"Yes", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField *textField = [alert textFieldAtIndex:0];
+    textField.placeholder = @"Place Name";
     [alert show];
 }
+
+# pragma mark - UIAlertViewDelegate methods
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSLog(@"index %i", buttonIndex);
     if (buttonIndex == 1) {
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        
         QLPlace *place = [[QLPlace alloc] init];
-        place.name = @"Home";
+        place.name = textField.text;
         QLGeoFenceCircle *circle = [[QLGeoFenceCircle alloc] init];
         circle.latitude = selectedCoords.latitude;
         circle.longitude = selectedCoords.longitude;
@@ -125,9 +132,30 @@
     [self.mapView addGestureRecognizer:longPressGesture];
 }
 
+# pragma mark - QLContextPlaceConnectorDelegate methods
+
 - (void)didGetPlaceEvent:(QLPlaceEvent *)placeEvent
 {
-    NSLog(@"did get place event %@", [placeEvent place].name);
+    NSLog(@"did get place event %@, %d", [placeEvent place].name, placeEvent.eventType);
+    
+    NSString *placeTitle = nil;
+    switch (placeEvent.eventType)
+    {
+        case QLPlaceEventTypeAt:
+            placeTitle = [NSString stringWithFormat:@"At %@", placeEvent.place.name];
+            //see how checkin wants to happen
+            break;
+        case QLPlaceEventTypeLeft:
+            placeTitle = [NSString stringWithFormat:@"Left %@", placeEvent.place.name];
+            //see how checkout wants to happen
+            break;
+    }
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertAction = NSLocalizedString(@"Foo", nil);
+    localNotification.alertBody = [NSString stringWithFormat:@"%@", placeTitle];
+    
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 }
 
 @end

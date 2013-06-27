@@ -182,11 +182,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Fitsby/FitsbyMapViewController.m"
-         timestampString = "393949434.978964"
+         timestampString = "394035476.978403"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "133"
-         endingLineNumber = "133"
+         startingLineNumber = "161"
+         endingLineNumber = "161"
          landmarkName = "@implementation FitsbyMapViewController"
          landmarkType = "3">
       </FileBreakpoint>
