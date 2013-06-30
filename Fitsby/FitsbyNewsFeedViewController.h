@@ -1,16 +1,13 @@
 //
-//  FitsbyNewsFeedViewController.h
+//  FitsbyNewsFeed2ViewController.h
 //  Fitsby
 //
-//  Created by Anirudh Balagopal on 26/06/13.
+//  Created by Anirudh Balagopal on 28/06/13.
 //  Copyright (c) 2013 Fitsby. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface FitsbyNewsFeedViewController : UIViewController
-{
-    IBOutlet UITableView *newsFeedTableView;
-}
+@interface FitsbyNewsFeed2ViewController : UIViewController
 
 @end

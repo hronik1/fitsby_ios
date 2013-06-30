@@ -1,5 +1,5 @@
 //
-//  FitsbyNewsFeedTable.h
+//  FitsbyNewsFeedViewController.h
 //  Fitsby
 //
 //  Created by Anirudh Balagopal on 26/06/13.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FitsbyNewsFeedTable : UITableView
+@interface FitsbyNewsFeedViewController : UIViewController
+{
+    IBOutlet UITableView *newsFeedTableView;
+}
 
 @end
