@@ -12,6 +12,7 @@
 #import "UserApplication.h"
 #import "User.h"
 
+
 @implementation FitsbyAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -34,6 +35,7 @@
         self.window.rootViewController=viewControl;
         self.window.backgroundColor = [UIColor whiteColor];
         [self.window makeKeyAndVisible];
+        [GMSServices provideAPIKey:@"AIzaSyCa0vigwlhrkI6Eob18-3EsmVvIeHmJExs"];
         
     }
                
