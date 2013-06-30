@@ -11,6 +11,8 @@
 #import "PublicGamesResponse.h"
 #import "CreateGameResponse.h"
 #import "PrivateGameResponse.h"
+#import "UserApplication.h"
+#import "User.h"
 
 static NSString *const ID_KEY = @"user_id";
 static NSString *const GAME_ID_KEY = @"game_id";
@@ -29,6 +31,7 @@ static NSString *const CREATE_GAME_ROUTE = @"create_game";
 static NSString *const JOIN_GAME_ROUTE = @"join_game";
 static NSString *const PRIVATE_GAME_ROUTE = @"get_private_game_info";
 static NSString *const GAME_COMMENTS = @"game_comments";
+static NSString *const USER_GAMES = @"games_user_is_in";
 
 @implementation GameCommunication
 
@@ -116,6 +119,44 @@ static NSString *const GAME_COMMENTS = @"game_comments";
         return nil;
     else
         return jsonDictionary;
+    
+}
++ (NSDictionary*)getUserGames:(NSString *)userID  {
+    NSArray *keys = [NSArray arrayWithObjects: ID_KEY, nil];
+    NSArray *objects = [NSArray arrayWithObjects:userID, nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    
+    NSData *response = [MyHttpClient createGetRequest:USER_GAMES withParams:dictionary];
+    NSError *error = nil;
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
+    if (error)
+        return nil;
+    
+    for (id key in jsonDictionary) {
+        NSLog(@"key:%@, value:%@", key, [jsonDictionary objectForKey:key]);
+    }
+    return jsonDictionary;
+}
+
++(void)populateUserGames
+{
+    UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+    NSLog(@"%d",userApplication.user._id);
+    NSDictionary *userGames=[GameCommunication getUserGames:[NSString stringWithFormat:@"%d",userApplication.user._id]];
+    if(userGames==nil)
+    {
+        NSLog(@"Error loading newsFeed");
+    }
+    for (id key in userGames) {
+        
+        if([key isEqualToString:@"games_user_is_in"])
+        {
+            
+            
+            userApplication.gameArray=[userGames objectForKey:key];
+            //NSLog(@"Games : %@",gamesArray);
+        }
+    }
     
 }
 

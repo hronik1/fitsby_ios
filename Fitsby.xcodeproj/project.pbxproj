@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F009B26177B23DF004C72B8 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B16177B23DF004C72B8 /* Common.framework */; };
-		8F009B27177B23DF004C72B8 /* ContextCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B19177B23DF004C72B8 /* ContextCore.framework */; };
-		8F009B28177B23DF004C72B8 /* ContextLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B1C177B23DF004C72B8 /* ContextLocation.framework */; };
-		8F009B29177B23DF004C72B8 /* DataModels.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F009B1E177B23DF004C72B8 /* DataModels.bundle */; };
-		8F009B2A177B23DF004C72B8 /* ContextProfiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B20177B23DF004C72B8 /* ContextProfiling.framework */; };
-		8F009B2B177B23DF004C72B8 /* rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F009B22177B23DF004C72B8 /* rules.txt */; };
-		8F009B2C177B23DF004C72B8 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B24177B23DF004C72B8 /* NetworkServices.framework */; };
-		8F009B2E177B2401004C72B8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B2D177B2401004C72B8 /* CoreLocation.framework */; };
-		8F009B30177B2406004C72B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B2F177B2406004C72B8 /* CoreData.framework */; };
-		8F009B32177B240B004C72B8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B31177B240B004C72B8 /* libz.dylib */; };
-		8F009B34177B240E004C72B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B33177B240E004C72B8 /* MapKit.framework */; };
-		8F009B36177B2413004C72B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F009B35177B2413004C72B8 /* Security.framework */; };
-		8F009B39177B2447004C72B8 /* FitsbyNewsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B37177B2447004C72B8 /* FitsbyNewsFeedViewController.m */; };
-		8F009B3C177B2455004C72B8 /* FitsbyNewsFeedTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B3B177B2455004C72B8 /* FitsbyNewsFeedTable.m */; };
+		8F009B51177E2CCD004C72B8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B3F177E2CCD004C72B8 /* AFHTTPClient.m */; };
+		8F009B52177E2CCD004C72B8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B41177E2CCD004C72B8 /* AFHTTPRequestOperation.m */; };
+		8F009B53177E2CCD004C72B8 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B43177E2CCD004C72B8 /* AFImageRequestOperation.m */; };
+		8F009B54177E2CCD004C72B8 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B45177E2CCD004C72B8 /* AFJSONRequestOperation.m */; };
+		8F009B55177E2CCD004C72B8 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B47177E2CCD004C72B8 /* AFNetworkActivityIndicatorManager.m */; };
+		8F009B56177E2CCD004C72B8 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B4A177E2CCD004C72B8 /* AFPropertyListRequestOperation.m */; };
+		8F009B57177E2CCD004C72B8 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B4C177E2CCD004C72B8 /* AFURLConnectionOperation.m */; };
+		8F009B58177E2CCD004C72B8 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B4E177E2CCD004C72B8 /* AFXMLRequestOperation.m */; };
+		8F009B59177E2CCD004C72B8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B50177E2CCD004C72B8 /* UIImageView+AFNetworking.m */; };
+		8F009B5A177E3DB4004C72B8 /* FitsbyNewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B37177B2447004C72B8 /* FitsbyNewsFeedTableViewController.m */; };
+		8F009B5E177E74A9004C72B8 /* FitsbyNewsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B5D177E74A6004C72B8 /* FitsbyNewsFeedViewController.m */; };
+		8F65768F177F4E6200F804CB /* newsFeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F65768E177F4E6200F804CB /* newsFeedTableCell.xib */; };
+		8F657692177F4F1D00F804CB /* FitsbyNewsFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F657691177F4F1D00F804CB /* FitsbyNewsFeedCell.m */; };
 		F23DA6C41777682B00C1E86B /* FitsbyCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23DA6C31777682B00C1E86B /* FitsbyCheckinViewController.m */; };
 		F23DA6DF177776B700C1E86B /* UserContext.plist in Resources */ = {isa = PBXBuildFile; fileRef = F23DA6DE177776B700C1E86B /* UserContext.plist */; };
 		F23DA6F11778869800C1E86B /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23DA6E11778869800C1E86B /* Common.framework */; };
@@ -83,22 +82,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F009B16177B23DF004C72B8 /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Common.framework; sourceTree = "<group>"; };
-		8F009B19177B23DF004C72B8 /* ContextCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextCore.framework; sourceTree = "<group>"; };
-		8F009B1C177B23DF004C72B8 /* ContextLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextLocation.framework; sourceTree = "<group>"; };
-		8F009B1E177B23DF004C72B8 /* DataModels.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DataModels.bundle; sourceTree = "<group>"; };
-		8F009B20177B23DF004C72B8 /* ContextProfiling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextProfiling.framework; sourceTree = "<group>"; };
-		8F009B22177B23DF004C72B8 /* rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rules.txt; sourceTree = "<group>"; };
-		8F009B24177B23DF004C72B8 /* NetworkServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = "<group>"; };
 		8F009B2D177B2401004C72B8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8F009B2F177B2406004C72B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8F009B31177B240B004C72B8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8F009B33177B240E004C72B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F009B35177B2413004C72B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		8F009B37177B2447004C72B8 /* FitsbyNewsFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyNewsFeedViewController.m; sourceTree = "<group>"; };
-		8F009B38177B2447004C72B8 /* FitsbyNewsFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyNewsFeedViewController.h; sourceTree = "<group>"; };
-		8F009B3A177B2455004C72B8 /* FitsbyNewsFeedTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyNewsFeedTable.h; sourceTree = "<group>"; };
-		8F009B3B177B2455004C72B8 /* FitsbyNewsFeedTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyNewsFeedTable.m; sourceTree = "<group>"; };
+		8F009B37177B2447004C72B8 /* FitsbyNewsFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyNewsFeedTableViewController.m; sourceTree = "<group>"; };
+		8F009B38177B2447004C72B8 /* FitsbyNewsFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyNewsFeedTableViewController.h; sourceTree = "<group>"; };
+		8F009B3E177E2CCD004C72B8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		8F009B3F177E2CCD004C72B8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		8F009B40177E2CCD004C72B8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		8F009B41177E2CCD004C72B8 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		8F009B42177E2CCD004C72B8 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		8F009B43177E2CCD004C72B8 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		8F009B44177E2CCD004C72B8 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		8F009B45177E2CCD004C72B8 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		8F009B46177E2CCD004C72B8 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		8F009B47177E2CCD004C72B8 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		8F009B48177E2CCD004C72B8 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		8F009B49177E2CCD004C72B8 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		8F009B4A177E2CCD004C72B8 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		8F009B4B177E2CCD004C72B8 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		8F009B4C177E2CCD004C72B8 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		8F009B4D177E2CCD004C72B8 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		8F009B4E177E2CCD004C72B8 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		8F009B4F177E2CCD004C72B8 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		8F009B50177E2CCD004C72B8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		8F009B5C177E74A5004C72B8 /* FitsbyNewsFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyNewsFeedViewController.h; sourceTree = "<group>"; };
+		8F009B5D177E74A6004C72B8 /* FitsbyNewsFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyNewsFeedViewController.m; sourceTree = "<group>"; };
+		8F65768E177F4E6200F804CB /* newsFeedTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = newsFeedTableCell.xib; path = ../newsFeedTableCell.xib; sourceTree = "<group>"; };
+		8F657690177F4F1D00F804CB /* FitsbyNewsFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyNewsFeedCell.h; sourceTree = "<group>"; };
+		8F657691177F4F1D00F804CB /* FitsbyNewsFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyNewsFeedCell.m; sourceTree = "<group>"; };
 		F23DA6C21777682B00C1E86B /* FitsbyCheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyCheckinViewController.h; sourceTree = "<group>"; };
 		F23DA6C31777682B00C1E86B /* FitsbyCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyCheckinViewController.m; sourceTree = "<group>"; };
 		F23DA6DE177776B700C1E86B /* UserContext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserContext.plist; sourceTree = "<group>"; };
@@ -208,13 +222,38 @@
 				F23DA6F31778869900C1E86B /* ContextLocation.framework in Frameworks */,
 				F23DA6F51778869900C1E86B /* ContextProfiling.framework in Frameworks */,
 				F23DA6F71778869900C1E86B /* NetworkServices.framework in Frameworks */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F009B3D177E2CCD004C72B8 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				8F009B3E177E2CCD004C72B8 /* AFHTTPClient.h */,
+				8F009B3F177E2CCD004C72B8 /* AFHTTPClient.m */,
+				8F009B40177E2CCD004C72B8 /* AFHTTPRequestOperation.h */,
+				8F009B41177E2CCD004C72B8 /* AFHTTPRequestOperation.m */,
+				8F009B42177E2CCD004C72B8 /* AFImageRequestOperation.h */,
+				8F009B43177E2CCD004C72B8 /* AFImageRequestOperation.m */,
+				8F009B44177E2CCD004C72B8 /* AFJSONRequestOperation.h */,
+				8F009B45177E2CCD004C72B8 /* AFJSONRequestOperation.m */,
+				8F009B46177E2CCD004C72B8 /* AFNetworkActivityIndicatorManager.h */,
+				8F009B47177E2CCD004C72B8 /* AFNetworkActivityIndicatorManager.m */,
+				8F009B48177E2CCD004C72B8 /* AFNetworking.h */,
+				8F009B49177E2CCD004C72B8 /* AFPropertyListRequestOperation.h */,
+				8F009B4A177E2CCD004C72B8 /* AFPropertyListRequestOperation.m */,
+				8F009B4B177E2CCD004C72B8 /* AFURLConnectionOperation.h */,
+				8F009B4C177E2CCD004C72B8 /* AFURLConnectionOperation.m */,
+				8F009B4D177E2CCD004C72B8 /* AFXMLRequestOperation.h */,
+				8F009B4E177E2CCD004C72B8 /* AFXMLRequestOperation.m */,
+				8F009B4F177E2CCD004C72B8 /* UIImageView+AFNetworking.h */,
+				8F009B50177E2CCD004C72B8 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 		F23DA6E01778869800C1E86B /* Common.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +275,6 @@
 			children = (
 				F23DA6E41778869800C1E86B /* ContextCore.framework */,
 				F23DA6E51778869800C1E86B /* Resources */,
-
 			);
 			path = ContextCore.embeddedframework;
 			sourceTree = "<group>";
@@ -253,7 +291,6 @@
 			children = (
 				F23DA6E71778869800C1E86B /* ContextLocation.framework */,
 				F23DA6E81778869800C1E86B /* Resources */,
-
 			);
 			path = ContextLocation.embeddedframework;
 			sourceTree = "<group>";
@@ -262,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				F23DA6E91778869800C1E86B /* DataModels.bundle */,
-
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -272,7 +308,6 @@
 			children = (
 				F23DA6EB1778869800C1E86B /* ContextProfiling.framework */,
 				F23DA6EC1778869800C1E86B /* Resources */,
-
 			);
 			path = ContextProfiling.embeddedframework;
 			sourceTree = "<group>";
@@ -281,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				F23DA6ED1778869800C1E86B /* rules.txt */,
-
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,7 +325,6 @@
 			children = (
 				F23DA6EF1778869800C1E86B /* NetworkServices.framework */,
 				F23DA6F01778869800C1E86B /* Resources */,
-
 			);
 			path = NetworkServices.embeddedframework;
 			sourceTree = "<group>";
@@ -332,8 +365,8 @@
 			children = (
 				F2C0000616DDA18800F869BB /* User.h */,
 				F2C0000716DDA18800F869BB /* User.m */,
-				F2EA228716E28FFE00B8918E /* Game.h */,
 				F2EA228816E28FFE00B8918E /* Game.m */,
+				F2EA228716E28FFE00B8918E /* Game.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -372,6 +405,7 @@
 		F2C0FF9F16D474F700F869BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F009B3D177E2CCD004C72B8 /* AFNetworking */,
 				F23DA70017788A2800C1E86B /* libz.dylib */,
 				F23DA6FC1778890000C1E86B /* CoreData.framework */,
 				F23DA6FA177888E700C1E86B /* CoreLocation.framework */,
@@ -398,10 +432,11 @@
 				F2C0000916DDB79100F869BB /* Application Sublcass */,
 				F2C0000516DD022500F869BB /* Models */,
 				F2C0FFFE16DAB45800F869BB /* NetworkControllers */,
-				8F009B38177B2447004C72B8 /* FitsbyNewsFeedViewController.h */,
-				8F009B37177B2447004C72B8 /* FitsbyNewsFeedViewController.m */,
-				8F009B3A177B2455004C72B8 /* FitsbyNewsFeedTable.h */,
-				8F009B3B177B2455004C72B8 /* FitsbyNewsFeedTable.m */,
+				8F009B38177B2447004C72B8 /* FitsbyNewsFeedTableViewController.h */,
+				8F009B37177B2447004C72B8 /* FitsbyNewsFeedTableViewController.m */,
+				8F657690177F4F1D00F804CB /* FitsbyNewsFeedCell.h */,
+				8F657691177F4F1D00F804CB /* FitsbyNewsFeedCell.m */,
+				8F65768E177F4E6200F804CB /* newsFeedTableCell.xib */,
 				F2C0FFF816D7237000F869BB /* FitsbyLoginViewController.h */,
 				F2C0FFF916D7237000F869BB /* FitsbyLoginViewController.m */,
 				F2A3C37717032F7500DA56EF /* FitsbyPrivateGameViewController.h */,
@@ -413,6 +448,8 @@
 				F2C0FFAF16D474F700F869BB /* FitsbyAppDelegate.h */,
 				F2C0FFB016D474F700F869BB /* FitsbyAppDelegate.m */,
 				F2C0FFB816D474F700F869BB /* MainStoryboard.storyboard */,
+				8F009B5C177E74A5004C72B8 /* FitsbyNewsFeedViewController.h */,
+				8F009B5D177E74A6004C72B8 /* FitsbyNewsFeedViewController.m */,
 				F23DA702177A9D7800C1E86B /* FitsbyMapViewController.h */,
 				F23DA703177A9D7800C1E86B /* FitsbyMapViewController.m */,
 				F2A3C30B16F8AB4D00DA56EF /* FitsbyChildViewController.h */,
@@ -563,7 +600,7 @@
 				F23DA6DF177776B700C1E86B /* UserContext.plist in Resources */,
 				F23DA6F41778869900C1E86B /* DataModels.bundle in Resources */,
 				F23DA6F61778869900C1E86B /* rules.txt in Resources */,
-
+				8F65768F177F4E6200F804CB /* newsFeedTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +639,18 @@
 				F2A3C37C170334AD00DA56EF /* PrivateGameResponse.m in Sources */,
 				F23DA6C41777682B00C1E86B /* FitsbyCheckinViewController.m in Sources */,
 				F23DA704177A9D7800C1E86B /* FitsbyMapViewController.m in Sources */,
-
+				8F009B51177E2CCD004C72B8 /* AFHTTPClient.m in Sources */,
+				8F009B52177E2CCD004C72B8 /* AFHTTPRequestOperation.m in Sources */,
+				8F009B53177E2CCD004C72B8 /* AFImageRequestOperation.m in Sources */,
+				8F009B54177E2CCD004C72B8 /* AFJSONRequestOperation.m in Sources */,
+				8F009B55177E2CCD004C72B8 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				8F009B56177E2CCD004C72B8 /* AFPropertyListRequestOperation.m in Sources */,
+				8F009B57177E2CCD004C72B8 /* AFURLConnectionOperation.m in Sources */,
+				8F009B58177E2CCD004C72B8 /* AFXMLRequestOperation.m in Sources */,
+				8F009B59177E2CCD004C72B8 /* UIImageView+AFNetworking.m in Sources */,
+				8F009B5A177E3DB4004C72B8 /* FitsbyNewsFeedTableViewController.m in Sources */,
+				8F009B5E177E74A9004C72B8 /* FitsbyNewsFeedViewController.m in Sources */,
+				8F657692177F4F1D00F804CB /* FitsbyNewsFeedCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,7 +747,6 @@
 					"\"$(SRCROOT)/ContextLocation.embeddedframework\"",
 					"\"$(SRCROOT)/ContextProfiling.embeddedframework\"",
 					"\"$(SRCROOT)/NetworkServices.embeddedframework\"",
-
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fitsby/Fitsby-Prefix.pch";
@@ -724,7 +771,6 @@
 					"\"$(SRCROOT)/ContextLocation.embeddedframework\"",
 					"\"$(SRCROOT)/ContextProfiling.embeddedframework\"",
 					"\"$(SRCROOT)/NetworkServices.embeddedframework\"",
-
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fitsby/Fitsby-Prefix.pch";

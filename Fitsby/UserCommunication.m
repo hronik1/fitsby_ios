@@ -19,6 +19,11 @@
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
                                                            forKeys:keys];
     NSData *response = [MyHttpClient createPostRequest:@"login_android" withParams:dictionary];
+    if(!response)
+    {
+        NSLog(@"error");
+        return nil;
+    }
     NSError *error = nil;
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
     
@@ -29,6 +34,18 @@
         NSLog(@"error");
         return nil;
     }
+}
++(BOOL)logoutUser
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    if(standardUserDefaults!=nil)
+    {
+    [standardUserDefaults setValue:@"no" forKey:@"loggedIn"];
+    [standardUserDefaults synchronize];
+    return true;
+    }
+    else
+        return false;
 }
 
 + (UserResponse *)registerUser:(NSString *)email withPassword:(NSString *)password
@@ -41,6 +58,12 @@
                                                            forKeys:keys];
     
     NSData *response = [MyHttpClient createPostRequest:@"users.json" withParams:dictionary];
+    if(!response)
+    {
+        NSLog(@"error");
+        return nil;
+    }
+
     NSError *error = nil;
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
     

@@ -7,7 +7,9 @@
 //
 
 #import "UserApplication.h"
-
+#import "User.h"
+#import "GameCommunication.h"
 @implementation UserApplication
+@synthesize user;
 
 @end

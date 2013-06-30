@@ -10,6 +10,7 @@
 #import "UserCommunication.h"
 #import "UserResponse.h"
 #import "UserApplication.h"
+#import "User.h"
 
 static NSString *const SEGUE_ID = @"register";
 static int const TERMS_TAG = 3;
@@ -106,7 +107,7 @@ static int const PRIVACY_TAG = 1;
                 [progress stopAnimating];
                 if (!userResponse) {
                     //TODO tailor failure message
-                    [self showFailureDialog];
+                    [self showNoInternetDialog];
                     NSLog(@"userResponse nil");
                     return;
                 } else if (!userResponse.successful) {
@@ -123,6 +124,7 @@ static int const PRIVACY_TAG = 1;
                 } else {
                     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
                     userApplication.user = user;
+                    [user saveUserSession];
                     (NSLog(@"segue initiated"));
                     [self performSegueWithIdentifier:SEGUE_ID sender:sender];
                 }
@@ -150,4 +152,14 @@ static int const PRIVACY_TAG = 1;
                                           otherButtonTitles:nil];
     [alert show];
 }
+- (void)showNoInternetDialog {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry, could not connect to the network"
+                                                    message:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+
 @end

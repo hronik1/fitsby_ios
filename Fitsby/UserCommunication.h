@@ -39,4 +39,6 @@
 + (UserResponse *)registerUser:(NSString *)email withPassword:(NSString *)password
           confirmPassword:(NSString *)confirmPassword firstName:(NSString *)firstName lastName:(NSString *)lastName;
 
++(BOOL)logoutUser;
+
 @end

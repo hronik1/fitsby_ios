@@ -37,5 +37,8 @@
  * @return  This instance of a User
  */
 - (id)initWithId:(int)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email;
-
+-(void)saveUserSession;
+-(void)retriveUserSession;
++(void)populateUserGames;
 @end
+

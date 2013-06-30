@@ -98,7 +98,7 @@ static NSString *const SEGUE_ID = @"LoggedIn";
                 [progress stopAnimating];
                 if (!userResponse) {
                     //TODO tailor failure message
-                    [self showFailureDialog];
+                    [self showNoInternetDialog];
                     NSLog(@"userResponse nil");
                     return;
                 } else if (!userResponse.successful) {
@@ -114,7 +114,11 @@ static NSString *const SEGUE_ID = @"LoggedIn";
                     NSLog(@"user nil");
                 } else {
                     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+                    
+
                     userApplication.user = user;
+                    [user saveUserSession];
+                    
                     (NSLog(@"segue initiated"));
                     [self performSegueWithIdentifier:SEGUE_ID sender:sender];
                 }
@@ -137,6 +141,14 @@ static NSString *const SEGUE_ID = @"LoggedIn";
 
 - (void)showFailureDialog {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Doh, either your username or password is wrong"
+                                                    message:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+- (void)showNoInternetDialog {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry, could not connect to the network"
                                                     message:nil
                                                    delegate:nil
                                           cancelButtonTitle:@"Ok"

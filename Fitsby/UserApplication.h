@@ -13,10 +13,13 @@
 {
     NSNumber *gameID;
     NSArray *feedArray;
+    NSMutableArray *gameArray;
 }
+-(NSNumber*)getCurrentGameID;
 
 @property (strong, atomic) User *user;
 @property NSString *gameID;
 @property NSArray *feedArray;
+@property NSMutableArray *gameArray;
 
 @end

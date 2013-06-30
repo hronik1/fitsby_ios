@@ -35,4 +35,28 @@
     
     return self;
 }
+@synthesize firstName,_id,lastName;
+-(void)saveUserSession
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *userId=[NSString stringWithFormat:@"%d",self._id];
+    [standardUserDefaults setValue:userId forKey:@"loggedInUserId"];
+    [standardUserDefaults setValue:self.email forKey:@"loggedInUserEmail"];
+    [standardUserDefaults setValue:self.firstName forKey:@"loggedInUserFirstName"];
+    [standardUserDefaults setValue:self.lastName forKey:@"loggedInUserLastName"];
+     [standardUserDefaults setValue:@"yes" forKey:@"loggedIn"];
+    
+    [standardUserDefaults synchronize];
+}
+-(void)retriveUserSession
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    self.firstName=[standardUserDefaults objectForKey:@"loggedInUserFirstName"];
+    self.lastName=[standardUserDefaults objectForKey:@"loggedInUserLastName"];
+   // NSLog(@"Some : %@",self.firstName);
+    NSString *id=[standardUserDefaults objectForKey:@"loggedInUserId"];
+    self.email=[standardUserDefaults objectForKey:@"loggedInUserEmail"];
+    self._id=[id intValue];
+}
+
 @end

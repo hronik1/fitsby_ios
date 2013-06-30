@@ -7,16 +7,55 @@
 //
 
 #import "FitsbyAppDelegate.h"
-
+#import "FitsbyLoginViewController.h"
+#import "LandingViewController.h"
+#import "UserApplication.h"
+#import "User.h"
 
 @implementation FitsbyAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    return YES;
+    
+    
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    if([standardUserDefaults objectForKey:@"loggedIn"] != nil && [[standardUserDefaults valueForKey:@"loggedIn"]isEqualToString:@"yes"])
+    {
+        NSLog(@"LoggedIn");
+        UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+        User *user=[[User alloc]init];
+        [user retriveUserSession];
+        userApplication.user = user;
+       
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        FitsbyLoginViewController *viewControl = (FitsbyLoginViewController *)[storyboard instantiateViewControllerWithIdentifier:@"homeView"];
+        self.window.rootViewController=viewControl;
+        self.window.backgroundColor = [UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+        
+    }
+               
+        
+    else
+    {
+        NSLog(@"Not logged in");
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        // Override point for customization after application launch.
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        LandingViewController *viewControl = (LandingViewController *)[storyboard instantiateViewControllerWithIdentifier:@"landingView"];
+
+        self.window.rootViewController=viewControl;
+        self.window.backgroundColor = [UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+        
+    }
+    
+          return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

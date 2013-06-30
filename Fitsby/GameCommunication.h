@@ -84,5 +84,17 @@
  */
 + (NSDictionary*)getGameComments:(NSString *)gameID;
 
+/**
+ *  getUserGames
+ *
+ *  Returns the games the user is in
+ *
+ *  @param  gameID  The id of the game which is being searched for.
+ *
+ *  @return  A NSDictionary with a status and then an array of array of comments with all the details
+ */
++ (NSDictionary*)getUserGames:(NSString *)userID;
+
++(void)populateUserGames;
 
 @end
