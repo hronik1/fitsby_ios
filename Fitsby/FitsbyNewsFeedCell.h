@@ -10,4 +10,8 @@
 
 @interface FitsbyNewsFeedCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *comment;
+@property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
+
 @end

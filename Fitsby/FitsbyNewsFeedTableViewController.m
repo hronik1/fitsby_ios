@@ -6,42 +6,33 @@
 //  Copyright (c) 2013 Fitsby. All rights reserved.
 //
 
-#import "FitsbyNewsFeedViewController.h"
+#import "FitsbyNewsFeedTableViewController.h"
 #import "UserApplication.h"
 #import "GameCommunication.h"
-
-@interface FitsbyNewsFeedViewController ()
+#import "LandingViewController.h"
+#import "UserCommunication.h"
+#import "FitsbyNewsFeedCell.h"
+@interface FitsbyNewsFeedTableViewController ()
 
 @end
 
-@implementation FitsbyNewsFeedViewController
+@implementation FitsbyNewsFeedTableViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    NSLog(@"NewsFeed View Loaded");
-    
-    
+    self=[super init];
     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
-    userApplication.gameID = [NSString stringWithFormat:@"356"];
-    
-    NSString *feedGameID=userApplication.gameID;
+    if(userApplication.gameID==nil)
+    {
+        [GameCommunication populateUserGames];
+    }
+    NSString *feedGameID=[userApplication.gameArray objectAtIndex:0];
     
     NSDictionary *feedResponse=[GameCommunication getGameComments:feedGameID];
     if(feedResponse==nil)
     {
         NSLog(@"Error loading newsFeed");
     }
-    
     for (id key in feedResponse) {
         
         if([key isEqualToString:@"all_comments"])
@@ -52,6 +43,7 @@
             userApplication.feedArray=feedsArray;
         }
     }
+    return self;
 
 }
 
@@ -74,20 +66,44 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+  
+    static NSString *simpleTableIdentifier = @"newsFeedTableCell";
+    
+    FitsbyNewsFeedCell *cell = (FitsbyNewsFeedCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"newsFeedTableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
-    UITableViewCell *cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"UITableViewCell"];
     NSDictionary *feedObject=[userApplication.feedArray objectAtIndex:[indexPath row]];
     for(id feedKey in feedObject)
     {
-       if([feedKey isEqualToString:@"message"])
-       {
-           [[cell textLabel] setText:[feedObject objectForKey:feedKey]];
-       }
+        if([feedKey isEqualToString:@"first_name"])
+        {
+              [[cell nameLabel] setText:[feedObject objectForKey:feedKey]];
+            
+        }
+        if([feedKey isEqualToString:@"message"])
+        {
+            [[cell comment] setText:[feedObject objectForKey:feedKey]];
+            
+        }
     }
-   
-    
     return cell;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 78;
+}
+-(IBAction)loginButtonClicked:(id)sender
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    LandingViewController *viewControl = (LandingViewController *)[storyboard instantiateViewControllerWithIdentifier:@"landingView"];
+    [UserCommunication logoutUser];
+    [self presentViewController:viewControl animated:YES completion:NULL];
+   
 
+}
 
 @end

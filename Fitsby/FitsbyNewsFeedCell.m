@@ -9,6 +9,9 @@
 #import "FitsbyNewsFeedCell.h"
 
 @implementation FitsbyNewsFeedCell
+@synthesize nameLabel = nameLabel;
+@synthesize comment = comment;
+@synthesize thumbnailImageView = thumbnailImageView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

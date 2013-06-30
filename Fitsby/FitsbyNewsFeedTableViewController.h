@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FitsbyNewsFeedViewController : UIViewController
-{
-    IBOutlet UITableView *newsFeedTableView;
-}
+@interface FitsbyNewsFeedTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
+
+
 
 @end
