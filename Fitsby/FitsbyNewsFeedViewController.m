@@ -67,12 +67,18 @@
     userApplication.gameID=[NSString stringWithFormat:@"Game : %@",userApplication.gameID];
     gameLabel.text=userApplication.gameID;
    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewsFeedTable) name:@"finishedLoadingGetGameComments" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)loadNewsFeedTable
+{
+    [newsFeedTableView reloadData];
 }
 -(void)clickNewsFeedButton
 {

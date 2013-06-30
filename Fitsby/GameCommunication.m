@@ -13,6 +13,8 @@
 #import "PrivateGameResponse.h"
 #import "UserApplication.h"
 #import "User.h"
+#import "AFJSONRequestOperation.h"
+#import "FeedCell.h"
 
 static NSString *const ID_KEY = @"user_id";
 static NSString *const GAME_ID_KEY = @"game_id";
@@ -32,6 +34,7 @@ static NSString *const JOIN_GAME_ROUTE = @"join_game";
 static NSString *const PRIVATE_GAME_ROUTE = @"get_private_game_info";
 static NSString *const GAME_COMMENTS = @"game_comments";
 static NSString *const USER_GAMES = @"games_user_is_in";
+
 
 @implementation GameCommunication
 
@@ -111,7 +114,45 @@ static NSString *const USER_GAMES = @"games_user_is_in";
     NSArray *keys = [NSArray arrayWithObjects: GAME_ID_KEY, nil];
     NSArray *objects = [NSArray arrayWithObjects:gameID, nil];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
+    NSMutableString *stringRequest = [[userApplication getServerURL] mutableCopy];
+    [stringRequest appendString:GAME_COMMENTS];
+    [stringRequest appendFormat:@"?"];
+    [stringRequest appendFormat:@"game_id=%@",gameID];
+   
+   
     
+    NSURL *url = [NSURL URLWithString:stringRequest];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        for (id key in JSON) {
+           if([key isEqualToString:@"all_comments"])
+           {
+              
+               returnedFeedArray=[JSON objectForKey:key];
+           }
+        }
+        
+        if(returnedFeedArray!=nil)
+        {
+            NSMutableArray *tempFeedArray=[[NSMutableArray alloc] init];
+             for(id key in returnedFeedArray)
+             {
+                 FeedCell *tempFeedCell=[[FeedCell alloc] initWithData:[key objectForKey:@"first_name"] lastName:[key objectForKey:@"last_name"] message:[key objectForKey:@"message"] timeStamp:[key objectForKey:@"stamp"] commentType:[key objectForKey:@"checkin"] userId:[[NSString stringWithFormat:@"%@",[key objectForKey:@"user_id"]] intValue]];
+                 [tempFeedArray addObject:tempFeedCell];
+                 
+             }
+            userApplication.feedArray=tempFeedArray;
+
+        }
+       
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLoadingGetGameComments" object:nil];
+        
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                             NSLog(@"NSError: %@",[error localizedDescription]);
+                                         }];
+    [operation start];
+
     NSData *response = [MyHttpClient createGetRequest:GAME_COMMENTS withParams:dictionary];
     NSError *error = nil;
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];
@@ -125,7 +166,6 @@ static NSString *const USER_GAMES = @"games_user_is_in";
     NSArray *keys = [NSArray arrayWithObjects: ID_KEY, nil];
     NSArray *objects = [NSArray arrayWithObjects:userID, nil];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    
     NSData *response = [MyHttpClient createGetRequest:USER_GAMES withParams:dictionary];
     NSError *error = nil;
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&error];

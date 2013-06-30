@@ -12,4 +12,11 @@
 @implementation UserApplication
 @synthesize user;
 
+static NSString *const SERVER_URL = @"https://f-app.herokuapp.com/"; //production server
+
+-(NSString*)getServerURL
+{
+    return SERVER_URL;
+}
+
 @end

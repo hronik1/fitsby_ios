@@ -18,6 +18,7 @@
 		8F009B59177E2CCD004C72B8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B50177E2CCD004C72B8 /* UIImageView+AFNetworking.m */; };
 		8F009B5A177E3DB4004C72B8 /* FitsbyNewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B37177B2447004C72B8 /* FitsbyNewsFeedTableViewController.m */; };
 		8F009B5E177E74A9004C72B8 /* FitsbyNewsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F009B5D177E74A6004C72B8 /* FitsbyNewsFeedViewController.m */; };
+		8F51C0EE177FD3B500E14CF3 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F51C0ED177FD3B500E14CF3 /* FeedCell.m */; };
 		8F65768F177F4E6200F804CB /* newsFeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F65768E177F4E6200F804CB /* newsFeedTableCell.xib */; };
 		8F657692177F4F1D00F804CB /* FitsbyNewsFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F657691177F4F1D00F804CB /* FitsbyNewsFeedCell.m */; };
 		F23DA6C41777682B00C1E86B /* FitsbyCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23DA6C31777682B00C1E86B /* FitsbyCheckinViewController.m */; };
@@ -110,6 +111,8 @@
 		8F009B50177E2CCD004C72B8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		8F009B5C177E74A5004C72B8 /* FitsbyNewsFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyNewsFeedViewController.h; sourceTree = "<group>"; };
 		8F009B5D177E74A6004C72B8 /* FitsbyNewsFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyNewsFeedViewController.m; sourceTree = "<group>"; };
+		8F51C0EC177FD3B500E14CF3 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		8F51C0ED177FD3B500E14CF3 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		8F65768E177F4E6200F804CB /* newsFeedTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = newsFeedTableCell.xib; path = ../newsFeedTableCell.xib; sourceTree = "<group>"; };
 		8F657690177F4F1D00F804CB /* FitsbyNewsFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitsbyNewsFeedCell.h; sourceTree = "<group>"; };
 		8F657691177F4F1D00F804CB /* FitsbyNewsFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitsbyNewsFeedCell.m; sourceTree = "<group>"; };
@@ -367,6 +370,8 @@
 				F2C0000716DDA18800F869BB /* User.m */,
 				F2EA228816E28FFE00B8918E /* Game.m */,
 				F2EA228716E28FFE00B8918E /* Game.h */,
+				8F51C0EC177FD3B500E14CF3 /* FeedCell.h */,
+				8F51C0ED177FD3B500E14CF3 /* FeedCell.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -651,6 +656,7 @@
 				8F009B5A177E3DB4004C72B8 /* FitsbyNewsFeedTableViewController.m in Sources */,
 				8F009B5E177E74A9004C72B8 /* FitsbyNewsFeedViewController.m in Sources */,
 				8F657692177F4F1D00F804CB /* FitsbyNewsFeedCell.m in Sources */,
+				8F51C0EE177FD3B500E14CF3 /* FeedCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

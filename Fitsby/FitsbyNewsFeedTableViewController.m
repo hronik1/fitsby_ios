@@ -12,6 +12,7 @@
 #import "LandingViewController.h"
 #import "UserCommunication.h"
 #import "FitsbyNewsFeedCell.h"
+#import "FeedCell.h"
 @interface FitsbyNewsFeedTableViewController ()
 
 @end
@@ -27,22 +28,7 @@
         [GameCommunication populateUserGames];
     }
     NSString *feedGameID=[userApplication.gameArray objectAtIndex:0];
-    
-    NSDictionary *feedResponse=[GameCommunication getGameComments:feedGameID];
-    if(feedResponse==nil)
-    {
-        NSLog(@"Error loading newsFeed");
-    }
-    for (id key in feedResponse) {
-        
-        if([key isEqualToString:@"all_comments"])
-        {
-            
-            NSMutableArray *feedsArray;
-            feedsArray=[feedResponse objectForKey:key];
-            userApplication.feedArray=feedsArray;
-        }
-    }
+    [GameCommunication getGameComments:feedGameID];
     return self;
 
 }
@@ -76,20 +62,12 @@
         cell = [nib objectAtIndex:0];
     }
     UserApplication *userApplication = (UserApplication *)[UserApplication sharedApplication];
-    NSDictionary *feedObject=[userApplication.feedArray objectAtIndex:[indexPath row]];
-    for(id feedKey in feedObject)
-    {
-        if([feedKey isEqualToString:@"first_name"])
-        {
-              [[cell nameLabel] setText:[feedObject objectForKey:feedKey]];
+    FeedCell *feedObject=[userApplication.feedArray objectAtIndex:[indexPath row]];
+    
+    [[cell nameLabel] setText:feedObject.firstName];
             
-        }
-        if([feedKey isEqualToString:@"message"])
-        {
-            [[cell comment] setText:[feedObject objectForKey:feedKey]];
+    [[cell comment] setText:feedObject.message];
             
-        }
-    }
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

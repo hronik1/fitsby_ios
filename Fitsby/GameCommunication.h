@@ -11,8 +11,10 @@
 @class CreateGameResponse;
 @class StatusResponse;
 @class PrivateGameResponse;
-
+NSMutableArray *tempFeedArray;
+NSMutableArray *returnedFeedArray;
 @interface GameCommunication : NSObject
+
 
 /**
  *  getPublicGames

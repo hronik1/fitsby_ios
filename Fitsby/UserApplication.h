@@ -12,14 +12,15 @@
 @interface UserApplication : UIApplication
 {
     NSNumber *gameID;
-    NSArray *feedArray;
+    NSMutableArray *feedArray;
     NSMutableArray *gameArray;
+    
 }
--(NSNumber*)getCurrentGameID;
+-(NSString*)getServerURL;
 
 @property (strong, atomic) User *user;
 @property NSString *gameID;
-@property NSArray *feedArray;
+@property NSMutableArray *feedArray;
 @property NSMutableArray *gameArray;
 
 @end
